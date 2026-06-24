@@ -1,0 +1,13 @@
+---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
+const body = lang === 'zh'
+  ? '多體學與精準醫學研究是一門跨領域整合的前沿科學，涵蓋體學技術創新、資料分析與轉譯應用，到基礎研究、轉譯醫學乃至臨床實踐。由六大學會聯合主辦。'
+  : 'Multi-omics and precision medicine is a frontier interdisciplinary field, jointly organized by six societies.';
+---
+<section id="about" class="mx-auto max-w-3xl px-4 py-16">
+  <p class="text-lg leading-relaxed text-ink/90">{body}</p>
+</section>

@@ -1,0 +1,78 @@
+---
+import { splitSpeaker, type Agenda } from '../lib/agenda';
+import { pick, type Lang } from '../lib/i18n';
+const { agenda, lang } = Astro.props as { agenda: Agenda; lang: Lang };
+const trackColor = ['border-t101', 'border-t102', 'border-t103'];
+// 欄頭色點：與該欄 td 左框同色，呼應手機版的會場 chip 色點
+const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103'];
+---
+{agenda.days.map((day) => (
+  <section class="mb-10">
+    <h3 class="mb-3 text-lg font-bold text-accent">{lang === 'zh' ? day.label_zh : day.label_en}</h3>
+    <div class="overflow-hidden rounded-lg border border-line">
+      <table class="w-full table-fixed border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface">
+            <th class="sticky left-0 w-28 border-b border-line p-2 text-left">{lang === 'zh' ? '時間' : 'Time'}</th>
+            {agenda.venues.map((v, i) => (
+              <th class="border-b border-line p-2 text-left">
+                <span class="th-dot" style={`--chip: var(${trackVar[i] ?? '--color-accent'})`}></span>{v}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {day.slots.map((slot) => (
+            slot.type === 'parallel' ? (
+              <tr>
+                <td class="border-b border-line p-2 align-top font-semibold text-accent">{slot.time}</td>
+                {slot.tracks!.map((tk, i) => (
+                  <td class={`border-b border-l border-line p-2 align-top break-words ${trackColor[i]} border-l-4`}>
+                    {tk.session && <div class="text-xs font-bold text-muted">{tk.session}</div>}
+                    <div class="font-medium">{pick(tk, 'title', lang) || tk.title_zh}</div>
+                    {tk.speaker && (() => {
+                      const sp = splitSpeaker(tk.speaker);
+                      return (
+                        <div class="text-xs text-muted">
+                          {sp.person}{sp.affiliation && <span class="block opacity-80">{sp.affiliation}</span>}
+                        </div>
+                      );
+                    })()}
+                  </td>
+                ))}
+              </tr>
+            ) : (
+              <tr class="bg-bg/50">
+                <td class="border-b border-line p-2 align-top font-semibold text-accent">{slot.time}</td>
+                <td colspan={agenda.venues.length} class="border-b border-line p-2">
+                  <span class="font-medium">{pick(slot, 'title', lang) || slot.title_zh}</span>
+                  {slot.speaker && (() => {
+                    const sp = splitSpeaker(slot.speaker);
+                    const aff = sp.affiliation || pick(slot, 'affiliation', lang);
+                    return <span class="text-xs text-muted">　{sp.person}{aff ? ' ' + aff : ''}</span>;
+                  })()}
+                  {slot.moderator && (() => {
+                    const m = splitSpeaker(slot.moderator);
+                    return <span class="ml-2 text-xs text-muted">（Moderator: {m.person}{m.affiliation ? ' ' + m.affiliation : ''}）</span>;
+                  })()}
+                </td>
+              </tr>
+            )
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+))}
+
+<style>
+  .th-dot {
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 9999px;
+    background: rgb(var(--chip));
+    margin-right: 0.45em;
+    vertical-align: middle;
+  }
+</style>

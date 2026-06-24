@@ -1,0 +1,16 @@
+---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { t, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const data: any = yaml.load(fs.readFileSync('src/data/photos.yaml', 'utf8'));
+const photos: any[] = data.photos ?? [];
+---
+{photos.length > 0 && (
+  <section id="photos" class="mx-auto max-w-5xl px-4 py-16">
+    <h2 class="mb-8 text-2xl font-bold text-accent">{t(lang, 'section.photos')}</h2>
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+      {photos.map((p: any) => <img src={p.src} alt={p.alt ?? ''} class="aspect-square w-full rounded-lg object-cover" loading="lazy" />)}
+    </div>
+  </section>
+)}

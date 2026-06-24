@@ -1,0 +1,9 @@
+name = "mopm-2026"
+compatibility_date = "2025-01-01"
+
+# Cloudflare Workers Static Assets（與 yoju-site 同模式）：
+# Cloudflare 綁定本 GitHub repo，push 到 main 自動 build（npm run build）+ deploy；
+# 以下 [assets] 把 build 產出的 dist/ 當純靜態資產服務。
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"

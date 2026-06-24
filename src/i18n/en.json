@@ -1,0 +1,5 @@
+{
+  "nav": { "about": "About", "speakers": "Speakers", "agenda": "Agenda", "transport": "Travel", "abstract": "Abstract", "sponsors": "Sponsors", "register": "Register" },
+  "hero": { "cta": "Register Now" },
+  "section": { "speakers": "Keynote Speakers", "transport": "Travel", "abstract": "Abstract Submission", "sponsors": "Sponsors", "photos": "Gallery", "register": "Registration" }
+}

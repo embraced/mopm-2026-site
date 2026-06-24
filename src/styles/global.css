@@ -1,0 +1,7 @@
+@import './tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { background: rgb(var(--color-bg)); color: rgb(var(--color-text)); font-family: system-ui, "Noto Sans TC", sans-serif; }

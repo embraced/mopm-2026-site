@@ -1,0 +1,5 @@
+{
+  "nav": { "about": "關於", "speakers": "講者", "agenda": "議程", "transport": "交通", "abstract": "投稿", "sponsors": "贊助", "register": "報名" },
+  "hero": { "cta": "立即報名" },
+  "section": { "speakers": "Keynote Speakers", "transport": "交通資訊", "abstract": "摘要投稿", "sponsors": "會議贊助", "photos": "活動照片", "register": "報名" }
+}

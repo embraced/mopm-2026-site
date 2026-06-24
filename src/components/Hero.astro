@@ -1,0 +1,21 @@
+---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { t, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
+const title = lang === 'zh' ? c.title_zh : c.title_en;
+const theme = lang === 'zh' ? c.theme_zh : c.theme_en;
+const date = lang === 'zh' ? c.date_zh : c.date_en;
+const venue = lang === 'zh' ? c.venue_zh : c.venue_en;
+---
+<section class="relative isolate flex min-h-[60vh] items-center justify-center overflow-hidden text-white">
+  <img src={c.banner} alt="" class="absolute inset-0 -z-10 h-full w-full object-cover" />
+  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black/70 via-black/40 to-black/30"></div>
+  <div class="mx-auto max-w-3xl px-6 text-center">
+    <p class="mb-3 text-sm uppercase tracking-widest text-white/80">{c.edition}th ・ {theme}</p>
+    <h1 class="mb-4 text-4xl font-extrabold sm:text-5xl">{title}</h1>
+    <p class="mb-6 text-white/90">📅 {date}　📍 {venue}</p>
+    <a href={lang === 'en' ? '/en/' + c.register_anchor : c.register_anchor} class="inline-block rounded-lg bg-accent px-6 py-3 font-semibold text-accent-contrast">{t(lang, 'hero.cta')}</a>
+  </div>
+</section>

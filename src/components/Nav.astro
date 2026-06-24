@@ -1,0 +1,26 @@
+---
+import { t, pathFor, type Lang } from '../lib/i18n';
+import ThemeToggle from './ThemeToggle.astro';
+import LangToggle from './LangToggle.astro';
+const { lang } = Astro.props as { lang: Lang };
+const base = lang === 'en' ? '/en/' : '/';
+const neutralPath = Astro.url.pathname.replace(/^\/en/, '').replace(/\/$/, '') || '/';
+const items = [
+  { key: 'about', href: base + '#about' },
+  { key: 'speakers', href: base + '#speakers' },
+  { key: 'agenda', href: pathFor(lang, '/agenda') },
+  { key: 'transport', href: base + '#transport' },
+  { key: 'abstract', href: base + '#abstract' },
+  { key: 'register', href: base + '#register' },
+];
+---
+<header class="sticky top-0 z-50 border-b border-line bg-surface/90 backdrop-blur">
+  <nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+    <a href={base} class="font-extrabold text-accent">MOPM 2026</a>
+    <div class="flex items-center gap-3 text-sm">
+      {items.map((i) => <a href={i.href} class="hidden sm:inline text-muted hover:text-ink">{t(lang, 'nav.' + i.key)}</a>)}
+      <LangToggle lang={lang} path={neutralPath} />
+      <ThemeToggle />
+    </div>
+  </nav>
+</header>

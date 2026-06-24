@@ -1,0 +1,20 @@
+---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { t, pick, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')) as any[];
+const note = lang === 'zh' ? '請至所屬學會完成報名：' : 'Register via your society:';
+---
+<section id="register" class="mx-auto max-w-5xl px-4 py-16">
+  <h2 class="mb-2 text-2xl font-bold text-accent">{t(lang, 'section.register')}</h2>
+  <p class="mb-8 text-muted">{note}</p>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {socs.map((s) => (
+      <a href={s.register_url} target="_blank" rel="noopener" class="flex items-center gap-3 rounded-lg border border-line bg-surface p-4 hover:border-accent">
+        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-line text-xs font-bold">{s.logo ? <img src={s.logo} alt={s.code} class="h-12 w-12 object-contain" /> : s.code}</div>
+        <span class="text-sm font-medium">{pick(s, 'name', lang)}</span>
+      </a>
+    ))}
+  </div>
+</section>

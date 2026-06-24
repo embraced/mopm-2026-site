@@ -1,0 +1,5 @@
+---
+const { lang } = Astro.props as { lang: 'zh' | 'en' };
+const text = lang === 'zh' ? '多體學與精準醫學聯合會議 MOPM 2026' : 'Multi-Omics & Precision Medicine Conference 2026';
+---
+<footer class="border-t border-line py-8 text-center text-sm text-muted">{text}</footer>

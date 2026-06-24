@@ -1,0 +1,7 @@
+---
+const { lang, path = '/' } = Astro.props as { lang: 'zh' | 'en'; path?: string };
+// `path` is the language-neutral path (no /en prefix), e.g. '/' or '/agenda'
+const target = lang === 'zh' ? `/en${path === '/' ? '/' : path}` : (path === '/' ? '/' : path);
+const label = lang === 'zh' ? 'EN' : '中';
+---
+<a href={target} class="rounded-full border border-line px-2 py-1 text-sm">{label}</a>

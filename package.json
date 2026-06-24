@@ -1,0 +1,24 @@
+{
+  "name": "mopm-2026-site",
+  "version": "1.0.0",
+  "description": "MOPM 2026 官網（Astro + Cloudflare）。內容由私有 repo mopm-2026 產生。",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.6",
+    "js-yaml": "^4.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@types/js-yaml": "^4.0.9",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^6.0.3"
+  }
+}

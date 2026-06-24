@@ -1,0 +1,30 @@
+- code: TBSB
+  name_zh: "台灣生物資訊暨系統生物學會"
+  name_en: "Taiwan Society for Bioinformatics and Systems Biology"
+  logo: "/societies/tbsb.png"
+  register_url: "https://example.org/tbsb-register"
+- code: TPS
+  name_zh: "台灣蛋白體學會"
+  name_en: "Taiwan Proteomics Society"
+  logo: "/societies/tps.png"
+  register_url: "https://example.org/tps-register"
+- code: TGMBS
+  name_zh: "台灣基因醫學暨生物標記學會"
+  name_en: "Taiwan Society of Genomic Medicine and Biomarkers"
+  logo: "/societies/tgmbs.png"
+  register_url: "https://example.org/tgmbs-register"
+- code: TSECB
+  name_zh: "台灣演化與計算生物學會"
+  name_en: "Taiwan Society of Evolution and Computational Biology"
+  logo: "/societies/tsecb.png"
+  register_url: "https://example.org/tsecb-register"
+- code: TPMS
+  name_zh: "台灣精準醫學學會"
+  name_en: "Taiwan Precision Medicine Society"
+  logo: "/societies/tpms.png"
+  register_url: "https://example.org/tpms-register"
+- code: TSEV
+  name_zh: "台灣胞外體學會"
+  name_en: "Taiwan Society for Extracellular Vesicles"
+  logo: "/societies/tsev.png"
+  register_url: "https://example.org/tsev-register"

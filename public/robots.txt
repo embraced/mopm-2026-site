@@ -1,0 +1,36 @@
+# MOPM 2026 — AI-first：歡迎搜尋與 AI 答案引擎索引、引用本站內容
+User-agent: *
+Allow: /
+
+# 明確歡迎主要 AI 檢索/答案引擎爬蟲（希望被 ChatGPT / Claude / Perplexity 等引用）
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://2026.mopm.tw/sitemap-index.xml

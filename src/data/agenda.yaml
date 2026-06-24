@@ -1,0 +1,363 @@
+venues:
+  - 博雅館101
+  - 博雅館102
+  - 博雅館103
+days:
+  - date: '2025-11-08'
+    label_en: Day 1
+    label_zh: Day 1
+    slots:
+      - time: 08:30-09:00
+        type: break
+        category: registration
+        title_zh: Registration
+      - time: 09:00-09:20
+        type: plenary
+        category: opening
+        title_zh: Opening Remarks / Group Photo何信瑩 理事長 台灣生物資訊與系統生物學會
+      - time: 09:20-10:05
+        type: plenary
+        category: keynote
+        title_zh: 'Keynote Talk 1: Facioscapulohumeral muscular dystrophy is a model epigenetic disease for diagnostics and therapy罕病基因診斷與轉譯醫學專家 Peter L JonesProfessor of Pharmacology, the Mick Hitchcock, PhD Endowed Chair of Medical Biochemistry at the University of Nevada, Reno School of Medicine, USA'
+        moderator: 蔡婉琪 副教授 高雄醫學大學 醫學檢驗生物技術學系
+      - time: 10:05-10:25
+        type: plenary
+        category: showcase
+        title_zh: Technology Showcase (威健、圖爾思、國家高速網路與計算中心)
+      - time: 10:25-10:50
+        type: break
+        category: break
+        title_zh: Group Photo / Refreshment Break (一樓中央大廳/西側大廳)
+      - time: 10:50-11:25
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 1: AI for Bioinformatics'
+            organizer: TBSB
+            moderator: 李宗夷 教授國立陽明交通大學
+            title_zh: 'Talk 1-1: 結合基因網路與機器學習之先天免疫缺損關連基因優先排序方法Integrating Gene Networks and Machine Learning for Prioritizing Candidate Genes in Inborn Errors of Immunity'
+            speaker: 陳卓逸 副教授 國立陽明交通大學
+          - venue: 博雅館102
+            session: 'Session 2: 精準醫學與免疫治療:新趨勢與未來發展'
+            organizer: TGMBS
+            moderator: 林文瑋 副教授 高雄醫學大學 學士後醫學系
+            title_zh: 'Talk 2-1: Macrophage MRC2 Mitigates MASLD by Downregulating TNF-a production'
+            speaker: 林明宏 教授 高雄醫學大學
+          - venue: 博雅館103
+            session: 'Session 3: AI in Proteomics'
+            organizer: TPS
+            moderator: 姚宗杰 醫師/教授 林口長庚醫院學術組
+            title_zh: Talk 3-1:AI加速膀胱癌蛋白質生物標誌之系統性評估與臨床檢測方法開發
+            speaker: 陳怡婷 教授 長庚大學
+      - time: 11:25-12:00
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 1: AI for Bioinformatics'
+            organizer: TBSB
+            moderator: 李宗夷 教授國立陽明交通大學
+            title_zh: 'Talk 1-2: Multitask and Transfer Learning for Drug Discovery'
+            speaker: 童俊維 研究員國家衛生研究院
+          - venue: 博雅館102
+            session: 'Session 2: 精準醫學與免疫治療:新趨勢與未來發展'
+            organizer: TGMBS
+            moderator: 林文瑋 副教授 高雄醫學大學 學士後醫學系
+            title_zh: 'Talk 2-2: 克服三陰性乳癌治療挑戰：抗CD24療法作為新世代標靶免疫治療Overcoming treatment challenges in triple-negative breast cancer: Anti-CD24 therapy as a next-generation targeted immunotherapy'
+            speaker: 詹世萱 助理教授 中國醫藥大學
+          - venue: 博雅館103
+            session: 'Session 3: AI in Proteomics'
+            organizer: TPS
+            moderator: 姚宗杰 醫師/教授 林口長庚醫院學術組
+            title_zh: Talk 3-2:AI-Assisted Quality Assurance for Peak Identification in Targeted Proteomics
+            speaker: 楊崎 助理研究員 長庚大學
+      - time: 12:00-12:35
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 1: AI for Bioinformatics'
+            organizer: TBSB
+            moderator: 李宗夷 教授國立陽明交通大學
+            title_zh: 'Talk 1-3:A Data-Centric Path to Trustworthy Clinical Text AI: From Knowledge Extraction to De-Identification'
+            speaker: 蔡宗翰 教授國立中央大學
+          - venue: 博雅館102
+            session: 'Session 2: 精準醫學與免疫治療:新趨勢與未來發展'
+            organizer: TGMBS
+            moderator: 林文瑋 副教授 高雄醫學大學 學士後醫學系
+            title_zh: Talk 2-3:Development of microRNA therapy from scientific discovery to clinical trials
+            speaker: 卓夙航 特聘教授 視航生醫
+          - venue: 博雅館103
+            session: 'Session 3: AI in Proteomics'
+            organizer: TPS
+            moderator: 姚宗杰 醫師/教授 林口長庚醫院學術組
+            title_zh: 'Talk 3-3:PathBridge: An AI Framework Bridging scRNA and Spatial Proteomics for Pathway Mapping:'
+            speaker: 陳玫如 助理教授 國立臺灣大學
+      - time: 12:35-13:00
+        type: plenary
+        category: showcase
+        title_zh: 'Technology ShowcaseTopic: 臺灣人體生物資料庫與衛生福利資料庫的整合應用'
+        speaker: 蘇明威 MING-WEI SU , 資訊長中研院臺灣人體生物資料庫
+      - time: 13:00-13:30
+        type: break
+        category: lunch
+        title_zh: Lunch & Poster Session
+      - time: 13:30-14:15
+        type: plenary
+        category: keynote
+        title_zh: 'Keynote Talk 2 : Exosomes as the Language of Life: Redefining Biology and Shaping Precision Medicine外泌體專家 沈湯龍 教授 國立臺灣大學'
+        moderator: 周涵怡 副教授國立臺灣大學 口腔生物科學研究所
+      - time: 14:15-14:35
+        type: plenary
+        category: showcase
+        title_zh: Technology Showcase (伯森生物科技)
+      - time: 14:35-15:00
+        type: break
+        category: break
+        title_zh: Refreshment Break (一樓中央大廳/西側大廳)
+      - time: 15:00-15:35
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 4: Decoding Human Disease:From Genes to Phenotypes'
+            organizer: TSECB
+            moderator: 吳育瑋 教授台北醫學大學醫學資訊研究所
+            title_zh: 'Talk 4-1: Uncovering Epigenetic Signatures of Type 2 Diabetes and Cardiometabolic Traits'
+            speaker: 鍾仁華 研究員 國家衛生研究院
+          - venue: 博雅館102
+            session: 'Session 5: 人工智慧奠基精準診斷與治療'
+            organizer: TPMS
+            moderator: 陳相成 部長三軍總醫院 內科部
+            title_zh: 'Talk 5-1: 藉AI進行臨床大數據驗證的實例'
+            speaker: 張廷彰 顧問教授林口長庚醫院婦產部
+          - venue: 博雅館103
+            session: 'Session 6: Exosome in precision medicine'
+            organizer: TSEV
+            moderator: 沈湯龍 教授國立臺灣大學
+            title_zh: 'Talk 6-1:Beyond exosomes: ER-originated EVs orchestrate neuron-glia crosstalk'
+            speaker: 姚繼光 副研究員中央研究院
+      - time: 15:35-16:10
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 4: Decoding Human Disease:From Genes to Phenotypes'
+            organizer: TSECB
+            moderator: 吳育瑋 教授台北醫學大學醫學資訊研究所
+            title_zh: 'Talk 4-2: (視訊)Establishing a Deep Architecture of Gene-Specific Pathogenicity Prediction Platform for Missense Variants and Decipher the Inheritance Mode of GJB2 Variants by MD Simulations'
+            speaker: 楊立威 教授國立清華大學
+          - venue: 博雅館102
+            session: 'Session 5: 人工智慧奠基精準診斷與治療'
+            organizer: TPMS
+            moderator: 陳相成 部長三軍總醫院 內科部
+            title_zh: 'Talk 5-2: Precision Health Enhancement Program and Information System Development in Taiwan台灣精準健康提升計畫與資訊系統建構'
+            speaker: 賴泓誌 主任醫師新光醫院 癌症化療中心
+          - venue: 博雅館103
+            session: 'Session 6: Exosome in precision medicine'
+            organizer: TSEV
+            moderator: 沈湯龍 教授國立臺灣大學
+            title_zh: 'Talk 6-2:RBC-Derived Exosomes Enriched with α1-Antichymotrypsin and α1-Antitrypsin: A Novel Biomarker for Parkinson''s Disease and Contributor to Neuronal α-Synucleinopathy'
+            speaker: 曾冠穎 助理教授國防醫學院
+      - time: 16:10-16:45
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 4: Decoding Human Disease:From Genes to Phenotypes'
+            organizer: TSECB
+            moderator: 吳育瑋 教授台北醫學大學醫學資訊研究所
+            title_zh: 'Talk 4-3: (視訊)Polygenic Prediction of Antidepressant Treatment Outcomes'
+            speaker: 林彥鋒 副研究員級主治醫生國家衛生研究院
+          - venue: 博雅館102
+            session: 'Session 5: 人工智慧奠基精準診斷與治療'
+            organizer: TPMS
+            moderator: 陳相成 部長三軍總醫院 內科部
+            title_zh: Talk 5-3:藥物基因體學之臨床應用/Clinical Application of Pharmacogenomics
+            speaker: 黃織芬 所長國立臺灣大學 臨床藥學研究所
+          - venue: 博雅館103
+            session: 'Session 6: Exosome in precision medicine'
+            organizer: TSEV
+            moderator: 沈湯龍 教授國立臺灣大學
+            title_zh: Talk 6-3:Extracellular Vesicles in Intersystems Communication
+            speaker: 周涵怡 副教授國立臺灣大學
+      - time: 16:45-17:40
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 4: Decoding Human Disease:From Genes to Phenotypes'
+            organizer: TSECB
+            moderator: 吳育瑋 教授台北醫學大學醫學資訊研究所
+            title_zh: TSECBBoard of Directors meeting
+          - venue: 博雅館102
+            session: 'Session 5: 人工智慧奠基精準診斷與治療'
+            organizer: TPMS
+            moderator: 陳相成 部長三軍總醫院 內科部
+            title_zh: TPMSBoard of Directors meeting
+          - venue: 博雅館103
+            session: 'Session 6: Exosome in precision medicine'
+            organizer: TSEV
+            moderator: 沈湯龍 教授國立臺灣大學
+            title_zh: TBSBGeneral Assembly
+      - time: 18:00-20:00
+        type: break
+        category: banquet
+        title_zh: Invited Banquet
+  - date: '2025-11-09'
+    label_en: Day 2
+    label_zh: Day 2
+    slots:
+      - time: 08:45-09:05
+        type: break
+        category: registration
+        title_zh: Registration
+      - time: 09:05-09:55
+        type: plenary
+        category: keynote
+        title_zh: Keynote Talk 3:40 years of Genomics, Cancer Genomics and Immunogenomics基因體大師 Yusuke NakamuraPresident,National Institutes of Biomedical Innovation, Health, and Nutrition (NIBIOHN), Japan
+        moderator: 柯泰名 教授 國立陽明交通大學
+      - time: 09:55-10:15
+        type: plenary
+        category: showcase
+        title_zh: Technology Showcase (4組)
+      - time: 10:15-10:40
+        type: break
+        category: break
+        title_zh: Refreshment Break (一樓中央大廳/西側大廳)
+      - time: 10:40-11:15
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: Session 7:Multi-Omics of model organisms
+            organizer: TSECB
+            moderator: 蔡怡陞 研究員中央研究院生物多樣性研究中心
+            title_zh: Talk 7-1:Leverage Computational Models to Discover Translation Initiation Mechanisms
+            speaker: 劉明容 副研究員 中央研究院
+          - venue: 博雅館102
+            session: Session 8:精準健康年代來臨了!
+            organizer: TPMS
+            moderator: 王智弘 總院長 臺北市立聯合醫院
+            title_zh: 'Talk 8-1: 人工智慧精準健康 Artificial Intelligent (AI) For Precision Health'
+            speaker: 陳秀熙 教授國立臺灣大學
+          - venue: 博雅館103
+            session: Session 9:Recent advances in exosome studies
+            organizer: TSEV
+            moderator: 周涵怡 副教授國立臺灣大學
+            title_zh: Talk 9-1:Dynamic Biodistribution of Big and Small Extracellular Vesicles
+            speaker: 賴品光 副研究員中央研究院
+      - time: 11:15-11:50
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: Session 7:Multi-Omics of model organisms
+            organizer: TSECB
+            moderator: 蔡怡陞 研究員中央研究院生物多樣性研究中心
+            title_zh: Talk 7-2:Unraveling Long-Distance Peptide Signaling Roles via Single-Cell andMS-based Multi-Omics
+            speaker: 陳盈嵐 副教授國立成功大學
+          - venue: 博雅館102
+            session: Session 8:精準健康年代來臨了!
+            organizer: TPMS
+            moderator: 王智弘 總院長 臺北市立聯合醫院
+            title_zh: 'Talk 8-2: Translational Clinical Applications in the New Field of Precision Quantum Medicine'
+            speaker: 李英雄 教授中山醫學大學附設醫院
+          - venue: 博雅館103
+            session: Session 9:Recent advances in exosome studies
+            organizer: TSEV
+            moderator: 周涵怡 副教授國立臺灣大學
+            title_zh: 'Talk 9-2:CRISPR基因工程幹細胞透過分泌粒線體細胞外囊泡改善代謝性肝病CRISPR-Engineered Stem Cells Secrete Mitochondrial Extracellular Vesicles toAmeliorate Metabolic Liver Disease:'
+            speaker: 王志豪 助研究員中央研究院基因體研究中心
+      - time: 11:50-12:25
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: Session 7:Multi-Omics of model organisms
+            organizer: TSECB
+            moderator: 蔡怡陞 研究員中央研究院生物多樣性研究中心
+            title_zh: 'Talk 7-3:Excursions along the drift barrier: Evolution of the rate and fitness effects of mutation under minimal selection in Caenorhabditis elegans'
+            speaker: Charles F. Baer Professor, FSU, USA
+          - venue: 博雅館102
+            session: Session 8:精準健康年代來臨了!
+            organizer: TPMS
+            moderator: 王智弘 總院長 臺北市立聯合醫院
+            title_zh: 'Talk 8-3: Cell-Based Liquid Biopsy: CTCs in the Era of Personalized Medicine'
+            speaker: 周輝政 醫師台安醫院
+          - venue: 博雅館103
+            session: Session 9:Recent advances in exosome studies
+            organizer: TSEV
+            moderator: 周涵怡 副教授國立臺灣大學
+            title_zh: Talk 9-3:間質幹細胞外泌體應用於再生醫學之潛力
+            speaker: 鄭乃禎 醫師臺大醫院
+      - time: 12:25-14:00
+        type: break
+        category: lunch
+        title_zh: Lunch & Poster Session
+      - time: 14:00-14:15
+        type: break
+        category: break
+        title_zh: Refreshment Break (一樓中央大廳/西側大廳)
+      - time: 14:15-14:50
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 10: Big Data Analytics in Multi-Omics'
+            organizer: TBSB
+            moderator: 林峻宇 副教授國立陽明交通大學
+            title_zh: 'Talk 10-1:從基因體學到脂質體學：揭示疾病的分子驅動因子 / From Genomics toLipidomics: Uncovering molecular drivers of disease'
+            speaker: 鄭維中 教授中國醫藥大學
+          - venue: 博雅館102
+            session: 'Session 11: AI引領生物醫學變革:從智慧分析到臨床應用'
+            organizer: TGMBS
+            moderator: 劉鼎元 助理教授 中國醫藥大學 數位健康創新碩士學位學程
+            title_zh: 'Talk 11-1: 基因晶片啟動健康AI新紀元Gene chips usher in a new era of health AI'
+            speaker: 陳怡芳 博士 創辦人威力先進科技股份有限公司
+          - venue: 博雅館103
+            session: 'Session 12: Proximity proteomics'
+            organizer: TPS
+            moderator: 謝世良 特聘研究員兼主任國家衛生研究院 免疫醫學研究中心
+            title_zh: 'Talk 12-1: Chemoproteomic insights into drug discovery: STING modulators and beyond'
+            speaker: 張明姿 副研究員國家衛生研究院
+      - time: 14:50-15:25
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 10: Big Data Analytics in Multi-Omics'
+            organizer: TBSB
+            moderator: 林峻宇 副教授國立陽明交通大學
+            title_zh: Talk 10-2:利用多組學單細胞定序追蹤小兒肝母細胞瘤的癌症演化，揭示 Wnt 訊號依賴的化療抗性Tracing Cancer Evolution in Pediatric Hepatoblastoma Using Multi-omics Single-cell Sequencing Reveals Wnt Signaling-dependent Chemoresistance
+            speaker: 陳亭妏 副教授 國立陽明交通大學
+          - venue: 博雅館102
+            session: 'Session 11: AI引領生物醫學變革:從智慧分析到臨床應用'
+            organizer: TGMBS
+            moderator: 劉鼎元 助理教授 中國醫藥大學 數位健康創新碩士學位學程
+            title_zh: 'Talk 11-2: 因果 AI × 生成式AI：多體學驅動的高成功率藥物再定位策略'
+            speaker: 陳欣儒 業務營運與商業化總監 維曙智能科技有限公司
+          - venue: 博雅館103
+            session: 'Session 12: Proximity proteomics'
+            organizer: TPS
+            moderator: 謝世良 特聘研究員兼主任國家衛生研究院 免疫醫學研究中心
+            title_zh: 'Talk 12-2: Optoproteomics: Unbiased Spatial Proteomics at Disease-AssociatedSites'
+            speaker: 廖仲麒 執行長新析生物科股份有限公司
+      - time: 15:25-16:00
+        type: parallel
+        tracks:
+          - venue: 博雅館101
+            session: 'Session 10: Big Data Analytics in Multi-Omics'
+            organizer: TBSB
+            moderator: 林峻宇 副教授國立陽明交通大學
+            title_zh: 'Talk 10-3:虛擬表觀基因體：多任務學習建構跨細胞類型、疾病與擾動的多模態染色質動態模型The Virtual Epigenome: Modeling Multimodal Chromatin Dynamics Across Cell Types,Diseases, and Perturbations Using Multitask Learning'
+            speaker: 洪瑞鴻 教授 國立陽明交通大學
+          - venue: 博雅館102
+            session: 'Session 11: AI引領生物醫學變革:從智慧分析到臨床應用'
+            organizer: TGMBS
+            moderator: 劉鼎元 助理教授 中國醫藥大學 數位健康創新碩士學位學程
+            title_zh: 'Talk 11-3: 數位生物學：多體學與精準醫療分析的AI工具'
+            speaker: 陳映嘉 博士 NVIDIA醫療生技解決方案架構師
+          - venue: 博雅館103
+            session: 'Session 12: Proximity proteomics'
+            organizer: TPS
+            moderator: 謝世良 特聘研究員兼主任國家衛生研究院 免疫醫學研究中心
+            title_zh: 'Talk 12-3: Integrating Proximity Labeling and Phosphoproteomics to Dissect Dynamic Kinase-Substrate Networks'
+            speaker: 許全智 研究助技師 中央研究院
+      - time: 16:00-16:40
+        type: plenary
+        category: ceremony
+        title_zh: Award Ceremony
+      - time: 16:40-16:50
+        type: plenary
+        category: closing
+        title_zh: Closing Remarks & Handover ceremony

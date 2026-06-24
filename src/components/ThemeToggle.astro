@@ -1,0 +1,19 @@
+---
+---
+<button id="theme-toggle" aria-label="切換深淺色" class="rounded-full border border-line px-2 py-1 text-sm">
+  <span class="dark:hidden">🌙</span><span class="hidden dark:inline">☀️</span>
+</button>
+<script is:inline>
+  (function () {
+    const saved = localStorage.getItem('theme');
+    const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark', dark);
+  })();
+</script>
+<script>
+  const btn = document.getElementById('theme-toggle');
+  btn?.addEventListener('click', () => {
+    const dark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  });
+</script>

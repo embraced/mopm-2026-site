@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import AgendaDesktop from '../../components/AgendaDesktop.astro';
+import AgendaMobile from '../../components/AgendaMobile.astro';
+import { loadAgenda } from '../../lib/agenda';
+const agenda = loadAgenda();
+---
+<Base lang="en" title="Agenda | MOPM 2026">
+  <div class="mx-auto max-w-5xl px-4 py-8">
+    <h1 class="mb-6 text-2xl font-extrabold">Agenda</h1>
+    <div class="hidden md:block"><AgendaDesktop agenda={agenda} lang="en" /></div>
+    <div class="md:hidden"><AgendaMobile agenda={agenda} lang="en" /></div>
+  </div>
+</Base>

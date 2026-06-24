@@ -1,0 +1,15 @@
+# MOPM — 多體學與精準醫學聯合會議 (Multi-Omics & Precision Medicine Conference)
+
+> 台灣由六個學術學會聯合主辦的多體學與精準醫學年度研討會。涵蓋大會主題演講、平行學術場次、壁報論文競賽與產業展示。目前線上為 2025 屆示範資料，2026 屆內容更新中。
+
+## 大會資訊
+- 名稱：多體學與精準醫學聯合會議 / Multi-Omics & Precision Medicine Conference (MOPM)
+- 主辦學會：台灣生物資訊暨系統生物學會 (TBSB)、台灣蛋白體學會 (TPS)、台灣基因醫學暨生物標記學會 (TGMBS)、台灣演化與計算生物學會 (TSECB)、台灣精準醫學學會 (TPMS)、台灣胞外體學會 (TSEV)
+- 地點：國立臺灣大學博雅教學館 (Boya Building, National Taiwan University)
+- 官方網站：https://2026.mopm.tw
+
+## 重要頁面
+- [首頁 Home (中文)](https://2026.mopm.tw/)
+- [Home (English)](https://2026.mopm.tw/en/)
+- [議程 Agenda](https://2026.mopm.tw/agenda/)
+- [Agenda (English)](https://2026.mopm.tw/en/agenda/)

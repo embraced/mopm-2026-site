@@ -1,0 +1,8 @@
+tiers:
+  - name_zh: "鑽石級"
+    name_en: "Diamond"
+    sponsors:
+      - { name: "範例生技", logo: "", url: "https://example.org" }
+  - name_zh: "黃金級"
+    name_en: "Gold"
+    sponsors: []
