@@ -7,6 +7,13 @@
   photo: ""
   bio_zh: "計算生物學家，CIBERSORT／CIBERSORTx 等工具開發者，從整體組織基因表現解析腫瘤細胞組成與免疫微環境。"
   bio_en: "Computational biologist; creator of CIBERSORT/CIBERSORTx for deconvolving cell composition and the tumor immune microenvironment from bulk tissue profiles."
+  links:
+    - label_zh: "Google Scholar"
+      label_en: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=gODP8bYAAAAJ"
+    - label_zh: "個人網頁"
+      label_en: "Profile"
+      url: "https://profiles.stanford.edu/aaron-newman"
 - name: "Heng Zhu"
   title_zh: "教授"
   title_en: "Professor"
@@ -15,6 +22,13 @@
   photo: ""
   bio_zh: "蛋白質體學專家，運用高通量蛋白質晶片研究蛋白質轉譯後修飾、訊息傳遞網路與宿主—病原交互作用。"
   bio_en: "Proteomics expert using high-throughput protein microarrays to study post-translational modifications, signaling networks, and host–pathogen interactions."
+  links:
+    - label_zh: "Google Scholar"
+      label_en: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=PLQVWdcAAAAJ"
+    - label_zh: "實驗室網頁"
+      label_en: "Lab Website"
+      url: "https://www.hopkinsmedicine.org/research/labs/h/heng-zhu-lab"
 # TODO 第三位 keynote 待定，主辦確認後填入
 - name: "第三位講者待定"
   title_zh: ""
