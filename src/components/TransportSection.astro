@@ -2,14 +2,43 @@
 import { t, type Lang } from '../lib/i18n';
 const { lang } = Astro.props as { lang: Lang };
 const mapSrc = 'https://www.google.com/maps?q=國立成功大學醫學院 成杏校區&output=embed';
-const info = lang === 'zh'
-  ? ['火車：台南火車站步行約 10 分鐘', '高鐵：台南站轉沙崙線至台南火車站']
-  : ['Train: 10-min walk from Tainan Railway Station', 'HSR: Tainan HSR Station via Shalun line to Tainan Station'];
+const modes = lang === 'zh'
+  ? [
+      { icon: '🚗', label: '自行開車（國道路線）', lines: [
+          '南下：國道一號南下 → 下大灣交流道右轉 → 沿復興路（西向）往台南市區直走 → 接小東路直走即可抵達。（國道三號南下者轉國道8號西向，可接國道一號南向）',
+          '北上：國道一號北上 → 下仁德交流道左轉 → 沿中山路（西向）往台南市區直走 → 接東門路 → 中華東路右轉（北向）→ 小東路口左轉（西向）直走即可抵達。（國道三號北上者轉86號快速道路西向，可接國道一號北向）',
+        ] },
+      { icon: '🚆', label: '搭乘火車', lines: [
+          '台南站下車，自後站出口走大學路 → 勝利路左轉 → 遇小東路右轉約 100 公尺，左側即為醫學院成杏校區入口。',
+        ] },
+      { icon: '🚄', label: '搭乘高鐵', lines: [
+          '高鐵台南站轉搭台鐵電車至台南火車站，自後站出口走大學路 → 勝利路左轉 → 遇小東路右轉約 100 公尺，左側即為醫學院成杏校區入口。',
+        ] },
+    ]
+  : [
+      { icon: '🚗', label: 'By Car (Freeway)', lines: [
+          'Southbound: National Freeway 1 → exit at Dawan IC, turn right → Fuxing Rd (west) toward downtown → onto Xiaodong Rd, straight ahead to the College. (From Freeway 3, take Freeway 8 west to Freeway 1 south.)',
+          'Northbound: National Freeway 1 → exit at Rende IC, turn left → Zhongshan Rd (west) toward downtown → Dongmen Rd → turn right onto Zhonghua E. Rd (north) → turn left at Xiaodong Rd (west), straight ahead to the College. (From Freeway 3, take Expressway 86 west to Freeway 1 north.)',
+        ] },
+      { icon: '🚆', label: 'By Train', lines: [
+          'Alight at Tainan Station, take the rear exit onto University Rd → turn left at Shengli Rd → turn right at Xiaodong Rd; about 100 m ahead on the left is the Cheng-Hsing (medical) campus entrance.',
+        ] },
+      { icon: '🚄', label: 'By High Speed Rail (THSR)', lines: [
+          'From THSR Tainan Station, transfer to the TRA local train to Tainan Station, then follow the train directions above to the Cheng-Hsing (medical) campus entrance.',
+        ] },
+    ];
 ---
 <section id="transport" class="mx-auto max-w-5xl px-4 py-16">
   <h2 class="mb-6 text-2xl font-bold text-accent">{t(lang, 'section.transport')}</h2>
   <div class="grid gap-6 md:grid-cols-2">
-    <iframe src={mapSrc} class="h-72 w-full rounded-lg border border-line" loading="lazy"></iframe>
-    <ul class="space-y-2 text-ink/80">{info.map((i) => <li>・{i}</li>)}</ul>
+    <iframe src={mapSrc} class="h-72 w-full rounded-lg border border-line md:h-full" loading="lazy"></iframe>
+    <div class="space-y-4 text-ink/80">
+      {modes.map((m) => (
+        <div>
+          <h3 class="mb-1 font-bold text-ink">{m.icon} {m.label}</h3>
+          {m.lines.map((l) => <p class="text-sm leading-relaxed">{l}</p>)}
+        </div>
+      ))}
+    </div>
   </div>
 </section>
