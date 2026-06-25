@@ -32,11 +32,19 @@ const modes = lang === 'zh'
   <h2 class="mb-6 text-2xl font-bold text-accent">{t(lang, 'section.transport')}</h2>
   <div class="grid gap-6 md:grid-cols-2">
     <iframe src={mapSrc} class="h-72 w-full rounded-lg border border-line md:h-full" loading="lazy"></iframe>
-    <div class="space-y-4 text-ink/80">
+    <div class="space-y-5 text-ink/80">
       {modes.map((m) => (
         <div>
-          <h3 class="mb-1 font-bold text-ink">{m.icon} {m.label}</h3>
-          {m.lines.map((l) => <p class="text-sm leading-relaxed">{l}</p>)}
+          <h3 class="mb-2 font-bold text-ink">{m.icon} {m.label}</h3>
+          <div class="space-y-3">
+            {m.lines.map((l) => (
+              <div class="text-sm leading-relaxed">
+                {l.split('→').map((seg, i) => (
+                  <span class={i > 0 ? 'block pl-4' : 'block'}>{i > 0 ? '→ ' : ''}{seg.trim()}</span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       ))}
     </div>
