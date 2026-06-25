@@ -1,10 +1,10 @@
 ---
 import { t, type Lang } from '../lib/i18n';
 const { lang } = Astro.props as { lang: Lang };
-const mapSrc = 'https://www.google.com/maps?q=國立臺灣大學博雅教學館&output=embed';
+const mapSrc = 'https://www.google.com/maps?q=國立成功大學醫學院 成杏校區&output=embed';
 const info = lang === 'zh'
-  ? ['捷運：公館站步行約 10 分鐘', '公車：台大正門口 / 捷運公館站']
-  : ['MRT: 10-min walk from Gongguan Station', 'Bus: NTU Main Gate / Gongguan Station'];
+  ? ['火車：台南火車站步行約 10 分鐘', '高鐵：台南站轉沙崙線至台南火車站']
+  : ['Train: 10-min walk from Tainan Railway Station', 'HSR: Tainan HSR Station via Shalun line to Tainan Station'];
 ---
 <section id="transport" class="mx-auto max-w-5xl px-4 py-16">
   <h2 class="mb-6 text-2xl font-bold text-accent">{t(lang, 'section.transport')}</h2>

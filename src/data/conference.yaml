@@ -1,15 +1,17 @@
-# ⚠️ 以下為 2025 示範資料（demo），主辦請逐欄改成 2026 內容
-edition: 7
+# 2026 屆內容（主辦提供）。主題與 banner 待定，收到後更新 theme_* 與 banner。
+edition: 8
 title_zh: "多體學與精準醫學聯合會議"
 title_en: "Multi-Omics & Precision Medicine Conference"
-theme_zh: "大數據與 AI 驅動的次世代精準醫療革命"
-theme_en: "Big Data and AI Revolution for Next-Generation Precision Medicine"
-date_zh: "2025 年 11 月 8-9 日"
-date_en: "November 8-9, 2025"
-# 機器可讀日期（給 Event 結構化資料／AI 引用用，ISO 8601 + 時區；主辦改 2026 時一併更新）
-start_date: "2025-11-08T08:30:00+08:00"
-end_date: "2025-11-09T17:00:00+08:00"
-venue_zh: "國立臺灣大學博雅教學館"
-venue_en: "Boya Bldg., National Taiwan University"
-banner: "/banner-2025.png"
+# TODO 主題待定，主辦確認後填入
+theme_zh: "主題待定"
+theme_en: "Theme to be announced"
+date_zh: "2026 年 11 月 14-15 日"
+date_en: "November 14-15, 2026"
+# 機器可讀日期（給 Event 結構化資料／AI 引用用，ISO 8601 + 時區）
+start_date: "2026-11-14T08:30:00+08:00"
+end_date: "2026-11-15T17:00:00+08:00"
+venue_zh: "國立成功大學醫學院"
+venue_en: "College of Medicine, National Cheng Kung University"
+# TODO banner 待定，主辦提供初版後改為實際檔名（如 /banner-2026.png）
+banner: "/banner-placeholder.svg"
 register_anchor: "#register"
