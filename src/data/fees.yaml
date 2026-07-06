@@ -1,0 +1,32 @@
+# 報名費用（主辦提供）。單位 TWD。加購項標 addon: true。
+# 改這裡即改網站費用表與 EventSchema 的結構化 offers。
+currency: TWD
+includes_zh: "報名費含電子議程手冊、電子論文集、會議期間午餐及茶點。"
+includes_en: "The registration fee includes the electronic program book, electronic proceedings, lunch, and coffee breaks during the conference."
+items:
+  - group_zh: "學會會員"
+    group_en: "Society Members"
+    label_zh: "學生會員"
+    label_en: "Student Member"
+    price: 400
+  - group_zh: "學會會員"
+    group_en: "Society Members"
+    label_zh: "一般會員"
+    label_en: "Regular Member"
+    price: 800
+  - group_zh: "非會員"
+    group_en: "Non-Members"
+    label_zh: "學生（須出示學生證）"
+    label_en: "Student (valid student ID required)"
+    price: 1000
+  - group_zh: "非會員"
+    group_en: "Non-Members"
+    label_zh: "非學生"
+    label_en: "Non-Student"
+    price: 2000
+  - group_zh: "加購"
+    group_en: "Optional"
+    label_zh: "紙本論文集"
+    label_en: "Printed Proceedings"
+    price: 200
+    addon: true

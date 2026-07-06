@@ -1,12 +1,83 @@
 ---
-import { t, type Lang } from '../lib/i18n';
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { t, pick, type Lang } from '../lib/i18n';
 const { lang } = Astro.props as { lang: Lang };
-const formUrl = 'https://forms.gle/TODO';
-const desc = lang === 'zh' ? '歡迎投稿壁報摘要，截止日期將公布。' : 'Poster abstract submission is open. Deadline TBA.';
-const btn = lang === 'zh' ? '前往投稿表單' : 'Go to submission form';
+const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
+
+const formUrl: string = c.abstract_form_url ?? '#';
+const templateUrl: string = c.abstract_template ?? '';
+const deadline = pick(c, 'abstract_deadline', lang);
+
+const txt = lang === 'zh'
+  ? {
+      intro: '本次會議僅接受海報發表（Poster Presentation）。請依摘要範本撰寫，通過所屬學會審查後獲大會接受並編配論文編號。',
+      deadlineLabel: '投稿截止',
+      rulesTitle: '投稿規定',
+      rules: [
+        '一律線上投稿，僅接受海報發表。',
+        '摘要以英文撰寫，長度 1 頁為限，上傳 PDF 檔。',
+        '英文題目除介系詞外，每個單字字首皆須大寫。',
+        '發表者須填中、英文姓名，並以底線標示發表者。',
+        '發表者須為主辦六學會之一的有效會員，每篇摘要限投一個學會。',
+      ],
+      fileTitle: '檔案上傳規範',
+      files: [
+        '格式 PDF，大小 10 MB 以內。',
+        '檔名格式：學會_姓名_學校（例：TPS_王大明_國立成功大學.pdf）。',
+        '檔名請勿包含多餘的「.」符號（錯誤範例：ooxx.ooxx.pdf）。',
+      ],
+      submitBtn: '前往投稿表單',
+      templateBtn: '下載摘要範本',
+    }
+  : {
+      intro: 'Poster presentation is the only format. Prepare your abstract using the template; accepted abstracts (after review by the corresponding society) receive an abstract number.',
+      deadlineLabel: 'Submission Deadline',
+      rulesTitle: 'Submission Requirements',
+      rules: [
+        'All abstracts are submitted online; poster presentation only.',
+        'Abstracts must be written in English, limited to one page, and uploaded as a PDF.',
+        'Capitalize the first letter of each word in the title, except prepositions.',
+        'Provide the presenting author’s name in both Chinese and English, with the presenting author underlined.',
+        'The presenting author must be an active member of one of the six organizing societies; each abstract may be submitted to one society only.',
+      ],
+      fileTitle: 'Upload Instructions',
+      files: [
+        'Format: PDF, maximum 10 MB.',
+        'File name: Society_Name_Affiliation (e.g., TPS_DaMing Wang_National Cheng Kung University.pdf).',
+        'Do not include extra periods (".") in the file name (incorrect: ooxx.ooxx.pdf).',
+      ],
+      submitBtn: 'Go to Submission Form',
+      templateBtn: 'Download Abstract Template',
+    };
 ---
-<section id="abstract" class="mx-auto max-w-3xl px-4 py-16 text-center">
-  <h2 class="mb-4 text-2xl font-bold text-accent">{t(lang, 'section.abstract')}</h2>
-  <p class="mb-6 text-ink/80">{desc}</p>
-  <a href={formUrl} target="_blank" rel="noopener" class="inline-block rounded-lg bg-accent px-6 py-3 font-semibold text-accent-contrast">{btn}</a>
+<section id="abstract" class="mx-auto max-w-3xl px-4 py-16">
+  <h2 class="mb-4 text-center text-2xl font-bold text-accent">{t(lang, 'section.abstract')}</h2>
+  <p class="mx-auto mb-6 max-w-2xl text-center text-ink/80">{txt.intro}</p>
+
+  {deadline && (
+    <p class="mb-8 text-center text-sm text-muted">
+      <span class="font-semibold text-ink">{txt.deadlineLabel}：</span>{deadline}
+    </p>
+  )}
+
+  <div class="grid gap-6 rounded-lg border border-line bg-surface p-6 sm:grid-cols-2">
+    <div>
+      <h3 class="mb-3 font-bold text-ink">{txt.rulesTitle}</h3>
+      <ul class="space-y-2 text-sm leading-relaxed text-ink/80">
+        {txt.rules.map((r) => <li class="flex gap-2"><span class="text-accent">•</span><span>{r}</span></li>)}
+      </ul>
+    </div>
+    <div>
+      <h3 class="mb-3 font-bold text-ink">{txt.fileTitle}</h3>
+      <ul class="space-y-2 text-sm leading-relaxed text-ink/80">
+        {txt.files.map((r) => <li class="flex gap-2"><span class="text-accent">•</span><span>{r}</span></li>)}
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-8 flex flex-wrap justify-center gap-4">
+    <a href={formUrl} target="_blank" rel="noopener" class="inline-block rounded-lg bg-accent px-6 py-3 font-semibold text-accent-contrast hover:opacity-90">{txt.submitBtn}</a>
+    {templateUrl && <a href={templateUrl} class="inline-block rounded-lg border border-accent px-6 py-3 font-semibold text-accent hover:bg-accent/10">{txt.templateBtn}</a>}
+  </div>
 </section>

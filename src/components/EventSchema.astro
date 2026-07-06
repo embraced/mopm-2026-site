@@ -9,6 +9,7 @@ const { lang } = Astro.props as { lang: Lang };
 const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
 const societies: any[] = (yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')) as any[]) ?? [];
 const speakers: any[] = (yaml.load(fs.readFileSync('src/data/speakers.yaml', 'utf8')) as any[]) ?? [];
+const fees: any = yaml.load(fs.readFileSync('src/data/fees.yaml', 'utf8')) ?? {};
 
 const site = (Astro.site ?? new URL('https://2026.mopm.tw')).href.replace(/\/$/, '');
 const pageUrl = lang === 'en' ? `${site}/en/` : `${site}/`;
@@ -43,12 +44,15 @@ const schema = {
     name: s.name,
     ...(p(s, 'affiliation') ? { affiliation: { '@type': 'Organization', name: p(s, 'affiliation') } } : {}),
   })),
-  offers: {
+  offers: (fees.items ?? []).map((it: any) => ({
     '@type': 'Offer',
+    name: `${it[`group_${lang}`] ?? it.group_zh} — ${it[`label_${lang}`] ?? it.label_zh}`,
+    price: it.price,
+    priceCurrency: fees.currency ?? 'TWD',
     url: pageUrl + (c.register_anchor || '#register'),
     availability: 'https://schema.org/InStock',
     category: 'Registration',
-  },
+  })),
 };
 ---
 <script type="application/ld+json" set:html={JSON.stringify(schema)} />
