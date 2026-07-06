@@ -18,7 +18,7 @@ register_anchor: "#register"
 
 # 報名（主辦提供）
 register_deadline_zh: "即日起至 2026 年 10 月 16 日（五）17:00"
-# TODO 主辦確認：報名文件英文版誤植為 October 30, 2025，此處暫以中文版 2026/10/16 為準
+# 以中文版 2026/10/16 為準（報名文件英文版誤植 October 30, 2025，已確認忽略）
 register_deadline_en: "Now open through 17:00, October 16, 2026 (Fri.)"
 # TODO 非會員線上報名連結（主辦提供後替換佔位）
 nonmember_register_url: "https://forms.gle/TODO"
