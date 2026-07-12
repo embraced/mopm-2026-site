@@ -13,12 +13,9 @@ const base = lang === 'en' ? '/en/' : '/';
   <div class="mx-auto max-w-[1600px]">
     <img src={c.banner} alt={title} class="block w-full" fetchpriority="high" />
   </div>
-  <div class="mx-auto max-w-3xl px-6 pb-10 pt-6 text-center">
-    <h1 class="mb-4 text-2xl font-black leading-snug sm:text-4xl">{title}</h1>
-    <div class="mb-7 flex flex-col items-center gap-1">
-      <span class="text-base font-semibold tracking-wide text-teal-light">2026.11.14 – 11.15</span>
-      <span class="text-sm text-[#94A3B8]">{venue}</span>
-    </div>
+  <div class="mx-auto max-w-3xl px-6 pb-9 pt-7 text-center">
+    {/* 主標題／日期／地點已在 banner 圖上呈現；此處以 sr-only 保留給 SEO、螢幕閱讀器與文件大綱（結構化資料另見 EventSchema JSON-LD）。 */}
+    <h1 class="sr-only">{title}　{date}　{venue}</h1>
     <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
       <a
         href={base + '#register'}

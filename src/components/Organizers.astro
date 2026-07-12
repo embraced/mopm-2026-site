@@ -11,8 +11,8 @@ const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')
   <div class="grid gap-5 rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)] sm:grid-cols-2 lg:grid-cols-3">
     {socs.map((s) => (
       <div class="flex items-center gap-4 rounded-xl bg-bg p-4">
-        <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-surface">
-          {s.logo ? <img src={s.logo} alt={s.code} class="h-12 w-12 object-contain" /> : <span class="text-xs font-bold text-accent">{s.code}</span>}
+        <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white/95 p-1.5 shadow-[0_1px_5px_rgba(15,23,33,.12)] ring-1 ring-black/[.04]">
+          {s.logo ? <img src={s.logo} alt={s.code} class="max-h-full max-w-full object-contain" /> : <span class="text-xs font-bold text-teal-deep">{s.code}</span>}
         </div>
         <div>
           <div class="text-[13px] font-bold tracking-wide text-accent">{s.code}</div>
