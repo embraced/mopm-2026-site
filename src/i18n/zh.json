@@ -1,5 +1,28 @@
 {
-  "nav": { "about": "關於", "speakers": "講者", "agenda": "議程", "transport": "交通", "abstract": "投稿", "sponsors": "贊助", "register": "報名" },
-  "hero": { "cta": "立即報名" },
-  "section": { "speakers": "Keynote Speakers", "transport": "交通資訊", "abstract": "摘要投稿", "sponsors": "會議贊助", "photos": "活動照片", "register": "報名" }
+  "nav": { "about": "關於會議", "speakers": "講者陣容", "agenda": "議程", "register": "報名資訊", "abstract": "摘要投稿", "transport": "交通資訊", "sponsors": "贊助" },
+  "hero": { "register": "立即報名", "submit": "立即投稿", "learn": "了解更多" },
+  "stats": {
+    "days": "天會議", "daysSub": "11.14 – 11.15",
+    "speakers": "國際講者", "speakersSub": "Keynote Speakers",
+    "societies": "主辦學會", "societiesSub": "跨領域聯合主辦",
+    "sessions": "平行場次", "sessionsSub": "Parallel Sessions"
+  },
+  "section": {
+    "about": "關於會議", "aboutSub": "About the Conference",
+    "speakers": "Keynote Speakers", "speakersSub": "專題講者",
+    "keydates": "重要時程", "keydatesSub": "Key Dates",
+    "agenda": "議程總覽", "agendaSub": "Programme",
+    "register": "報名資訊", "registerSub": "Registration",
+    "abstract": "摘要投稿", "abstractSub": "Abstract Submission",
+    "transport": "交通資訊", "transportSub": "成大醫學院 · 成杏校區",
+    "organizers": "主辦單位", "organizersSub": "六大學會聯合主辦",
+    "sponsors": "會議贊助", "sponsorsSub": "Sponsors",
+    "photos": "活動照片", "photosSub": "會議回顧"
+  },
+  "agenda": {
+    "note": "2 天 3 會場（博雅館 101 / 102 / 103）平行進行",
+    "full": "完整議程",
+    "parallel": "平行場次"
+  },
+  "keydates": { "abstract": "投稿截止", "register": "報名截止" }
 }

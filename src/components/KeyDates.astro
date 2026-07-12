@@ -1,0 +1,41 @@
+---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { t, pick, type Lang } from '../lib/i18n';
+import SectionHeading from './SectionHeading.astro';
+const { lang } = Astro.props as { lang: Lang };
+const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
+
+const dates = [
+  {
+    label: t(lang, 'keydates.abstract'),
+    body: pick(c, 'abstract_deadline', lang),
+    color: '#F59E0B',
+    icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15h6M9 11h2"/>',
+  },
+  {
+    label: t(lang, 'keydates.register'),
+    body: pick(c, 'register_deadline', lang),
+    color: '#22C55E',
+    icon: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-3 3-1.5-1.5"/>',
+  },
+].filter((d) => d.body);
+---
+{dates.length > 0 && (
+  <section class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
+    <SectionHeading title={t(lang, 'section.keydates')} subtitle={t(lang, 'section.keydatesSub')} />
+    <div class="grid gap-5 sm:grid-cols-2">
+      {dates.map((d) => (
+        <div class="flex items-start gap-4 rounded-2xl bg-surface p-6 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-bg shadow-[0_2px_8px_rgba(30,41,59,.06)]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={d.color} stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" set:html={d.icon} />
+          </div>
+          <div>
+            <span class="mb-1.5 inline-block rounded-md px-2.5 py-0.5 text-xs font-semibold text-white" style={`background:${d.color}`}>{d.label}</span>
+            <div class="text-[15px] leading-relaxed text-muted">{d.body}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}

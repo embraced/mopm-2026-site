@@ -1,5 +1,28 @@
 {
-  "nav": { "about": "About", "speakers": "Speakers", "agenda": "Agenda", "transport": "Travel", "abstract": "Abstract", "sponsors": "Sponsors", "register": "Register" },
-  "hero": { "cta": "Register Now" },
-  "section": { "speakers": "Keynote Speakers", "transport": "Travel", "abstract": "Abstract Submission", "sponsors": "Sponsors", "photos": "Gallery", "register": "Registration" }
+  "nav": { "about": "About", "speakers": "Speakers", "agenda": "Agenda", "register": "Registration", "abstract": "Abstract", "transport": "Travel", "sponsors": "Sponsors" },
+  "hero": { "register": "Register Now", "submit": "Submit Abstract", "learn": "Learn More" },
+  "stats": {
+    "days": "Days", "daysSub": "Nov 14 – 15",
+    "speakers": "Keynote Speakers", "speakersSub": "International",
+    "societies": "Host Societies", "societiesSub": "Interdisciplinary",
+    "sessions": "Parallel Sessions", "sessionsSub": "Across 3 venues"
+  },
+  "section": {
+    "about": "About", "aboutSub": "About the Conference",
+    "speakers": "Keynote Speakers", "speakersSub": "Invited Talks",
+    "keydates": "Key Dates", "keydatesSub": "Important Deadlines",
+    "agenda": "Programme", "agendaSub": "Overview",
+    "register": "Registration", "registerSub": "Fees & Sign-up",
+    "abstract": "Abstract Submission", "abstractSub": "Poster Only",
+    "transport": "Travel", "transportSub": "NCKU · College of Medicine",
+    "organizers": "Organizers", "organizersSub": "Six Societies",
+    "sponsors": "Sponsors", "sponsorsSub": "Our Supporters",
+    "photos": "Gallery", "photosSub": "Highlights"
+  },
+  "agenda": {
+    "note": "2 days · 3 parallel venues (Boya Hall 101 / 102 / 103)",
+    "full": "Full Programme",
+    "parallel": "Parallel"
+  },
+  "keydates": { "abstract": "Abstract Deadline", "register": "Registration Deadline" }
 }

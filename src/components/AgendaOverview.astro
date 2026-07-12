@@ -1,0 +1,116 @@
+---
+import { loadAgenda, splitSpeaker, type Slot } from '../lib/agenda';
+import { t, pick, pathFor, type Lang } from '../lib/i18n';
+import SectionHeading from './SectionHeading.astro';
+const { lang } = Astro.props as { lang: Lang };
+const agenda = loadAgenda();
+
+// Map the existing slot.category → the handoff's three band styles.
+function bandKind(slot: Slot): 'keynote' | 'feature' | 'break' {
+  if (slot.type === 'break') return 'break';
+  const cat = (slot.category ?? '').toLowerCase();
+  if (cat.includes('keynote')) return 'keynote';
+  if (['registration', 'break', 'lunch', 'refreshment', 'showcase', 'photo', 'poster'].some((k) => cat.includes(k))) return 'break';
+  return 'feature'; // opening / closing / banquet / award / ceremony / assembly …
+}
+const bandClass: Record<string, string> = {
+  keynote: 'bg-accent/10 border border-accent/40',
+  feature: 'bg-gold/10 border border-gold/40',
+  break: 'bg-bg border border-line',
+};
+const bandLabel: Record<string, string> = {
+  keynote: 'text-accent',
+  feature: 'text-gold',
+  break: 'text-muted',
+};
+
+// venue name → track color css var (101 teal / 102 gold / 103 blue)
+const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103'];
+const venueIndex = (v: string) => Math.max(0, agenda.venues.indexOf(v));
+
+const fullHref = pathFor(lang, '/agenda');
+---
+<section id="agenda" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
+  <SectionHeading title={t(lang, 'section.agenda')} subtitle={t(lang, 'agenda.note')}>
+    <a href={fullHref} class="whitespace-nowrap text-sm font-semibold text-accent hover:underline">{t(lang, 'agenda.full')} →</a>
+  </SectionHeading>
+
+  <div class="agenda-overview rounded-2xl bg-surface p-6 shadow-[0_2px_14px_rgba(30,41,59,.06)] sm:p-8">
+    <!-- day tabs -->
+    {agenda.days.length > 1 && (
+      <div class="mb-5 inline-flex rounded-xl bg-bg p-1">
+        {agenda.days.map((day, di) => (
+          <button
+            type="button"
+            class="ao-tab rounded-lg px-4 py-2 text-sm font-semibold transition-all data-[on=false]:text-muted data-[on=true]:bg-gradient-to-br data-[on=true]:from-accent data-[on=true]:to-teal-light data-[on=true]:text-teal-deep data-[on=true]:shadow-[0_2px_6px_rgba(88,213,208,.3)]"
+            data-day={di}
+            data-on={di === 0 ? 'true' : 'false'}
+          >{lang === 'zh' ? day.label_zh : day.label_en}</button>
+        ))}
+      </div>
+    )}
+
+    <!-- venue legend -->
+    <div class="mb-3 hidden grid-cols-[86px_1fr] gap-3 sm:grid">
+      <div></div>
+      <div class="grid grid-cols-3 gap-2.5">
+        {agenda.venues.map((v, i) => (
+          <div class="flex items-center gap-2 text-[13px] font-bold text-muted">
+            <span class="h-2.5 w-2.5 rounded-[3px]" style={`background: rgb(var(${trackVar[i] ?? '--color-accent'}))`}></span>{v}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- days -->
+    {agenda.days.map((day, di) => (
+      <div class="ao-day flex flex-col gap-2" data-day={di} style={di === 0 ? '' : 'display:none'}>
+        {day.slots.map((slot) => {
+          const isParallel = slot.type === 'parallel' && !!slot.tracks?.length;
+          const kind = bandKind(slot);
+          const speaker = slot.speaker ? splitSpeaker(slot.speaker).person : '';
+          const note = speaker || slot.venue || '';
+          return (
+            <div class="grid grid-cols-[64px_1fr] items-stretch gap-3 sm:grid-cols-[86px_1fr]">
+              <div class="flex items-center text-[13px] font-bold tabular-nums text-muted">{slot.time}</div>
+              {isParallel ? (
+                <div class="grid gap-2.5 sm:grid-cols-3">
+                  {slot.tracks!.map((tk) => (
+                    <div
+                      class="rounded-lg border border-line bg-bg p-3"
+                      style={`border-left: 3px solid rgb(var(${trackVar[venueIndex(tk.venue)] ?? '--color-accent'}))`}
+                    >
+                      <div class="mb-1.5 flex flex-wrap items-center gap-2">
+                        {tk.organizer && <span class="rounded-[5px] bg-black/5 px-2 py-0.5 text-[11px] font-bold text-muted dark:bg-white/10">{tk.organizer}</span>}
+                        {tk.session && <span class="text-[11px] font-bold text-muted">{tk.session}</span>}
+                      </div>
+                      <div class="text-[13.5px] font-semibold leading-snug text-ink">{pick(tk, 'title', lang) || tk.title_zh}</div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div class={`flex min-h-[48px] items-center gap-2.5 rounded-xl px-4 py-3 ${bandClass[kind]}`}>
+                  <span class={`text-sm font-bold ${bandLabel[kind]}`}>{pick(slot, 'title', lang) || slot.title_zh}</span>
+                  {note && <span class="text-[13px] font-medium text-muted">{note}</span>}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  const root = document.querySelector('.agenda-overview');
+  if (root) {
+    const tabs = root.querySelectorAll<HTMLButtonElement>('.ao-tab');
+    const days = root.querySelectorAll<HTMLElement>('.ao-day');
+    tabs.forEach((tab) => tab.addEventListener('click', () => {
+      const d = tab.dataset.day;
+      tabs.forEach((x) => { x.dataset.on = String(x.dataset.day === d); });
+      days.forEach((day) => { day.style.display = day.dataset.day === d ? '' : 'none'; });
+    }));
+  }
+</script>

@@ -6,8 +6,8 @@ import { loadAgenda } from '../../lib/agenda';
 const agenda = loadAgenda();
 ---
 <Base lang="en" title="Agenda | MOPM 2026">
-  <div class="mx-auto max-w-5xl px-4 py-8">
-    <h1 class="mb-6 text-2xl font-extrabold">Agenda</h1>
+  <div class="mx-auto max-w-6xl px-5 py-10 sm:px-8">
+    <h1 class="mb-6 text-2xl font-bold tracking-tight text-accent sm:text-[28px]">Agenda <span class="text-base font-medium text-muted">Programme</span></h1>
     <div class="hidden md:block"><AgendaDesktop agenda={agenda} lang="en" /></div>
     <div class="md:hidden"><AgendaMobile agenda={agenda} lang="en" /></div>
   </div>

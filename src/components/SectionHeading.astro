@@ -1,0 +1,16 @@
+---
+// Consistent section heading: teal zh title + muted subtitle, with an optional
+// right-aligned action (e.g. "完整議程 →") passed via the default slot.
+interface Props {
+  title: string;
+  subtitle?: string;
+  id?: string;
+}
+const { title, subtitle, id } = Astro.props as Props;
+const hasAction = Astro.slots.has('default');
+---
+<div class="mb-6 flex flex-wrap items-baseline gap-x-3 gap-y-1" id={id}>
+  <h2 class="m-0 text-2xl font-bold tracking-tight text-accent sm:text-[28px]">{title}</h2>
+  {subtitle && <span class="text-base font-medium text-muted">{subtitle}</span>}
+  {hasAction && <div class="ml-auto"><slot /></div>}
+</div>

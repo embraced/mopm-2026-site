@@ -35,7 +35,12 @@ const enPath = path.startsWith('/en') ? path : '/en' + (path === '/' ? '/' : pat
     <link rel="alternate" hreflang="zh-Hant" href={new URL(zhPath, site).href} />
     <link rel="alternate" hreflang="en" href={new URL(enPath, site).href} />
     <link rel="alternate" hreflang="x-default" href={new URL(zhPath, site).href} />
-    <meta name="theme-color" content="#1d4ed8" />
+    <meta name="theme-color" content="#1E293B" />
+
+    <!-- Noto Sans TC (brand font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 
     <!-- Open Graph / social -->
     <meta property="og:type" content="website" />
@@ -52,7 +57,7 @@ const enPath = path.startsWith('/en') ? path : '/en' + (path === '/' ? '/' : pat
   </head>
   <body class="bg-bg text-ink">
     <Nav lang={lang} />
-    <main><slot /></main>
+    <main class="pb-14 sm:pb-16"><slot /></main>
     <Footer lang={lang} />
   </body>
 </html>

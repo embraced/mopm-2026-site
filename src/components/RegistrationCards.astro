@@ -2,6 +2,7 @@
 import yaml from 'js-yaml';
 import fs from 'node:fs';
 import { t, pick, type Lang } from '../lib/i18n';
+import SectionHeading from './SectionHeading.astro';
 const { lang } = Astro.props as { lang: Lang };
 const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')) as any[];
 const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
@@ -14,74 +15,70 @@ const nonmemberUrl: string = c.nonmember_register_url ?? '#';
 const txt = lang === 'zh'
   ? {
       deadlineLabel: '報名期間',
-      feeHeadItem: '身分',
-      feeHeadPrice: '費用',
-      memberTitle: '學會會員',
-      memberNote: '請透過所屬學會的報名系統或聯絡窗口完成報名：',
-      nonmemberTitle: '非會員',
-      nonmemberNote: '非六學會會員請由線上表單完成報名。',
-      nonmemberBtn: '前往非會員報名',
+      feeTitle: '費用一覽',
+      memberTitle: '學會會員報名',
+      memberNote: '請透過所屬學會的報名系統或聯絡窗口完成報名。',
+      nonmemberTitle: '非會員報名',
+      nonmemberNote: '非六學會會員請由線上表單報名。',
+      nonmemberBtn: '前往報名',
     }
   : {
       deadlineLabel: 'Registration Period',
-      feeHeadItem: 'Category',
-      feeHeadPrice: 'Fee',
-      memberTitle: 'Society Members',
-      memberNote: 'Register through your society’s registration system or contact person:',
-      nonmemberTitle: 'Non-Members',
-      nonmemberNote: 'Participants who are not members of the six organizing societies may register online.',
-      nonmemberBtn: 'Non-Member Registration',
+      feeTitle: 'Fees',
+      memberTitle: 'Society Member Registration',
+      memberNote: 'Register through your society’s registration system or contact person.',
+      nonmemberTitle: 'Non-Member Registration',
+      nonmemberNote: 'Participants who are not members of the six societies may register online.',
+      nonmemberBtn: 'Register',
     };
 const money = (n: number) => `NT$ ${n.toLocaleString('en-US')}`;
 ---
-<section id="register" class="mx-auto max-w-5xl px-4 py-16">
-  <h2 class="mb-6 text-2xl font-bold text-accent">{t(lang, 'section.register')}</h2>
-
+<section id="register" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
+  <SectionHeading title={t(lang, 'section.register')} subtitle={t(lang, 'section.registerSub')} />
   {deadline && (
-    <p class="mb-8 text-sm text-muted">
-      <span class="font-semibold text-ink">{txt.deadlineLabel}：</span>{deadline}
-    </p>
+    <p class="mb-6 text-sm text-muted"><span class="font-semibold text-ink">{txt.deadlineLabel}：</span>{deadline}</p>
   )}
 
-  <!-- 費用表 -->
-  <div class="mb-4 overflow-hidden rounded-lg border border-line">
-    <table class="w-full text-left text-sm">
-      <thead class="bg-line/40 text-muted">
-        <tr>
-          <th class="px-4 py-2 font-semibold">{txt.feeHeadItem}</th>
-          <th class="px-4 py-2 text-right font-semibold">{txt.feeHeadPrice}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {fees.items.map((it: any) => (
-          <tr class="border-t border-line">
-            <td class="px-4 py-2">
-              <span class="text-xs text-muted">{pick(it, 'group', lang)}</span>
+  <div class="grid gap-6 lg:grid-cols-[1fr_1.15fr] lg:items-start">
+    <!-- Fee table -->
+    <div class="rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
+      <h3 class="mb-4 text-lg font-bold text-ink">{txt.feeTitle}</h3>
+      <div class="flex flex-col">
+        {fees.items.map((it: any, i: number) => (
+          <div class={`flex items-center justify-between py-3 ${i < fees.items.length - 1 ? 'border-b border-line' : ''}`}>
+            <span class="text-sm">
+              <span class={`text-xs ${it.addon ? 'font-semibold text-gold' : 'text-muted'}`}>{pick(it, 'group', lang)}</span>
               <span class="mx-1 text-muted">·</span>
               <span class="text-ink">{pick(it, 'label', lang)}</span>
-            </td>
-            <td class="px-4 py-2 text-right font-semibold tabular-nums text-ink">{money(it.price)}</td>
-          </tr>
+            </span>
+            <span class="font-bold tabular-nums text-ink">{money(it.price)}</span>
+          </div>
         ))}
-      </tbody>
-    </table>
-  </div>
-  {includes && <p class="mb-12 text-xs leading-relaxed text-muted">{includes}</p>}
+      </div>
+      {includes && <p class="mt-4 text-xs leading-relaxed text-muted">{includes}</p>}
+    </div>
 
-  <!-- 會員報名 -->
-  <h3 class="mb-2 text-lg font-bold text-ink">{txt.memberTitle}</h3>
-  <p class="mb-6 text-sm text-muted">{txt.memberNote}</p>
-  <div class="mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    {socs.map((s) => (
-      <a href={s.register_url} target="_blank" rel="noopener" class="flex items-center gap-3 rounded-lg border border-line bg-surface p-4 hover:border-accent">
-        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-line text-xs font-bold">{s.logo ? <img src={s.logo} alt={s.code} class="h-12 w-12 object-contain" /> : s.code}</div>
-        <span class="text-sm font-medium">{pick(s, 'name', lang)}</span>
-      </a>
-    ))}
+    <!-- Society + non-member -->
+    <div class="rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
+      <h3 class="mb-1.5 text-lg font-bold text-ink">{txt.memberTitle}</h3>
+      <p class="mb-4 text-[13px] text-muted">{txt.memberNote}</p>
+      <div class="grid gap-3 sm:grid-cols-2">
+        {socs.map((s) => (
+          <a href={s.register_url} target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-line p-3 transition-colors hover:border-accent">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-bg text-[11px] font-bold text-muted">
+              {s.logo ? <img src={s.logo} alt={s.code} class="h-10 w-10 object-contain" /> : s.code}
+            </div>
+            <span class="text-[13px] font-medium leading-snug text-ink">{pick(s, 'name', lang)}</span>
+          </a>
+        ))}
+      </div>
+      <div class="mt-5 flex items-center justify-between gap-4 border-t border-line pt-5">
+        <div>
+          <div class="text-[15px] font-bold text-ink">{txt.nonmemberTitle}</div>
+          <div class="text-[13px] text-muted">{txt.nonmemberNote}</div>
+        </div>
+        <a href={nonmemberUrl} target="_blank" rel="noopener" class="whitespace-nowrap rounded-lg bg-gradient-to-br from-accent to-teal-light px-5 py-2.5 text-sm font-bold text-teal-deep transition-transform hover:-translate-y-0.5">{txt.nonmemberBtn}</a>
+      </div>
+    </div>
   </div>
-
-  <!-- 非會員報名 -->
-  <h3 class="mb-2 text-lg font-bold text-ink">{txt.nonmemberTitle}</h3>
-  <p class="mb-6 text-sm text-muted">{txt.nonmemberNote}</p>
-  <a href={nonmemberUrl} target="_blank" rel="noopener" class="inline-block rounded-lg bg-accent px-6 py-3 font-semibold text-accent-contrast hover:opacity-90">{txt.nonmemberBtn}</a>
 </section>

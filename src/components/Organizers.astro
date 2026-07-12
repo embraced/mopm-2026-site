@@ -1,0 +1,24 @@
+---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { t, pick, type Lang } from '../lib/i18n';
+import SectionHeading from './SectionHeading.astro';
+const { lang } = Astro.props as { lang: Lang };
+const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')) as any[];
+---
+<section id="organizers" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
+  <SectionHeading title={t(lang, 'section.organizers')} subtitle={t(lang, 'section.organizersSub')} />
+  <div class="grid gap-5 rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)] sm:grid-cols-2 lg:grid-cols-3">
+    {socs.map((s) => (
+      <div class="flex items-center gap-4 rounded-xl bg-bg p-4">
+        <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-surface">
+          {s.logo ? <img src={s.logo} alt={s.code} class="h-12 w-12 object-contain" /> : <span class="text-xs font-bold text-accent">{s.code}</span>}
+        </div>
+        <div>
+          <div class="text-[13px] font-bold tracking-wide text-accent">{s.code}</div>
+          <div class="mt-0.5 text-sm font-medium leading-snug text-ink">{pick(s, 'name', lang)}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

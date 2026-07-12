@@ -12,8 +12,9 @@ start_date: "2026-11-14T08:30:00+08:00"
 end_date: "2026-11-15T17:00:00+08:00"
 venue_zh: "國立成功大學醫學院"
 venue_en: "College of Medicine, National Cheng Kung University"
-# TODO banner 待定，主辦提供初版後改為實際檔名（如 /banner-2026.png）
-banner: "/banner-placeholder.svg"
+# 目前用 handoff 設計版 key visual 作為過渡；學生徵稿作品就緒後覆蓋同名檔或改路徑。
+# 注意：banner-2026.png 約 4.9MB，上線前建議壓縮或轉為 WebP。
+banner: "/banner-2026.png"
 register_anchor: "#register"
 
 # 報名（主辦提供）

@@ -4,4 +4,4 @@
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-body { background: rgb(var(--color-bg)); color: rgb(var(--color-text)); font-family: system-ui, "Noto Sans TC", sans-serif; }
+body { background: rgb(var(--color-bg)); color: rgb(var(--color-text)); font-family: "Noto Sans TC", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }

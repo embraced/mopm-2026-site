@@ -1,0 +1,32 @@
+---
+// MOPM 2026 conference mark — "2a Offset Hub": 1 center node (host society) + 5
+// outer nodes (co-hosts), deliberately asymmetric. Stroke uses the brand teal by
+// default; pass `stroke` (any CSS color) for on-dark / decorative use.
+interface Props {
+  size?: number;
+  stroke?: string;
+  strokeWidth?: number;
+  class?: string;
+}
+const { size = 30, stroke = 'currentColor', strokeWidth = 1.6, class: klass } = Astro.props as Props;
+---
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke={stroke}
+  stroke-width={strokeWidth}
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class={klass}
+  aria-hidden="true"
+>
+  <path d="M7.54 12.3L5.6 7.87M9.29 12.23L11.5 5.92M10.38 13.01L16.82 7.93M10.9 14.61L17.5 14.93M10.2 16.2L11.94 17.94" />
+  <circle cx="8.5" cy="14.5" r="2.4" />
+  <circle cx="5" cy="6.5" r="1.5" />
+  <circle cx="12" cy="4.5" r="1.5" />
+  <circle cx="18" cy="7" r="1.5" />
+  <circle cx="19" cy="15" r="1.5" />
+  <circle cx="13" cy="19" r="1.5" />
+</svg>

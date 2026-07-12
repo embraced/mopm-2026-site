@@ -1,5 +1,58 @@
 ---
-const { lang } = Astro.props as { lang: 'zh' | 'en' };
-const text = lang === 'zh' ? '多體學與精準醫學聯合會議 MOPM 2026' : 'Multi-Omics & Precision Medicine Conference 2026';
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { t, type Lang } from '../lib/i18n';
+import Logo from './Logo.astro';
+const { lang } = Astro.props as { lang: Lang };
+const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
+const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')) as any[];
+const base = lang === 'en' ? '/en/' : '/';
+
+const nameFull = lang === 'zh' ? '多體學與精準醫學聯合會議' : 'Multi-Omics & Precision Medicine Conference';
+const editionLine = lang === 'zh' ? `第 ${c.edition} 屆` : `${c.edition}th Edition`;
+const venue = lang === 'zh' ? c.venue_zh : c.venue_en;
+const address = lang === 'zh' ? '701401 台南市東區大學路 1 號' : 'No. 1, University Rd, East Dist., Tainan 701401';
+const orgLine = (lang === 'zh' ? '六大學會聯合主辦：' : 'Jointly organized by: ') + socs.map((s) => s.code).join(' · ');
+
+const quick = [
+  { key: 'agenda', href: base + '#agenda' },
+  { key: 'register', href: base + '#register' },
+  { key: 'abstract', href: base + '#abstract' },
+];
+const quickTitle = lang === 'zh' ? '快速連結' : 'Quick Links';
 ---
-<footer class="border-t border-line py-8 text-center text-sm text-muted">{text}</footer>
+<footer class="mt-8 bg-header text-[#CBD5E1]">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-start justify-between gap-10 px-6 py-10 sm:px-8">
+    <div class="max-w-sm">
+      <div class="mb-2.5 flex items-center gap-3">
+        <Logo size={28} stroke="#58D5D0" strokeWidth={1.6} />
+        <span class="text-lg font-bold tracking-wide text-white">MOPM 2026</span>
+      </div>
+      <div class="text-sm font-semibold text-white">{nameFull}</div>
+      <div class="mt-0.5 text-xs text-[#94A3B8]">{editionLine}</div>
+    </div>
+
+    <div class="text-sm leading-8">
+      <div class="flex items-center gap-2.5">
+        <Logo size={16} stroke="#58D5D0" strokeWidth={1.6} class="shrink-0" />
+        <span>{venue}</span>
+      </div>
+      <div class="pl-[26px] text-[#94A3B8]">{address}</div>
+      <div class="pl-[26px]"><a href="https://2026.mopm.tw" class="text-[#CBD5E1] hover:text-accent">2026.mopm.tw</a></div>
+    </div>
+
+    <div class="flex flex-col gap-2.5">
+      <div class="text-xs uppercase tracking-widest text-[#94A3B8]">{quickTitle}</div>
+      {quick.map((q) => (
+        <a href={q.href} class="text-sm text-[#CBD5E1] transition-colors hover:text-accent">{t(lang, 'nav.' + q.key)}</a>
+      ))}
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4 text-[13px] text-[#64748B] sm:px-8">
+      <div>{orgLine}</div>
+      <div>© 2026 MOPM. All Rights Reserved.</div>
+    </div>
+  </div>
+</footer>

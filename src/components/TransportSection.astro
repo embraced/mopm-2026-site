@@ -1,46 +1,57 @@
 ---
 import { t, type Lang } from '../lib/i18n';
+import SectionHeading from './SectionHeading.astro';
 const { lang } = Astro.props as { lang: Lang };
 const mapSrc = 'https://www.google.com/maps?q=國立成功大學醫學院 成杏校區&output=embed';
+
+// teal line icons (car / train / hsr)
+const ICON = {
+  car: '<path d="M19 17h2v-4l-2-5H5L3 13v4h2M5 17a2 2 0 1 0 4 0M15 17a2 2 0 1 0 4 0M9 17h6"/>',
+  train: '<rect x="4" y="3" width="16" height="14" rx="2"/><path d="M4 11h16M8 21l2-4M16 21l-2-4M8.5 7h.01M15.5 7h.01"/>',
+  hsr: '<path d="M8 3h8l3 9H5l3-9ZM5 12v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6M8 19l-1 2M16 19l1 2M9 16h6"/>',
+};
 const modes = lang === 'zh'
   ? [
-      { icon: '🚗', label: '自行開車（國道路線）', lines: [
+      { icon: 'car', label: '自行開車（國道路線）', lines: [
           '南下：國道一號南下 → 下大灣交流道右轉 → 沿復興路（西向）往台南市區直走 → 接小東路直走即可抵達。（國道三號南下者轉國道8號西向，可接國道一號南向）',
           '北上：國道一號北上 → 下仁德交流道左轉 → 沿中山路（西向）往台南市區直走 → 接東門路 → 中華東路右轉（北向）→ 小東路口左轉（西向）直走即可抵達。（國道三號北上者轉86號快速道路西向，可接國道一號北向）',
         ] },
-      { icon: '🚆', label: '搭乘火車', lines: [
+      { icon: 'train', label: '搭乘火車', lines: [
           '台南站下車，自後站出口走大學路 → 勝利路左轉 → 遇小東路右轉約 100 公尺，左側即為醫學院成杏校區入口。',
         ] },
-      { icon: '🚄', label: '搭乘高鐵', lines: [
+      { icon: 'hsr', label: '搭乘高鐵', lines: [
           '高鐵台南站轉搭台鐵電車至台南火車站，自後站出口走大學路 → 勝利路左轉 → 遇小東路右轉約 100 公尺，左側即為醫學院成杏校區入口。',
         ] },
     ]
   : [
-      { icon: '🚗', label: 'By Car (Freeway)', lines: [
+      { icon: 'car', label: 'By Car (Freeway)', lines: [
           'Southbound: National Freeway 1 → exit at Dawan IC, turn right → Fuxing Rd (west) toward downtown → onto Xiaodong Rd, straight ahead to the College. (From Freeway 3, take Freeway 8 west to Freeway 1 south.)',
           'Northbound: National Freeway 1 → exit at Rende IC, turn left → Zhongshan Rd (west) toward downtown → Dongmen Rd → turn right onto Zhonghua E. Rd (north) → turn left at Xiaodong Rd (west), straight ahead to the College. (From Freeway 3, take Expressway 86 west to Freeway 1 north.)',
         ] },
-      { icon: '🚆', label: 'By Train', lines: [
+      { icon: 'train', label: 'By Train', lines: [
           'Alight at Tainan Station, take the rear exit onto University Rd → turn left at Shengli Rd → turn right at Xiaodong Rd; about 100 m ahead on the left is the Cheng-Hsing (medical) campus entrance.',
         ] },
-      { icon: '🚄', label: 'By High Speed Rail (THSR)', lines: [
+      { icon: 'hsr', label: 'By High Speed Rail (THSR)', lines: [
           'From THSR Tainan Station, transfer to the TRA local train to Tainan Station, then follow the train directions above to the Cheng-Hsing (medical) campus entrance.',
         ] },
     ];
 ---
-<section id="transport" class="mx-auto max-w-5xl px-4 py-16">
-  <h2 class="mb-6 text-2xl font-bold text-accent">{t(lang, 'section.transport')}</h2>
-  <div class="grid gap-6 md:grid-cols-2">
-    <iframe src={mapSrc} class="h-72 w-full rounded-lg border border-line md:h-full" loading="lazy"></iframe>
-    <div class="space-y-5 text-ink/80">
-      {modes.map((m) => (
-        <div>
-          <h3 class="mb-2 font-bold text-ink">{m.icon} {m.label}</h3>
-          <div class="space-y-3">
+<section id="transport" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
+  <SectionHeading title={t(lang, 'section.transport')} subtitle={t(lang, 'section.transportSub')} />
+  <div class="grid gap-6 md:grid-cols-2 md:items-stretch">
+    <iframe src={mapSrc} class="h-72 w-full rounded-2xl border border-line md:h-full" loading="lazy" title="Google Map"></iframe>
+    <div class="flex flex-col gap-5 rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
+      {modes.map((m, i) => (
+        <div class={i > 0 ? 'border-t border-line pt-5' : ''}>
+          <h3 class="mb-1.5 flex items-center gap-2 text-base font-bold text-ink">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--color-accent))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" set:html={ICON[m.icon as keyof typeof ICON]} />
+            {m.label}
+          </h3>
+          <div class="space-y-2 pl-7">
             {m.lines.map((l) => (
-              <div class="text-sm leading-relaxed">
-                {l.split('→').map((seg, i) => (
-                  <span class={i > 0 ? 'block pl-4' : 'block'}>{i > 0 ? '→ ' : ''}{seg.trim()}</span>
+              <div class="text-[13.5px] leading-relaxed text-muted">
+                {l.split('→').map((seg, j) => (
+                  <span class={j > 0 ? 'block pl-4' : 'block'}>{j > 0 ? '→ ' : ''}{seg.trim()}</span>
                 ))}
               </div>
             ))}
