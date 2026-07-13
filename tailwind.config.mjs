@@ -23,6 +23,8 @@ export default {
       },
       fontFamily: {
         sans: ['"Noto Sans TC"', 'system-ui', 'sans-serif'],
+        serif: ['"Noto Serif TC"', 'serif'],
+        spectral: ['"Spectral"', 'Georgia', 'serif'],
       },
     },
   },

@@ -1,6 +1,7 @@
 ---
 import { t, type Lang } from '../lib/i18n';
 const { lang } = Astro.props as { lang: Lang };
+const base = lang === 'en' ? '/en/' : '/';
 
 // Lucide-style line icons (calendar / mic / users / grid)
 const icons: Record<string, string> = {
@@ -18,27 +19,45 @@ const stats = [
 ];
 ---
 <section class="mx-auto max-w-6xl px-5 pt-9 sm:px-8">
-  <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
-    {stats.map((s) => (
-      <div class="flex items-center gap-4 rounded-2xl border border-line bg-surface p-4 shadow-[0_1px_8px_rgba(30,41,59,.05)] sm:p-5">
-        <svg
-          width="34"
-          height="34"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="rgb(var(--color-accent))"
-          stroke-width="1.6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="shrink-0"
-          set:html={icons[s.key]}
-        />
-        <div>
-          <div class="text-2xl font-extrabold leading-none text-accent">{s.num}</div>
-          <div class="mt-1 text-sm font-semibold text-ink">{t(lang, 'stats.' + s.key)}</div>
-          <div class="text-[11px] text-muted">{t(lang, 'stats.' + s.key + 'Sub')}</div>
+  <div class="flex flex-wrap items-center gap-x-6 gap-y-6">
+    {/* Quick facts — icon + text groups, no cards (aligns with the design) */}
+    <div class="flex flex-1 flex-wrap items-center justify-center gap-x-9 gap-y-5 sm:justify-start">
+      {stats.map((s) => (
+        <div class="flex items-center gap-3.5">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="rgb(var(--color-accent))"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="shrink-0"
+            set:html={icons[s.key]}
+          />
+          <div>
+            <div class="text-[26px] font-extrabold leading-none text-accent">{s.num}</div>
+            <div class="mt-1 text-sm font-semibold text-ink">{t(lang, 'stats.' + s.key)}</div>
+            <div class="text-[11px] text-muted">{t(lang, 'stats.' + s.key + 'Sub')}</div>
+          </div>
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
+    {/* CTAs — right side of the stats row */}
+    <div class="flex w-full flex-wrap items-center justify-center gap-3 sm:w-auto sm:justify-start">
+      <a
+        href={base + '#register'}
+        class="rounded-lg bg-gradient-to-br from-accent to-teal-light px-7 py-3 text-[15px] font-bold text-teal-deep shadow-[0_6px_16px_rgba(88,213,208,.35)] transition-transform hover:-translate-y-0.5"
+      >{t(lang, 'hero.register')}</a>
+      <a
+        href={base + '#abstract'}
+        class="rounded-lg bg-gold px-7 py-3 text-[15px] font-bold text-gold-contrast shadow-[0_6px_16px_rgba(201,168,106,.35)] transition-transform hover:-translate-y-0.5"
+      >{t(lang, 'hero.submit')}</a>
+      <a
+        href={base + '#about'}
+        class="rounded-lg border-[1.5px] border-accent bg-white px-6 py-2.5 text-[15px] font-semibold text-[#2E8F8B] transition-colors hover:bg-accent/10"
+      >{t(lang, 'hero.learn')}</a>
+    </div>
   </div>
 </section>

@@ -10,7 +10,7 @@ const { title, subtitle, id } = Astro.props as Props;
 const hasAction = Astro.slots.has('default');
 ---
 <div class="mb-6 flex flex-wrap items-baseline gap-x-3 gap-y-1" id={id}>
-  <h2 class="m-0 text-2xl font-bold tracking-tight text-accent sm:text-[28px]">{title}</h2>
-  {subtitle && <span class="text-base font-medium text-muted">{subtitle}</span>}
+  <h2 class="m-0 font-serif text-2xl font-black tracking-tight text-accent sm:text-[28px]">{title}</h2>
+  {subtitle && <span class="font-spectral text-base italic text-muted">{subtitle}</span>}
   {hasAction && <div class="ml-auto"><slot /></div>}
 </div>

@@ -1,0 +1,28 @@
+---
+// Fixed "back to top" button, bottom-right on all viewports.
+// Hidden until the user scrolls down; smooth-scrolls to top on click.
+---
+<button
+  id="back-to-top"
+  type="button"
+  aria-label="回到頂部 · Back to top"
+  class="pointer-events-none fixed bottom-5 right-5 z-50 flex h-11 w-11 translate-y-2 items-center justify-center rounded-full bg-accent text-teal-deep opacity-0 shadow-[0_6px_16px_rgba(88,213,208,.4)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-105 sm:bottom-8 sm:right-8 sm:h-12 sm:w-12"
+>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7" />
+  </svg>
+</button>
+<script>
+  const btn = document.getElementById('back-to-top');
+  if (btn) {
+    const toggle = () => {
+      const show = window.scrollY > 400;
+      btn.classList.toggle('opacity-0', !show);
+      btn.classList.toggle('translate-y-2', !show);
+      btn.classList.toggle('pointer-events-none', !show);
+    };
+    toggle();
+    window.addEventListener('scroll', toggle, { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+</script>
