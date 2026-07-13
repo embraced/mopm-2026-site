@@ -1,0 +1,25 @@
+---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { t, pick, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')) as any[];
+---
+<section class="w-full border-b border-[#EEF1F5] bg-white">
+  <div class="mx-auto flex max-w-[1360px] flex-wrap items-center gap-6 px-6 py-6 sm:gap-8 sm:px-10 sm:py-[26px]">
+    <div class="shrink-0">
+      <div class="text-[12px] font-bold uppercase tracking-[1.5px] text-slate-400">Co-hosted by</div>
+      <div class="mt-0.5 text-[15px] font-bold text-[#1E293B]">{t(lang, 'section.organizersSub')}</div>
+    </div>
+    <div class="flex min-w-[280px] flex-1 flex-wrap items-center justify-around gap-7">
+      {socs.map((s) => (
+        <img
+          src={s.logo}
+          alt={s.code}
+          title={pick(s, 'name', lang)}
+          class="h-[46px] w-auto object-contain opacity-85 transition-opacity hover:opacity-100"
+        />
+      ))}
+    </div>
+  </div>
+</section>
