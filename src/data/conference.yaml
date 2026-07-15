@@ -21,8 +21,7 @@ register_anchor: "#register"
 register_deadline_zh: "即日起至 2026 年 10 月 16 日（五）17:00"
 # 以中文版 2026/10/16 為準（報名文件英文版誤植 October 30, 2025，已確認忽略）
 register_deadline_en: "Now open through 17:00, October 16, 2026 (Fri.)"
-# TODO 非會員線上報名連結（主辦提供後替換佔位）
-nonmember_register_url: "https://forms.gle/TODO"
+nonmember_register_url: "https://www.proteomics.org.tw/%E7%B9%B3%E8%B2%BB%E5%B0%88%E5%8D%80/%E6%9C%83%E8%AD%B0%E8%A8%BB%E5%86%8A%E8%B2%BB/"
 
 # 摘要投稿（主辦提供）
 abstract_form_url: "https://forms.gle/FFGo2LcTw1f3SMxk8"
