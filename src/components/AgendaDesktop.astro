@@ -28,7 +28,12 @@ const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103']
                 <td class="border-b border-line p-2 align-top font-semibold text-accent">{slot.time}</td>
                 {slot.tracks!.map((tk, i) => (
                   <td class={`border-b border-l border-line p-2 align-top break-words ${trackColor[i]} border-l-4`}>
-                    {tk.session && <div class="text-xs font-bold text-muted">{tk.session}</div>}
+                    {(tk.session || tk.organizer) && (
+                      <div class="mb-0.5 flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
+                        {tk.session && <span class="text-xs font-bold text-muted">{tk.session}</span>}
+                        {tk.organizer && <span class="rounded border border-line px-1.5 text-[10px] font-bold tracking-wide text-muted">{tk.organizer}</span>}
+                      </div>
+                    )}
                     <div class="font-medium">{pick(tk, 'title', lang) || tk.title_zh}</div>
                     {tk.speaker && (() => {
                       const sp = splitSpeaker(tk.speaker);
@@ -37,6 +42,10 @@ const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103']
                           {sp.person}{sp.affiliation && <span class="block opacity-80">{sp.affiliation}</span>}
                         </div>
                       );
+                    })()}
+                    {tk.moderator && (() => {
+                      const m = splitSpeaker(tk.moderator);
+                      return <div class="mt-1 text-[11px] text-muted opacity-80">Moderator: {m.person}{m.affiliation ? ' ' + m.affiliation : ''}</div>;
                     })()}
                   </td>
                 ))}
@@ -49,7 +58,8 @@ const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103']
                   {slot.speaker && (() => {
                     const sp = splitSpeaker(slot.speaker);
                     const aff = sp.affiliation || pick(slot, 'affiliation', lang);
-                    return <span class="text-xs text-muted">　{sp.person}{aff ? ' ' + aff : ''}</span>;
+                    // 間距用 class，不要用全形空白字面值——JSX 會把它吃掉，標題與講者會黏在一起
+                    return <span class="ml-3 text-xs text-muted">{sp.person}{aff ? ' · ' + aff : ''}</span>;
                   })()}
                   {slot.moderator && (() => {
                     const m = splitSpeaker(slot.moderator);

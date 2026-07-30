@@ -31,7 +31,7 @@ const venueIndex = (v: string) => Math.max(0, agenda.venues.indexOf(v));
             <div class="mb-1 text-xs font-bold text-accent">{slot.time}・{lang === 'zh' ? '平行場次' : 'Parallel'}</div>
             {slot.tracks!.map((tk) => (
               <div class={`track-card mb-2 rounded-md border-l-4 ${trackBorder[venueIndex(tk.venue)] ?? 'border-line'} bg-surface p-3`} data-venue={tk.venue}>
-                <div class="text-xs font-bold text-muted">{tk.venue}・{tk.session}</div>
+                <div class="text-xs font-bold text-muted">{[tk.venue, tk.session, tk.organizer].filter(Boolean).join('・')}</div>
                 <div class="text-sm font-medium">{pick(tk, 'title', lang) || tk.title_zh}</div>
                 {tk.speaker && (() => {
                   const sp = splitSpeaker(tk.speaker);
@@ -40,6 +40,10 @@ const venueIndex = (v: string) => Math.max(0, agenda.venues.indexOf(v));
                       {sp.person}{sp.affiliation && <span class="block opacity-80">{sp.affiliation}</span>}
                     </div>
                   );
+                })()}
+                {tk.moderator && (() => {
+                  const m = splitSpeaker(tk.moderator);
+                  return <div class="mt-1 text-[11px] text-muted opacity-80">Moderator: {m.person}{m.affiliation ? ' ' + m.affiliation : ''}</div>;
                 })()}
               </div>
             ))}

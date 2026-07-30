@@ -4,8 +4,8 @@ venues:
   - 第二講堂
 days:
   - date: '2026-11-14'
-    label_en: Day 1
-    label_zh: Day 1
+    label_en: Day 1 · Nov 14 (Sat)
+    label_zh: 第 1 天 · 11/14（六）
     slots:
       - time: 08:00-09:00
         type: break
@@ -22,38 +22,62 @@ days:
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 1:'
-            title_zh: Talk 1-1
+            session: 'Session 1: AI 與精準醫療研究'
+            organizer: TPS
+            title_zh: Talk 1-1 · TBA
+            speaker: 陳璿宇 研究員 中研院統計所
           - venue: 第一講堂
-            session: 'Session 2:'
-            title_zh: Talk 2-1
+            session: 'Session 2: AI for Bioinformatics'
+            organizer: TBSB
+            moderator: 張資昊教授 台北醫學大學
+            title_zh: Talk 2-1 · TBA
+            speaker: 何信瑩教授 陽明交通大學
           - venue: 第二講堂
-            session: 'Session 3:'
-            title_zh: Talk 3-1
+            session: 'Session 3: 精準醫學檢測與多體學判讀'
+            organizer: TPMS
+            moderator: 王智弘 總院長 臺北市立聯合醫院
+            title_zh: 'Talk 3-1: NGS、LDTs 與分子腫瘤委員會：多體學報告如何轉成臨床決策'
+            speaker: 陳燕麟 主任 三軍總醫院精準醫學暨基因體中心
       - time: 10:05-10:40
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 1:'
-            title_zh: Talk 1-2
+            session: 'Session 1: AI 與精準醫療研究'
+            organizer: TPS
+            title_zh: Talk 1-2 · TBA
+            speaker: TBA
           - venue: 第一講堂
-            session: 'Session 2:'
-            title_zh: Talk 2-2
+            session: 'Session 2: AI for Bioinformatics'
+            organizer: TBSB
+            moderator: 張資昊教授 台北醫學大學
+            title_zh: Talk 2-2 · TBA
+            speaker: 朱彥煒教授 中興大學
           - venue: 第二講堂
-            session: 'Session 3:'
-            title_zh: Talk 3-2
+            session: 'Session 3: 精準醫學檢測與多體學判讀'
+            organizer: TPMS
+            moderator: 王智弘 總院長 臺北市立聯合醫院
+            title_zh: 'Talk 3-2: 原發性嚴重皮膚過敏發炎性疾病之基因診斷：從檢測到臨床判讀'
+            speaker: 楊晶安 醫師 林口長庚紀念醫院檢驗醫學部
       - time: 10:40-11:15
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 1:'
-            title_zh: Talk 1-3
+            session: 'Session 1: AI 與精準醫療研究'
+            organizer: TPS
+            title_zh: Talk 1-3 · TBA
+            speaker: TBA
           - venue: 第一講堂
-            session: 'Session 2:'
-            title_zh: Talk 2-3
+            session: 'Session 2: AI for Bioinformatics'
+            organizer: TBSB
+            moderator: 張資昊教授 台北醫學大學
+            title_zh: Talk 2-3 · TBA
+            speaker: 黃耀廷教授 中正大學
           - venue: 第二講堂
-            session: 'Session 3:'
-            title_zh: Talk 3-3
+            session: 'Session 3: 精準醫學檢測與多體學判讀'
+            organizer: TPMS
+            moderator: 王智弘 總院長 臺北市立聯合醫院
+            title_zh: 'Talk 3-3: Precision Medicine in Hematology Practice'
+            speaker: 陳昱光 博士醫師 三軍總醫院血液腫瘤部
       - time: 11:15-11:40
         type: break
         category: break
@@ -65,7 +89,8 @@ days:
       - time: 11:50-12:35
         type: plenary
         category: keynote
-        title_zh: 'Keynote Talk 1:'
+        title_zh: Keynote Talk 1 · TBA
+        speaker: Heng Zhu (Johns Hopkins University)
       - time: 12:35-13:40
         type: break
         category: lunch
@@ -77,7 +102,8 @@ days:
       - time: 13:50-14:35
         type: plenary
         category: keynote
-        title_zh: 'Keynote Talk 2:'
+        title_zh: Keynote Talk 2 · TBA
+        speaker: 吉田信介博士 日本京都大學
       - time: 14:35-14:50
         type: break
         category: break
@@ -86,38 +112,59 @@ days:
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 4:'
-            title_zh: Talk 4-1
+            session: 'Session 4: Evolutionary genomics'
+            organizer: TSECB
+            moderator: 許家郎 (台灣大學附設醫院醫學研究部)
+            title_zh: Talk 4-1 · TBA
+            speaker: 呂美曄 (中研院生物多樣性研究中心)
           - venue: 第一講堂
-            session: 'Session 5:'
-            title_zh: Talk 5-1
+            session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
+            organizer: TGMBS
+            moderator: 莊智弘 教授 高雄醫學大學醫學檢驗生物技術學系
+            title_zh: Talk 5-1 · TBA
+            speaker: 王慧菁 教授 國立清華大學生命科學暨醫學院分子與細胞生物研究所
           - venue: 第二講堂
-            session: 'Session 6:'
-            title_zh: Talk 6-1
+            session: 'Session 6: TBA'
+            organizer: TSEV
+            title_zh: Talk 6-1 · TBA
       - time: 15:25-16:00
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 4:'
-            title_zh: Talk 4-2
+            session: 'Session 4: Evolutionary genomics'
+            organizer: TSECB
+            moderator: 許家郎 (台灣大學附設醫院醫學研究部)
+            title_zh: Talk 4-2 · TBA
+            speaker: 陳志冠 (東華大學生化暨分子醫學科學系)
           - venue: 第一講堂
-            session: 'Session 5:'
-            title_zh: Talk 5-2
+            session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
+            organizer: TGMBS
+            moderator: 莊智弘 教授 高雄醫學大學醫學檢驗生物技術學系
+            title_zh: Talk 5-2 · TBA
+            speaker: 黃柏憲 副教授 國立成功大學生物化學暨分子生物學研究所
           - venue: 第二講堂
-            session: 'Session 6:'
-            title_zh: Talk 6-2
+            session: 'Session 6: TBA'
+            organizer: TSEV
+            title_zh: Talk 6-2 · TBA
       - time: 16:00-16:35
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 4:'
-            title_zh: Talk 4-3
+            session: 'Session 4: Evolutionary genomics'
+            organizer: TSECB
+            moderator: 許家郎 (台灣大學附設醫院醫學研究部)
+            title_zh: Talk 4-3 · TBA
+            speaker: 李承叡 (台灣大學生態學與演化生物學研究所)
           - venue: 第一講堂
-            session: 'Session 5:'
-            title_zh: Talk 5-3
+            session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
+            organizer: TGMBS
+            moderator: 莊智弘 教授 高雄醫學大學醫學檢驗生物技術學系
+            title_zh: Talk 5-3 · TBA
+            speaker: 李佳陽 教授 高雄醫學大學醫學研究所
           - venue: 第二講堂
-            session: 'Session 6:'
-            title_zh: Talk 6-3
+            session: 'Session 6: TBA'
+            organizer: TSEV
+            title_zh: Talk 6-3 · TBA
       - time: 16:35-17:30
         type: plenary
         title_zh: (Board of Directors meeting / General Assembly)
@@ -126,8 +173,8 @@ days:
         category: banquet
         title_zh: Invited Banquet
   - date: '2026-11-15'
-    label_en: Day 2
-    label_zh: Day 2
+    label_en: Day 2 · Nov 15 (Sun)
+    label_zh: 第 2 天 · 11/15（日）
     slots:
       - time: 08:00-09:00
         type: break
@@ -140,8 +187,8 @@ days:
       - time: 09:10-09:55
         type: plenary
         category: keynote
-        title_zh: 'Keynote Talk 3:'
-        moderator: (TSECB)
+        title_zh: Keynote Talk 3 · TBA
+        speaker: Aaron M. Newman (Stanford University)
       - time: 09:55-10:20
         type: break
         category: break
@@ -150,38 +197,59 @@ days:
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 7:'
-            title_zh: Talk 7-1
+            session: 'Session 7: Systems Biology'
+            organizer: TSECB
+            moderator: 吳謂勝 (國立成功大學電機工程)
+            title_zh: Talk 7-1 · TBA
+            speaker: 林之儀 (國立中興大學生命科學系)
           - venue: 第一講堂
-            session: 'Session 8:'
-            title_zh: Talk 8-1
+            session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
+            organizer: TGMBS
+            moderator: 黃友利 教授 高雄醫學大學醫學檢驗生物技術學系
+            title_zh: Talk 8-1 · TBA
+            speaker: 徐丞志 副教授 國立臺灣大學化學系暨研究所
           - venue: 第二講堂
-            session: 'Session 9:'
-            title_zh: Talk 9-1
+            session: 'Session 9: TBA'
+            organizer: TSEV
+            title_zh: Talk 9-1 · TBA
       - time: 10:55-11:30
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 7:'
-            title_zh: Talk 7-2
+            session: 'Session 7: Systems Biology'
+            organizer: TSECB
+            moderator: 吳謂勝 (國立成功大學電機工程)
+            title_zh: Talk 7-2 · TBA
+            speaker: 林暐翔 (中研院分子生物研究所)
           - venue: 第一講堂
-            session: 'Session 8:'
-            title_zh: Talk 8-2
+            session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
+            organizer: TGMBS
+            moderator: 黃友利 教授 高雄醫學大學醫學檢驗生物技術學系
+            title_zh: Talk 8-2 · TBA
+            speaker: 柯良胤 教授 高雄醫學大學醫學檢驗生物技術學系
           - venue: 第二講堂
-            session: 'Session 9:'
-            title_zh: Talk 9-2
+            session: 'Session 9: TBA'
+            organizer: TSEV
+            title_zh: Talk 9-2 · TBA
       - time: 11:30-12:05
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 7:'
-            title_zh: Talk 7-3
+            session: 'Session 7: Systems Biology'
+            organizer: TSECB
+            moderator: 吳謂勝 (國立成功大學電機工程)
+            title_zh: 'Talk 7-3: Beyond Transcription: Novel Mechanisms of HIF-1α in Small RNA Regulation, the Exoswitch'
+            speaker: 李婕寧 (Postdoctoral Research Fellow, 國立成功大學醫學檢驗生物技術學系)
           - venue: 第一講堂
-            session: 'Session 8:'
-            title_zh: Talk 8-3
+            session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
+            organizer: TGMBS
+            moderator: 黃友利 教授 高雄醫學大學醫學檢驗生物技術學系
+            title_zh: Talk 8-3 · TBA
+            speaker: 朱俐潔 助理教授 長庚大學生物醫學研究所
           - venue: 第二講堂
-            session: 'Session 9:'
-            title_zh: Talk 9-3
+            session: 'Session 9: TBA'
+            organizer: TSEV
+            title_zh: Talk 9-3 · TBA
       - time: 12:05-14:05
         type: break
         category: lunch
@@ -193,38 +261,59 @@ days:
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 10:'
-            title_zh: Talk 10-1
+            session: 'Session 10: 質譜多體學大數據生醫分析'
+            organizer: TPS
+            title_zh: Talk 10-1 · TBA
+            speaker: 于松桓老師 中山大學精準所
           - venue: 第一講堂
-            session: 'Session 11:'
-            title_zh: Talk 11-1
+            session: 'Session 11: Multi-Omics in Translational Medicine'
+            organizer: TBSB
+            title_zh: Talk 11-1 · TBA
+            speaker: 林峻宇教授 陽明交通大學
           - venue: 第二講堂
-            session: 'Session 12:'
-            title_zh: Talk 12-1
+            session: 'Session 12: 精準醫學臨床應用與未來治療策略'
+            organizer: TPMS
+            moderator: 陳相成 國防部軍醫局醫務管理處處長
+            title_zh: 'Talk 12-1: 藥物基因體學之臨床應用'
+            speaker: 黃織芬 所長 國立臺灣大學臨床藥學研究所
       - time: 14:40-15:15
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 10:'
-            title_zh: Talk 10-2
+            session: 'Session 10: 質譜多體學大數據生醫分析'
+            organizer: TPS
+            title_zh: Talk 10-2 · TBA
+            speaker: 陳志杰老師 中山大學醫科所
           - venue: 第一講堂
-            session: 'Session 11:'
-            title_zh: Talk 11-2
+            session: 'Session 11: Multi-Omics in Translational Medicine'
+            organizer: TBSB
+            title_zh: Talk 11-2 · TBA
+            speaker: 楊子賢教授 成功大學
           - venue: 第二講堂
-            session: 'Session 12:'
-            title_zh: Talk 12-2
+            session: 'Session 12: 精準醫學臨床應用與未來治療策略'
+            organizer: TPMS
+            moderator: 陳相成 國防部軍醫局醫務管理處處長
+            title_zh: 'Talk 12-2: Cell-Based Liquid Biopsy: CTCs in the Era of Personalized'
+            speaker: 周輝政 醫師 臺安醫院婦產科
       - time: 15:15-15:50
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 10:'
-            title_zh: Talk 10-3
+            session: 'Session 10: 質譜多體學大數據生醫分析'
+            organizer: TPS
+            title_zh: Talk 10-3 · TBA
+            speaker: 李宗夷理事長 陽明交大資工所
           - venue: 第一講堂
-            session: 'Session 11:'
-            title_zh: Talk 11-3
+            session: 'Session 11: Multi-Omics in Translational Medicine'
+            organizer: TBSB
+            title_zh: Talk 11-3 · TBA
+            speaker: 李建融教授 長庚大學
           - venue: 第二講堂
-            session: 'Session 12:'
-            title_zh: Talk 12-3
+            session: 'Session 12: 精準醫學臨床應用與未來治療策略'
+            organizer: TPMS
+            moderator: 陳相成 國防部軍醫局醫務管理處處長
+            title_zh: 'Talk 12-3: Precision Cell Therapy 精準細胞治療'
+            speaker: 宋柏儀 (國防醫學大學)
       - time: 15:50-16:30
         type: plenary
         category: ceremony
