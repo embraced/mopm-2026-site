@@ -1,5 +1,5 @@
 {
-  "nav": { "about": "關於會議", "speakers": "講者陣容", "agenda": "議程", "register": "報名資訊", "abstract": "摘要投稿", "transport": "交通資訊", "sponsors": "贊助" },
+  "nav": { "about": "關於會議", "speakers": "講者陣容", "agenda": "議程", "register": "報名資訊", "abstract": "摘要投稿", "transport": "交通資訊", "accommodation": "住宿", "sponsors": "贊助" },
   "hero": { "register": "立即報名", "submit": "立即投稿", "learn": "了解更多" },
   "stats": {
     "days": "天會議", "daysSub": "11.14 – 11.15",
@@ -15,6 +15,7 @@
     "register": "報名資訊", "registerSub": "Registration",
     "abstract": "摘要投稿", "abstractSub": "Abstract Submission",
     "transport": "交通資訊", "transportSub": "成大醫學院 · 成杏校區",
+    "accommodation": "住宿資訊", "accommodationSub": "特約飯店專案",
     "organizers": "主辦單位", "organizersSub": "六大學會聯合主辦",
     "sponsors": "會議贊助", "sponsorsSub": "Sponsors",
     "photos": "活動照片", "photosSub": "會議回顧"

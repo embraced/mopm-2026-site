@@ -13,6 +13,7 @@ const items = [
   { key: 'register', href: base + '#register' },
   { key: 'abstract', href: base + '#abstract' },
   { key: 'transport', href: base + '#transport' },
+  { key: 'accommodation', href: base + '#accommodation' },
 ];
 ---
 <header class="sticky top-0 z-50 bg-header/95 backdrop-blur">
@@ -22,7 +23,8 @@ const items = [
       <span class="text-lg font-bold tracking-wide text-white sm:text-xl">MOPM <span class="text-accent">2026</span></span>
     </a>
     <div class="flex items-center gap-5 sm:gap-7">
-      <div class="hidden items-center gap-6 text-[15px] font-medium md:flex">
+      <!-- 7 個項目在 md 斷點會擠爆可用寬度，md 收緊間距、lg 再放回 gap-6 -->
+      <div class="hidden items-center gap-4 text-[15px] font-medium md:flex lg:gap-6">
         {items.map((i) => (
           <a href={i.href} class="text-[#E9EEF3] transition-colors hover:text-accent">{t(lang, 'nav.' + i.key)}</a>
         ))}

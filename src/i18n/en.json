@@ -1,5 +1,5 @@
 {
-  "nav": { "about": "About", "speakers": "Speakers", "agenda": "Agenda", "register": "Registration", "abstract": "Abstract", "transport": "Travel", "sponsors": "Sponsors" },
+  "nav": { "about": "About", "speakers": "Speakers", "agenda": "Agenda", "register": "Registration", "abstract": "Abstract", "transport": "Travel", "accommodation": "Stay", "sponsors": "Sponsors" },
   "hero": { "register": "Register Now", "submit": "Submit Abstract", "learn": "Learn More" },
   "stats": {
     "days": "Days", "daysSub": "Nov 14 – 15",
@@ -15,6 +15,7 @@
     "register": "Registration", "registerSub": "Fees & Sign-up",
     "abstract": "Abstract Submission", "abstractSub": "Poster Only",
     "transport": "Travel", "transportSub": "NCKU · College of Medicine",
+    "accommodation": "Accommodation", "accommodationSub": "Conference Hotel Rates",
     "organizers": "Organizers", "organizersSub": "Six Societies",
     "sponsors": "Sponsors", "sponsorsSub": "Our Supporters",
     "photos": "Gallery", "photosSub": "Highlights"
