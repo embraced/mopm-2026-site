@@ -9,6 +9,11 @@
 - 地點：國立成功大學醫學院 (College of Medicine, National Cheng Kung University)，臺南市
 - 官方網站：https://2026.mopm.tw
 
+## 大會主題演講 Keynote Speakers
+- Heng Zhu（教授，美國約翰霍普金斯大學醫學院藥理與分子科學系）— 蛋白質體學、高通量蛋白質晶片
+- 吉田信介（資深研究學者／開發中心副中心長，日本京都大學 CiRA Foundation）— 臨床級 iPS 細胞量產與供應體系
+- Aaron M. Newman（副教授，美國史丹佛大學生物醫學數據科學系）— 計算生物學、CIBERSORT/CIBERSORTx
+
 ## 摘要投稿 Abstract Submission
 - 形式：僅接受海報發表 (Poster Presentation only)；摘要以英文撰寫、1 頁為限、上傳 PDF（10 MB 以內）
 - 投稿截止：2026 年 9 月 11 日（五）23:59 (September 11, 2026)
