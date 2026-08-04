@@ -7,7 +7,7 @@
   title_en: "Professor"
   affiliation_zh: "美國約翰霍普金斯大學醫學院藥理與分子科學系"
   affiliation_en: "Dept. of Pharmacology and Molecular Sciences, Johns Hopkins University School of Medicine"
-  photo: ""
+  photo: "/speaker-heng-zhu.webp"
   bio_zh: "專精於高通量蛋白質體學與系統生物學，開發了包含 HuProt 與 VirD 等功能性蛋白質微陣列平台，使研究人員得以進行大規模的多體學研究。"
   bio_en: "Specializing in high-throughput proteomics and systems biology; Dr. Zhu developed functional protein microarrays—such as the HuProt and VirD platforms—that enable researchers to conduct large-scale multi-omics research."
   links:
@@ -26,7 +26,7 @@
   title_en: "Former Deputy Director"
   affiliation_zh: "日本京都大學 CiRA 基金會"
   affiliation_en: "CiRA Foundation, Kyoto University, Japan"
-  photo: ""
+  photo: "/speaker-shinsuke-yoshida.webp"
   bio_zh: "再生醫學轉譯專家，曾主導建立臨床級 HLA 純合子 iPSC 細胞庫品管（QA），現致力於細胞自動化製程開發及跨國精準醫療整合。"
   bio_en: "Translational researcher in regenerative medicine who led quality assurance (QA) for clinical-grade iPSC Haplobanks, now dedicated to automated cell manufacturing and integrating transnational precision medicine frameworks."
 - name: "Aaron M. Newman"
