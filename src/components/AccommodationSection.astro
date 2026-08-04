@@ -3,15 +3,17 @@ import { t, type Lang } from '../lib/i18n';
 import SectionHeading from './SectionHeading.astro';
 const { lang } = Astro.props as { lang: Lang };
 
-// 主辦洽談的特約住宿（imports/附件1~3，2026-07-30）。
-// 這是研討會網站不是訂房網：只給飯店名、官網、訂房單三個連結，
-// 房價／條件／取消規定一律留在訂房單 PDF 裡，不在站上複製一份會過期的資料。
+// 主辦洽談的特約住宿（imports/特約住宿資訊.docx + 附件1~3，2026-08-04 三間版）。
+// 這是研討會網站不是訂房網：只給飯店名、與會場的距離、官網、訂房方式。
+// 房價／折扣／取消規定一律留在訂房單 PDF 或飯店訂房頁，不在站上複製一份會過期的資料。
 interface Hotel {
   name: string;
   sub: string;
+  distance: string;
   site: string;
-  form: string;
-  formLabel: string;
+  /** 訂房單 PDF（站內 /xxx.pdf）或飯店線上訂房頁（http 開頭）。 */
+  book: string;
+  bookLabel: string;
 }
 
 const hotels: Hotel[] = lang === 'zh'
@@ -19,49 +21,76 @@ const hotels: Hotel[] = lang === 'zh'
       {
         name: '台南遠東香格里拉',
         sub: "Shangri-La's Far Eastern Plaza Hotel, Tainan",
-        site: 'https://www.shangri-la.com/tc/tainan/fareasternplazashangrila/',
-        form: '/hotel-shangri-la-booking-form-zh.pdf',
-        formLabel: '訂房單 PDF',
+        distance: '距成大醫學院約 1.1 公里 · 步行 16 分／公車 9 分',
+        site: 'https://sltn.fareasternhotel.com.tw/tc/',
+        book: '/hotel-shangri-la-booking-form-zh.pdf',
+        bookLabel: '訂房單 PDF',
+      },
+      {
+        name: '禧榕軒大飯店',
+        sub: 'Grand Banyan Hotel',
+        distance: '距成大醫學院約 1.7 公里 · 步行 25 分／公車 16 分',
+        site: 'https://www.grandbanyanhotel.com/',
+        book: 'https://tlathena.ec-hotel.net/webhotel-v4/0967/rmProducts/PK26030/special',
+        bookLabel: '線上訂房',
       },
       {
         name: '台南老爺行旅',
         sub: 'The Place Tainan',
+        distance: '距成大醫學院約 2.4 公里 · 步行 34 分／公車 15 分',
         site: 'https://www.hotelroyal.com.tw/zh-tw/tainan',
-        form: '/hotel-the-place-tainan-booking-form-zh.pdf',
-        formLabel: '訂房單 PDF',
+        book: '/hotel-the-place-tainan-booking-form-zh.pdf',
+        bookLabel: '訂房單 PDF',
       },
     ]
   : [
       {
         name: "Shangri-La's Far Eastern Plaza Hotel, Tainan",
         sub: '台南遠東香格里拉',
+        distance: '1.1 km from the venue · 16-min walk / 9-min bus',
         site: 'https://www.shangri-la.com/tainan/fareasternplazashangrila/',
-        form: '/hotel-shangri-la-booking-form-en.pdf',
-        formLabel: 'Booking form (PDF)',
+        book: '/hotel-shangri-la-booking-form-en.pdf',
+        bookLabel: 'Booking form (PDF)',
+      },
+      {
+        name: 'Grand Banyan Hotel',
+        sub: '禧榕軒大飯店',
+        distance: '1.7 km from the venue · 25-min walk / 16-min bus',
+        site: 'https://www.grandbanyanhotel.com/en/',
+        book: 'https://tlathena.ec-hotel.net/webhotel-v4/0967/rmProducts/PK26030/special',
+        bookLabel: 'Book online',
       },
       {
         name: 'The Place Tainan',
         sub: '台南老爺行旅',
+        distance: '2.4 km from the venue · 34-min walk / 15-min bus',
         site: 'https://www.hotelroyal.com.tw/en-us/tainan',
-        form: '/hotel-the-place-tainan-booking-form-zh.pdf',
-        formLabel: 'Booking form (PDF, Chinese)',
+        book: '/hotel-the-place-tainan-booking-form-zh.pdf',
+        bookLabel: 'Booking form (PDF, Chinese)',
       },
     ];
 
 const txt = lang === 'zh'
-  ? { site: '飯店官網', note: '兩間飯店提供大會特約價，方案與房價詳見訂房單。請自行與飯店聯繫訂房，大會不代訂。' }
-  : { site: 'Hotel website', note: 'Both hotels offer a conference rate; see the booking form for details. Please book directly with the hotel — the conference does not handle reservations.' };
+  ? {
+      site: '飯店官網',
+      note: '三間飯店提供 11/13（五）、11/14（六）兩晚大會特約價，房型與房價依飯店房況浮動，以飯店最終確認為準。請自行與飯店聯繫訂房，大會不代訂。',
+    }
+  : {
+      site: 'Hotel website',
+      note: 'All three hotels offer a conference rate for the nights of Fri 13 and Sat 14 November. Room types and rates vary with availability and are subject to final confirmation by the hotel. Please book directly with the hotel — the conference does not handle reservations.',
+    };
 ---
 <section id="accommodation" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
   <SectionHeading title={t(lang, 'section.accommodation')} subtitle={t(lang, 'section.accommodationSub')} />
-  <div class="grid gap-4 sm:grid-cols-2">
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
     {hotels.map((h) => (
-      <div class="rounded-xl bg-surface p-5 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
+      <div class="flex flex-col rounded-xl bg-surface p-5 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
         <h3 class="text-base font-bold leading-snug text-ink">{h.name}</h3>
         <p class="mt-0.5 text-[13px] leading-snug text-muted">{h.sub}</p>
-        <div class="mt-3.5 flex flex-wrap gap-2">
+        <p class="mt-2 text-[13px] leading-snug text-muted">{h.distance}</p>
+        <div class="mt-auto flex flex-wrap gap-2 pt-3.5">
           <a href={h.site} target="_blank" rel="noopener" class="rounded-lg border border-line px-3 py-1.5 text-[13px] font-medium text-ink transition-colors hover:border-accent hover:text-accent">{txt.site} ↗</a>
-          <a href={h.form} target="_blank" rel="noopener" class="rounded-lg bg-gradient-to-br from-accent to-teal-light px-3 py-1.5 text-[13px] font-bold text-teal-deep transition-transform hover:-translate-y-0.5">{h.formLabel}</a>
+          <a href={h.book} target="_blank" rel="noopener" class="rounded-lg bg-gradient-to-br from-accent to-teal-light px-3 py-1.5 text-[13px] font-bold text-teal-deep transition-transform hover:-translate-y-0.5">{h.bookLabel}{h.book.startsWith('http') ? ' ↗' : ''}</a>
         </div>
       </div>
     ))}

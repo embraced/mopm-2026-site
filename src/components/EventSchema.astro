@@ -41,7 +41,7 @@ const schema = {
   organizer: societies.map((s) => ({ '@type': 'Organization', name: p(s, 'name') })),
   performer: speakers.map((s) => ({
     '@type': 'Person',
-    name: s.name,
+    name: (lang === 'en' && s.name_en) || s.name,
     ...(p(s, 'affiliation') ? { affiliation: { '@type': 'Organization', name: p(s, 'affiliation') } } : {}),
   })),
   offers: (fees.items ?? []).map((it: any) => ({

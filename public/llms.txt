@@ -10,9 +10,9 @@
 - 官方網站：https://2026.mopm.tw
 
 ## 大會主題演講 Keynote Speakers
-- Heng Zhu（教授，美國約翰霍普金斯大學醫學院藥理與分子科學系）— 蛋白質體學、高通量蛋白質晶片
-- 吉田信介（資深研究學者／開發中心副中心長，日本京都大學 CiRA Foundation）— 臨床級 iPS 細胞量產與供應體系
-- Aaron M. Newman（副教授，美國史丹佛大學生物醫學數據科學系）— 計算生物學、CIBERSORT/CIBERSORTx
+- Heng Zhu（教授，美國約翰霍普金斯大學醫學院藥理與分子科學系）— 高通量蛋白質體學與系統生物學；HuProt、VirD 等功能性蛋白質微陣列平台開發者
+- 吉田信介 Shinsuke Yoshida（前副所長，日本京都大學 CiRA 基金會）— 再生醫學轉譯；臨床級 HLA 純合子 iPSC 細胞庫品管、細胞自動化製程
+- Aaron M. Newman（副教授，美國史丹佛大學生物醫學數據科學系）— 計算生物學；CIBERSORT／CIBERSORTx 開發者，從混合組織轉錄體解卷積出細胞類型組成
 
 ## 摘要投稿 Abstract Submission
 - 形式：僅接受海報發表 (Poster Presentation only)；摘要以英文撰寫、1 頁為限、上傳 PDF（10 MB 以內）
@@ -27,9 +27,10 @@
 - 管道：學會會員經所屬學會報名；非會員經線上表單報名
 
 ## 住宿 Accommodation
-- 主辦洽談兩間特約飯店提供大會專案價；方案與房價詳見訂房單，與會者自行向飯店訂房，大會不代訂
-- 台南遠東香格里拉 Shangri-La's Far Eastern Plaza Hotel, Tainan — [官網](https://www.shangri-la.com/tc/tainan/fareasternplazashangrila/)｜訂房單 [中文](https://2026.mopm.tw/hotel-shangri-la-booking-form-zh.pdf)、[English](https://2026.mopm.tw/hotel-shangri-la-booking-form-en.pdf)
-- 台南老爺行旅 The Place Tainan — [官網](https://www.hotelroyal.com.tw/zh-tw/tainan)｜[訂房單（中文）](https://2026.mopm.tw/hotel-the-place-tainan-booking-form-zh.pdf)
+- 主辦洽談三間特約飯店，提供 11/13（五）、11/14（六）兩晚大會專案價；方案與房價詳見訂房單或飯店訂房頁，與會者自行向飯店訂房，大會不代訂
+- 台南遠東香格里拉 Shangri-La's Far Eastern Plaza Hotel, Tainan（距會場約 1.1 公里，步行 16 分）— [官網](https://sltn.fareasternhotel.com.tw/tc/)｜訂房單 [中文](https://2026.mopm.tw/hotel-shangri-la-booking-form-zh.pdf)、[English](https://2026.mopm.tw/hotel-shangri-la-booking-form-en.pdf)
+- 禧榕軒大飯店 Grand Banyan Hotel（距會場約 1.7 公里，步行 25 分）— [官網](https://www.grandbanyanhotel.com/)｜[線上訂房](https://tlathena.ec-hotel.net/webhotel-v4/0967/rmProducts/PK26030/special)
+- 台南老爺行旅 The Place Tainan（距會場約 2.4 公里，步行 34 分）— [官網](https://www.hotelroyal.com.tw/zh-tw/tainan)｜[訂房單（中文）](https://2026.mopm.tw/hotel-the-place-tainan-booking-form-zh.pdf)
 
 ## 重要頁面
 - [首頁 Home (中文)](https://2026.mopm.tw/)
