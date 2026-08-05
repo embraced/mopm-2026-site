@@ -7,12 +7,14 @@
   register_url: "https://www.proteomics.org.tw/%E7%B9%B3%E8%B2%BB%E5%B0%88%E5%8D%80/%E6%9C%83%E8%AD%B0%E8%A8%BB%E5%86%8A%E8%B2%BB/"
 - code: TBSB
   name_zh: "台灣生物資訊暨系統生物學會"
-  name_en: "Taiwan Society for Bioinformatics and Systems Biology"
+  # 2026-08-05：改用主辦 About 來源檔的寫法，與學會官網 tbsb.org.tw 一致
+  name_en: "Taiwan Bioinformatics and Systems Biology Society"
   logo: "/societies/tbsb.png"
   register_url: "https://example.org/tbsb-register"
 - code: TGMBS
   name_zh: "台灣基因醫學暨生物標記學會"
-  name_en: "Taiwan Society of Genomic Medicine and Biomarkers"
+  # 2026-08-05：改用主辦 About 來源檔的寫法（tgmbs.com 無英文，待主辦回覆確認）
+  name_en: "Taiwan Genomic Medicine and Biomarker Society"
   logo: "/societies/tgmbs.png"
   register_url: "https://example.org/tgmbs-register"
 - code: TSECB
