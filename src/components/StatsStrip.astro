@@ -20,10 +20,35 @@ const stats = [
 ---
 <section class="mx-auto max-w-6xl px-5 pt-9 sm:px-8">
   <div class="flex flex-wrap items-center gap-x-6 gap-y-6">
-    {/* Quick facts — icon + text groups, no cards (aligns with the design) */}
-    <div class="flex flex-1 flex-wrap items-center justify-center gap-x-9 gap-y-5 sm:justify-start">
+    {/*
+      Quick facts — icon + text groups, no cards (aligns with the design)
+
+      版面幾何（實測 @ 內容寬 1088px）：四項排一列中文需 619px、英文需 688px；
+      按鈕列中文 366px、英文 483px。中文 619+24+366=1009 塞得下；英文
+      688+24+483=1195 塞不下，所以英文的按鈕列必須自己一行。
+      目標是讓「誰換行」由內容寬度自動決定，不寫語言判斷、不寫死斷點。
+
+      要讓外層把**按鈕**推到下一行（而不是把 stats 壓成兩列），
+      下面三件事缺一不可，少任何一件都會退回原本的壞版面：
+
+        1. lg:flex-nowrap  — 容器可換行時，它對外層而言的 min-content 只有
+                             「最寬的單一項目」(169px)，外層永遠不會換行。
+        2. 每項 lg:shrink-0 — flex 項目預設 shrink:1，光鎖 nowrap 只會讓四項
+                             被壓扁、文字自己換行，寬度傳不出去。
+        3. flex-auto（不是 flex-1）
+                           — flex-1 是 `flex:1 1 0%`，basis 為 0，外層計算
+                             要不要換行時把這塊當成寬度 0，於是不換行、
+                             stats 直接溢出去蓋到按鈕上。flex-auto 的
+                             basis 依內容計算，外層才看得到真實的 688px。
+
+      綁在 lg 而非 sm：688px 的一列在 sm(600px 內容寬) 會橫向溢出。
+      lg 的內容寬至少 960px，安全；lg 以下按鈕本來就是整行 (w-full)。
+
+      實測 320–1440px 共 14 種寬度，中英兩版皆無重疊、無橫向捲動。
+    */}
+    <div class="flex flex-auto flex-wrap items-center justify-center gap-x-9 gap-y-5 sm:justify-start lg:flex-nowrap">
       {stats.map((s) => (
-        <div class="flex items-center gap-3.5">
+        <div class="flex items-center gap-3.5 lg:shrink-0">
           <svg
             width="34"
             height="34"
@@ -45,7 +70,7 @@ const stats = [
       ))}
     </div>
     {/* CTAs — right side of the stats row */}
-    <div class="flex w-full flex-wrap items-center justify-center gap-3 sm:w-auto sm:justify-start">
+    <div class="flex w-full flex-wrap items-center justify-center gap-3 lg:w-auto lg:justify-start">
       <a
         href={base + '#register'}
         class="rounded-lg bg-gradient-to-br from-accent to-teal-light px-7 py-3 text-[15px] font-bold text-teal-deep shadow-[0_6px_16px_rgba(88,213,208,.35)] transition-transform hover:-translate-y-0.5"
