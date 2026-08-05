@@ -25,6 +25,6 @@ nonmember_register_url: "https://www.proteomics.org.tw/%E7%B9%B3%E8%B2%BB%E5%B0%
 
 # 摘要投稿（主辦提供）
 abstract_form_url: "https://forms.gle/FFGo2LcTw1f3SMxk8"
-abstract_deadline_zh: "2026 年 9 月 11 日（五）23:59"
-abstract_deadline_en: "September 11, 2026 (Fri.), 23:59"
+abstract_deadline_zh: "2026 年 9 月 18 日（五）23:59"
+abstract_deadline_en: "September 18, 2026 (Fri.), 23:59"
 abstract_template: "/mopm-2026-abstract-template.docx"

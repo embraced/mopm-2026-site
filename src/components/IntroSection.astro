@@ -3,14 +3,25 @@ import { t, type Lang } from '../lib/i18n';
 import SectionHeading from './SectionHeading.astro';
 import Logo from './Logo.astro';
 const { lang } = Astro.props as { lang: Lang };
-const body = lang === 'zh'
-  ? '多體學與精準醫學是一門跨領域整合的前沿科學，涵蓋體學技術創新、資料分析與轉譯應用，串聯基礎研究、轉譯醫學乃至臨床實踐，由六大學會聯合主辦。'
-  : 'Multi-omics and precision medicine is a frontier interdisciplinary field spanning technology innovation, data analysis and translational application — connecting basic research, translational medicine, and clinical practice. Jointly organized by six societies.';
+// 主辦提供（imports/0805_2026_MOPM_AboutConference.docx），中英各三段，一字照抄。
+const paras = lang === 'zh'
+  ? [
+      '多體學與精準醫學是當代生醫高度整合的跨領域科學。多體學透過結合基因體、轉錄體、蛋白質體與代謝體等多維度數據，全方位解析複雜的疾病網絡；精準醫學則以此為底蘊，將生物特徵轉化為專屬的醫療策略。兩者融合建構出一條從基礎探索、體學創新、資料分析到轉譯應用的完整脈絡，將科學發現接軌至真實世界的臨床照護。',
+      '為深耕此領域，多體學與精準醫學聯合會議（MOPM）應運而生。自2019年由台灣生物資訊暨系統生物學會、台灣蛋白體學會與台灣基因醫學暨生物標記學會共同發起後，2020年更進一步結合了台灣演化與計算生物學會、台灣精準醫學學會及台灣胞外體學會。六大學會的結盟，深度串聯了生命科學、臨床醫學與資訊科學的專業能量。',
+      '第八屆MOPM將傳承跨域對話精神，探索最新研究與前瞻應用。大會規劃國內外專家專題演講、學術壁報競賽及產業儀器展示，期以多元交流激發創新思維與實質合作。誠摯邀請學界與業界先進共襄盛舉，與先驅們深度交流，共同推動個人化精準醫療的全球發展。',
+    ]
+  : [
+      'Multi-omics and precision medicine represent a highly integrated, interdisciplinary frontier in contemporary biomedicine. Multi-omics leverages multidimensional data—spanning genomics, transcriptomics, proteomics, and metabolomics—to comprehensively elucidate complex disease networks. Building upon this foundation, precision medicine translates biological signatures into tailored therapeutic strategies. Together, they establish a comprehensive continuum from basic exploration, omics innovation, and data analytics to translational applications, seamlessly bridging scientific discoveries with real-world clinical care.',
+      'To cultivate this discipline in Taiwan, the Joint Conference on Multi-Omics and Precision Medicine (MOPM) was established. Co-founded in 2019 by the Taiwan Bioinformatics and Systems Biology Society, the Taiwan Proteomics Society, and the Taiwan Genomic Medicine and Biomarker Society, the platform expanded in 2020 to incorporate the Taiwan Society of Evolution and Computational Biology, the Taiwan Precision Medicine Society, and the Taiwan Society for Extracellular Vesicles. The alliance of these six major societies profoundly synergizes expertise across the life sciences, clinical medicine, and informatics.',
+      'Entering its 8th iteration, MOPM carries forward its core mission of fostering cross-disciplinary dialogue to explore cutting-edge research and forward-looking applications. Featuring keynote presentations by esteemed experts, academic poster competitions, and industry instrumentation showcases, the conference aims to catalyze innovative thinking and tangible collaborations. We cordially invite colleagues from academia and industry to join us, engage deeply with pioneers, and collectively propel personalized, precision healthcare onto the global stage.',
+    ];
 ---
 <section id="about" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
   <SectionHeading title={t(lang, 'section.about')} subtitle={t(lang, 'section.aboutSub')} />
   <div class="relative overflow-hidden rounded-2xl bg-surface p-8 shadow-[0_2px_14px_rgba(30,41,59,.06)] sm:p-9">
     <Logo size={200} stroke="rgb(var(--color-accent))" strokeWidth={1} class="pointer-events-none absolute -bottom-8 -right-8 opacity-[.06]" />
-    <p class="relative m-0 max-w-3xl text-[17px] leading-[1.85] text-muted">{body}</p>
+    <div class="relative max-w-3xl space-y-4 text-[16.5px] leading-[1.9] text-muted">
+      {paras.map((p) => <p class="m-0">{p}</p>)}
+    </div>
   </div>
 </section>
