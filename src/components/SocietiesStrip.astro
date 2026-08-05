@@ -17,7 +17,7 @@ const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')
           src={s.logo}
           alt={s.code}
           title={pick(s, 'name', lang)}
-          class="h-[46px] w-auto max-w-full object-contain opacity-85 transition-opacity hover:opacity-100"
+          class="h-[55px] w-auto max-w-full object-contain opacity-85 transition-opacity hover:opacity-100"
         />
       ))}
     </div>
