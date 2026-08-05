@@ -29,16 +29,14 @@
   name_zh: "台灣精準醫學學會"
   name_en: "Taiwan Precision Medicine Society"
   logo: "/societies/tpms.png"
-  # 學會官網 tpms.org.tw 目前是壞的：DNS 解得到（207.148.102.234），但 http 301 轉到
-  # https 之後任何 TLS 版本都連不上（2026-08-05 驗證）。唯一能開的 TPMS 頁面在
-  # http://www.cntech.org/TPMS/，但 cntech.org 是「華域科技有限公司」的網域，非學會自有。
-  # 暫時留空 → 卡片渲染成不可點（見 RegistrationCards.astro），待主辦提供連結。
-  register_url: ""
+  # 過渡：暫連學會首頁，主辦取得 2026 報名連結後更換。
+  # ⚠️ 一定要用 apex，不要加 www：憑證不含 www.tpms.org.tw，
+  #    https://www.tpms.org.tw 會 TLS 握手失敗（2026-08-05 驗證）
+  register_url: "https://tpms.org.tw/"
 - code: TSEV
   name_zh: "台灣胞外體學會"
   name_en: "Taiwan Society for Extracellular Vesicles"
   logo: "/societies/tsev.png"
-  # 查不到 TSEV 有官方網站：tsev.org.tw 三種寫法皆無此站（2026-08-05 驗證），
-  # 只找到 Facebook 社團與 ACCUPASS 主辦單位頁，兩者都不適合當「學會首頁」。
-  # 暫時留空 → 卡片渲染成不可點，待主辦提供連結。
-  register_url: ""
+  # TSEV 沒有官方網站（原本的站已隨當初代管的公司停止服務而消失），
+  # 使用者指定改連 Facebook 社團——這是目前唯一還在運作的公開管道。
+  register_url: "https://www.facebook.com/groups/tsevtw/"
