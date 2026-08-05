@@ -1,8 +1,12 @@
+# 贊助商尚未招募。sponsors 全部留空時，SponsorWall 會整個 section 不渲染
+# （元件已過濾空 tier），Nav 也沒有贊助項目，所以不會留下斷掉的錨點。
+#
+# ⚠️ 不要放「範例生技」這類示範資料——之前那筆佔位資料是真的上線了，
+# 線上曾出現一個連到 example.org 的鑽石級贊助商。要預覽版面請在本機加、別 commit。
 tiers:
   - name_zh: "鑽石級"
     name_en: "Diamond"
-    sponsors:
-      - { name: "範例生技", logo: "", url: "https://example.org" }
+    sponsors: []
   - name_zh: "黃金級"
     name_en: "Gold"
     sponsors: []

@@ -21,6 +21,7 @@ const txt = lang === 'zh'
       nonmemberTitle: '非會員報名',
       nonmemberNote: '非六學會會員請由線上表單報名。',
       nonmemberBtn: '前往報名',
+      noLinkNote: '報名連結尚未提供，請洽學會',
     }
   : {
       deadlineLabel: 'Registration Period',
@@ -30,6 +31,7 @@ const txt = lang === 'zh'
       nonmemberTitle: 'Non-Member Registration',
       nonmemberNote: 'Participants who are not members of the six societies may register online.',
       nonmemberBtn: 'Register',
+      noLinkNote: 'Link not yet available — contact the society',
     };
 const money = (n: number) => `NT$ ${n.toLocaleString('en-US')}`;
 ---
@@ -63,14 +65,32 @@ const money = (n: number) => `NT$ ${n.toLocaleString('en-US')}`;
       <h3 class="mb-1.5 text-lg font-bold text-ink">{txt.memberTitle}</h3>
       <p class="mb-4 text-[13px] text-muted">{txt.memberNote}</p>
       <div class="grid gap-3 sm:grid-cols-2">
-        {socs.map((s) => (
-          <a href={s.register_url} target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-line p-3 transition-colors hover:border-accent">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded bg-white/95 p-1 text-[11px] font-bold text-teal-deep shadow-[0_1px_4px_rgba(15,23,33,.1)] ring-1 ring-black/[.04]">
-              {s.logo ? <img src={s.logo} alt={s.code} class="max-h-full max-w-full object-contain" /> : s.code}
-            </div>
-            <span class="text-[13px] font-medium leading-snug text-ink">{pick(s, 'name', lang)}</span>
-          </a>
-        ))}
+        {socs.map((s) => {
+          // register_url 留空＝該學會尚未提供連結，渲染成不可點的卡片。
+          // 寧可沒有連結，也不要掛一個點了到不了報名頁的死連結。
+          const Card = s.register_url ? 'a' : 'div';
+          const linkAttrs = s.register_url
+            ? { href: s.register_url, target: '_blank', rel: 'noopener' }
+            : {};
+          return (
+            <Card
+              {...linkAttrs}
+              class={`flex items-center gap-3 rounded-xl border border-line p-3 ${
+                s.register_url ? 'transition-colors hover:border-accent' : 'cursor-default'
+              }`}
+            >
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded bg-white/95 p-1 text-[11px] font-bold text-teal-deep shadow-[0_1px_4px_rgba(15,23,33,.1)] ring-1 ring-black/[.04]">
+                {s.logo ? <img src={s.logo} alt={s.code} class="max-h-full max-w-full object-contain" /> : s.code}
+              </div>
+              <span class="flex flex-col">
+                <span class="text-[13px] font-medium leading-snug text-ink">{pick(s, 'name', lang)}</span>
+                {!s.register_url && (
+                  <span class="mt-0.5 text-[11px] leading-snug text-muted">{txt.noLinkNote}</span>
+                )}
+              </span>
+            </Card>
+          );
+        })}
       </div>
       <div class="mt-5 flex items-center justify-between gap-4 border-t border-line pt-5">
         <div>

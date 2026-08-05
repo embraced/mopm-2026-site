@@ -10,13 +10,16 @@
   # 2026-08-05：改用主辦 About 來源檔的寫法，與學會官網 tbsb.org.tw 一致
   name_en: "Taiwan Bioinformatics and Systems Biology Society"
   logo: "/societies/tbsb.png"
-  register_url: "https://example.org/tbsb-register"
+  # 過渡：暫連學會首頁，主辦取得 2026 報名連結後更換（2026-08-05 驗證 200）
+  register_url: "https://www.tbsb.org.tw/"
 - code: TGMBS
   name_zh: "台灣基因醫學暨生物標記學會"
   # 2026-08-05：改用主辦 About 來源檔的寫法（tgmbs.com 無英文，待主辦回覆確認）
   name_en: "Taiwan Genomic Medicine and Biomarker Society"
   logo: "/societies/tgmbs.png"
-  register_url: "https://example.org/tgmbs-register"
+  # 過渡：暫連學會首頁，主辦取得 2026 報名連結後更換。
+  # 只有 http 可用——https://www.tgmbs.com 連不上（2026-08-05 驗證）
+  register_url: "http://www.tgmbs.com/"
 - code: TSECB
   name_zh: "台灣演化與計算生物學會"
   name_en: "Taiwan Society of Evolution and Computational Biology"
@@ -26,9 +29,16 @@
   name_zh: "台灣精準醫學學會"
   name_en: "Taiwan Precision Medicine Society"
   logo: "/societies/tpms.png"
-  register_url: "https://example.org/tpms-register"
+  # 學會官網 tpms.org.tw 目前是壞的：DNS 解得到（207.148.102.234），但 http 301 轉到
+  # https 之後任何 TLS 版本都連不上（2026-08-05 驗證）。唯一能開的 TPMS 頁面在
+  # http://www.cntech.org/TPMS/，但 cntech.org 是「華域科技有限公司」的網域，非學會自有。
+  # 暫時留空 → 卡片渲染成不可點（見 RegistrationCards.astro），待主辦提供連結。
+  register_url: ""
 - code: TSEV
   name_zh: "台灣胞外體學會"
   name_en: "Taiwan Society for Extracellular Vesicles"
   logo: "/societies/tsev.png"
-  register_url: "https://example.org/tsev-register"
+  # 查不到 TSEV 有官方網站：tsev.org.tw 三種寫法皆無此站（2026-08-05 驗證），
+  # 只找到 Facebook 社團與 ACCUPASS 主辦單位頁，兩者都不適合當「學會首頁」。
+  # 暫時留空 → 卡片渲染成不可點，待主辦提供連結。
+  register_url: ""
