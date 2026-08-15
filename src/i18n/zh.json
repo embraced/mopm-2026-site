@@ -25,5 +25,6 @@
     "full": "完整議程",
     "parallel": "平行場次"
   },
-  "keydates": { "abstract": "投稿截止", "register": "報名截止" }
+  "keydates": { "abstract": "投稿截止", "register": "報名截止" },
+  "footer": { "credit": "設計與開發" }
 }

@@ -52,7 +52,14 @@ const quickTitle = lang === 'zh' ? '快速連結' : 'Quick Links';
   <div class="border-t border-white/10">
     <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4 text-[13px] text-[#64748B] sm:px-8">
       <div>{orgLine}</div>
-      <div>© 2026 MOPM. All Rights Reserved.</div>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+        <span>
+          {t(lang, 'footer.credit')}{' '}
+          <a href="https://www.embraced.co/" target="_blank" rel="noopener" class="text-[#94A3B8] transition-colors hover:text-accent">Embraced Studio</a>
+        </span>
+        <span class="hidden text-white/20 sm:inline">·</span>
+        <span class="basis-full sm:basis-auto">© 2026 MOPM. All Rights Reserved.</span>
+      </div>
     </div>
   </div>
 </footer>
