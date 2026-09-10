@@ -1,8 +1,8 @@
 # 報名費用（主辦提供）。單位 TWD。加購項標 addon: true。
 # 改這裡即改網站費用表與 EventSchema 的結構化 offers。
 currency: TWD
-includes_zh: "報名費含紙本議程手冊、電子論文集、會議期間午餐及茶點。"
-includes_en: "The registration fee includes the printed program book, electronic proceedings, lunch, and coffee breaks during the conference."
+includes_zh: "報名費含紙本手冊、電子論文集、會議期間午餐及茶點。"
+includes_en: "The registration fee includes the printed handbook, electronic proceedings, lunch, and coffee breaks during the conference."
 items:
   - group_zh: "學會會員"
     group_en: "Society Members"
