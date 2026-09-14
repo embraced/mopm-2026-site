@@ -25,6 +25,6 @@
     "full": "Full Programme",
     "parallel": "Parallel"
   },
-  "keydates": { "abstract": "Abstract Deadline", "register": "Registration Deadline" },
+  "keydates": { "abstract": "Abstract Deadline", "register": "Registration Deadline", "extended": "Extended", "was": "was" },
   "footer": { "credit": "Designed & developed by" }
 }

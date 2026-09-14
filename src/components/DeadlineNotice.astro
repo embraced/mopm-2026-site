@@ -1,0 +1,54 @@
+---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
+import { pick, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
+
+/*
+  投稿截止延長公告 — 貼在 Hero banner 正下方，是 banner 之後第一個看到的東西。
+
+  渲染條件是 conference.yaml 還留著 abstract_deadline_prev_*，不是一個布林旗標：
+  旗標會跟日期脫節（設 true 但舊日期已被覆蓋 → 公告顯示「原 X → X」），
+  用舊日期本身的存在當條件則不可能不一致。公告下架 = 刪掉 yaml 那兩行。
+
+  用 gold / gold-contrast token 而非寫死色碼，深色模式的 gold 會自動換成較亮的
+  #DFC08A（見 tokens.css），對比才不會在深色底上糊掉。
+*/
+const prev = pick(c, 'abstract_deadline_prev', lang);
+const now = pick(c, 'abstract_deadline', lang);
+const base = lang === 'en' ? '/en/' : '/';
+
+const txt = lang === 'zh'
+  ? { tag: '最新公告', lead: '摘要投稿截止延長一週', cta: '前往投稿' }
+  : { tag: 'Announcement', lead: 'Abstract deadline extended by one week', cta: 'Submit Abstract' };
+---
+{prev && now && (
+  <aside class="bg-gold text-gold-contrast" aria-label={txt.tag}>
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-5 gap-y-3 px-5 py-4 sm:justify-between sm:px-8">
+      <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
+        <span class="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gold-contrast px-3 py-1 text-xs font-bold text-gold">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 11v3a1 1 0 0 0 1 1h2l3.29 3.29A1 1 0 0 0 11 17.6V6.4a1 1 0 0 0-1.71-.7L6 9H4a1 1 0 0 0-1 1Z" /><path d="M16 9a5 5 0 0 1 0 6" />
+          </svg>
+          {txt.tag}
+        </span>
+        {/*
+          flex-wrap + 每個 span whitespace-nowrap：換行只發生在語意單位「之間」。
+          用一般 inline 文字的話，瀏覽器只看得到字元，會把日期折成
+          「2026 /（換行）年 9 月 25 日…」、把英文的 "week" 孤立到下一行，
+          連底線都斷成兩截。不用 <br> 是因為那會寫死斷點，桌機也跟著斷。
+        */}
+        <p class="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-[15px] leading-relaxed sm:justify-start">
+          <span class="font-bold">{txt.lead}</span>
+          <span class="whitespace-nowrap opacity-60"><s>{prev}</s><span aria-hidden="true" class="ml-1.5">→</span></span>
+          <span class="whitespace-nowrap font-bold underline decoration-gold-contrast/30 decoration-2 underline-offset-4">{now}</span>
+        </p>
+      </div>
+      <a
+        href={base + '#abstract'}
+        class="shrink-0 rounded-lg bg-gold-contrast px-5 py-2.5 text-sm font-bold text-gold transition-transform hover:-translate-y-0.5"
+      >{txt.cta} →</a>
+    </div>
+  </aside>
+)}
