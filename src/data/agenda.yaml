@@ -268,14 +268,13 @@ days:
           - venue: 第一講堂
             session: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
+            moderator: 林峻宇教授 陽明交通大學
             title_zh: Talk 11-1 · TBA
-            speaker: 林峻宇教授 陽明交通大學
           - venue: 第二講堂
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
             organizer: TPMS
             moderator: 陳相成 國防部軍醫局醫務管理處處長
-            title_zh: 'Talk 12-1: 藥物基因體學之臨床應用'
-            speaker: 黃織芬 所長 國立臺灣大學臨床藥學研究所
+            title_zh: Talk 12-1 · TBA
       - time: 14:40-15:15
         type: parallel
         tracks:
@@ -287,6 +286,7 @@ days:
           - venue: 第一講堂
             session: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
+            moderator: 林峻宇教授 陽明交通大學
             title_zh: Talk 11-2 · TBA
             speaker: 楊子賢教授 成功大學
           - venue: 第二講堂
@@ -306,6 +306,7 @@ days:
           - venue: 第一講堂
             session: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
+            moderator: 林峻宇教授 陽明交通大學
             title_zh: Talk 11-3 · TBA
             speaker: 李建融教授 長庚大學
           - venue: 第二講堂
