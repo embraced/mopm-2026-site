@@ -43,7 +43,7 @@ const venueIndex = (v: string) => Math.max(0, agenda.venues.indexOf(v));
                 })()}
                 {tk.moderator && (() => {
                   const m = splitSpeaker(tk.moderator);
-                  return <div class="mt-1 text-[11px] text-muted opacity-80">Moderator: {m.person}{m.affiliation ? ' ' + m.affiliation : ''}</div>;
+                  return <div class="mt-1 text-xs text-muted">Moderator: {m.person}{m.affiliation ? ' ' + m.affiliation : ''}</div>;
                 })()}
               </div>
             ))}
