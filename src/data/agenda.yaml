@@ -45,19 +45,18 @@ days:
             session: 'Session 1: AI 與精準醫療研究'
             organizer: TPS
             title_zh: Talk 1-2 · TBA
-            speaker: TBA
+            speaker: Hyun Joo An
           - venue: 第一講堂
             session: 'Session 2: AI for Bioinformatics'
             organizer: TBSB
             moderator: 張資昊教授 台北醫學大學
             title_zh: Talk 2-2 · TBA
-            speaker: 朱彥煒教授 中興大學
+            speaker: 陳鯨太 (臺北市立大學資訊科學系)
           - venue: 第二講堂
             session: 'Session 3: 精準醫學檢測與多體學判讀'
             organizer: TPMS
             moderator: 王智弘 總院長 臺北市立聯合醫院
-            title_zh: 'Talk 3-2: 原發性嚴重皮膚過敏發炎性疾病之基因診斷：從檢測到臨床判讀'
-            speaker: 楊晶安 醫師 林口長庚紀念醫院檢驗醫學部
+            title_zh: Talk 3-2 · TBA
       - time: 10:40-11:15
         type: parallel
         tracks:
@@ -65,7 +64,7 @@ days:
             session: 'Session 1: AI 與精準醫療研究'
             organizer: TPS
             title_zh: Talk 1-3 · TBA
-            speaker: TBA
+            speaker: Je-Hyun Baek
           - venue: 第一講堂
             session: 'Session 2: AI for Bioinformatics'
             organizer: TBSB
@@ -82,28 +81,24 @@ days:
         type: break
         category: break
         title_zh: Refreshment Break
-      - time: 11:40-11:50
-        type: plenary
-        category: showcase
-        title_zh: Technology Showcase (6 min)
-      - time: 11:50-12:35
+      - time: 11:40-12:25
         type: plenary
         category: keynote
         title_zh: Keynote Talk 1 · TBA
         speaker: Heng Zhu (Johns Hopkins University)
-      - time: 12:35-13:40
+      - time: 12:25-13:40
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 @ 3F-301~304)
-      - time: 13:40-13:50
-        type: plenary
-        category: showcase
-        title_zh: Technology Showcase (6 min)
-      - time: 13:50-14:35
+        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 @ 3F-301~304 · 3F-302 亞洲準譯)
+      - time: 13:40-14:25
         type: plenary
         category: keynote
         title_zh: Keynote Talk 2 · TBA
         speaker: 吉田信介博士 日本京都大學
+      - time: 14:25-14:35
+        type: plenary
+        category: showcase
+        title_zh: Technology Showcase (6 min) · 圖爾思
       - time: 14:35-14:50
         type: break
         category: break
@@ -124,9 +119,11 @@ days:
             title_zh: Talk 5-1 · TBA
             speaker: 王慧菁 教授 國立清華大學生命科學暨醫學院分子與細胞生物研究所
           - venue: 第二講堂
-            session: 'Session 6: TBA'
+            session: 'Session 6: Exosomes in human diseases'
             organizer: TSEV
+            moderator: 沈湯龍 (國立台灣大學植病系微生物所)
             title_zh: Talk 6-1 · TBA
+            speaker: 王竹安 (成功大學基醫所)
       - time: 15:25-16:00
         type: parallel
         tracks:
@@ -143,9 +140,11 @@ days:
             title_zh: Talk 5-2 · TBA
             speaker: 黃柏憲 副教授 國立成功大學生物化學暨分子生物學研究所
           - venue: 第二講堂
-            session: 'Session 6: TBA'
+            session: 'Session 6: Exosomes in human diseases'
             organizer: TSEV
+            moderator: 沈湯龍 (國立台灣大學植病系微生物所)
             title_zh: Talk 6-2 · TBA
+            speaker: 謝明佑 (中國醫藥大學)
       - time: 16:00-16:35
         type: parallel
         tracks:
@@ -162,9 +161,11 @@ days:
             title_zh: Talk 5-3 · TBA
             speaker: 李佳陽 教授 高雄醫學大學醫學研究所
           - venue: 第二講堂
-            session: 'Session 6: TBA'
+            session: 'Session 6: Exosomes in human diseases'
             organizer: TSEV
+            moderator: 沈湯龍 (國立台灣大學植病系微生物所)
             title_zh: Talk 6-3 · TBA
+            speaker: 廖秀蓉 研究員 亞東醫院醫研部
       - time: 16:35-17:30
         type: plenary
         title_zh: (Board of Directors meeting / General Assembly)
@@ -180,15 +181,16 @@ days:
         type: break
         category: registration
         title_zh: Registration
-      - time: 09:00-09:10
-        type: plenary
-        category: showcase
-        title_zh: Technology Showcase (6 min)
-      - time: 09:10-09:55
+      - time: 09:00-09:45
         type: plenary
         category: keynote
         title_zh: Keynote Talk 3 · TBA
         speaker: Aaron M. Newman (Stanford University)
+        moderator: 劉宗霖老師 成功大學生物科技與產業科學系
+      - time: 09:45-09:55
+        type: plenary
+        category: showcase
+        title_zh: Technology Showcase (6 min)
       - time: 09:55-10:20
         type: break
         category: break
@@ -209,9 +211,11 @@ days:
             title_zh: Talk 8-1 · TBA
             speaker: 徐丞志 副教授 國立臺灣大學化學系暨研究所
           - venue: 第二講堂
-            session: 'Session 9: TBA'
+            session: 'Session 9: Plant and microbial EVs'
             organizer: TSEV
+            moderator: 周涵怡 (國立台灣大學口生所)
             title_zh: Talk 9-1 · TBA
+            speaker: 徐瑋萱 (國立成功大學食安所)
       - time: 10:55-11:30
         type: parallel
         tracks:
@@ -228,9 +232,11 @@ days:
             title_zh: Talk 8-2 · TBA
             speaker: 柯良胤 教授 高雄醫學大學醫學檢驗生物技術學系
           - venue: 第二講堂
-            session: 'Session 9: TBA'
+            session: 'Session 9: Plant and microbial EVs'
             organizer: TSEV
+            moderator: 周涵怡 (國立台灣大學口生所)
             title_zh: Talk 9-2 · TBA
+            speaker: 潘敏雄 (國立台灣大學食科所)
       - time: 11:30-12:05
         type: parallel
         tracks:
@@ -239,7 +245,7 @@ days:
             organizer: TSECB
             moderator: 吳謂勝 (國立成功大學電機工程)
             title_zh: 'Talk 7-3: Beyond Transcription: Novel Mechanisms of HIF-1α in Small RNA Regulation, the Exoswitch'
-            speaker: 李婕寧 (Postdoctoral Research Fellow, 國立成功大學醫學檢驗生物技術學系)
+            speaker: 李婕寧 助理教授 國立成功大學細胞生物與解剖學研究所
           - venue: 第一講堂
             session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
             organizer: TGMBS
@@ -247,13 +253,15 @@ days:
             title_zh: Talk 8-3 · TBA
             speaker: 朱俐潔 助理教授 長庚大學生物醫學研究所
           - venue: 第二講堂
-            session: 'Session 9: TBA'
+            session: 'Session 9: Plant and microbial EVs'
             organizer: TSEV
+            moderator: 周涵怡 (國立台灣大學口生所)
             title_zh: Talk 9-3 · TBA
+            speaker: 沈湯龍 (國立台灣大學植病系微生物所)
       - time: 12:05-14:05
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 @ 3F-301~304)
+        title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 @ 3F-301~304 · 3F-301 博克科技 · 3F-302 世基生醫)
       - time: 12:55-13:50
         type: plenary
         title_zh: (Board of Directors meeting / General Assembly)
@@ -270,6 +278,7 @@ days:
             organizer: TBSB
             moderator: 林峻宇教授 陽明交通大學
             title_zh: Talk 11-1 · TBA
+            speaker: 楊子賢教授 國立成功大學
           - venue: 第二講堂
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
             organizer: TPMS
@@ -288,7 +297,7 @@ days:
             organizer: TBSB
             moderator: 林峻宇教授 陽明交通大學
             title_zh: Talk 11-2 · TBA
-            speaker: 楊子賢教授 成功大學
+            speaker: 李建融教授 長庚大學
           - venue: 第二講堂
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
             organizer: TPMS
@@ -308,7 +317,7 @@ days:
             organizer: TBSB
             moderator: 林峻宇教授 陽明交通大學
             title_zh: Talk 11-3 · TBA
-            speaker: 李建融教授 長庚大學
+            speaker: 周緻雅博士 陽明交通大學
           - venue: 第二講堂
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
             organizer: TPMS
