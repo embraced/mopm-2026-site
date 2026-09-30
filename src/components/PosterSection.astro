@@ -1,0 +1,59 @@
+---
+import { t, type Lang } from '../lib/i18n';
+import SectionHeading from './SectionHeading.astro';
+const { lang } = Astro.props as { lang: Lang };
+
+// 中文照抄主辦提供的文字（2026-09-30）；**…** 標記原稿的粗體重點。
+const blocks = lang === 'zh'
+  ? [
+      { title: '海報展示指引', items: [
+          '海報尺寸為 **A0 直式（寬 84.1 cm × 高 118.9 cm）**，海報內容請以**英文**撰寫。',
+          '大會當日請至**所屬學會之報到櫃台**完成報到，並確認您的**海報編號**及 **Poster 發表時段**。',
+          '所有海報請於 **2026 年 11 月 14 日（六）12:00 前完成張貼**，並張貼於對應論文編號之海報板。',
+          '海報展示期間為**整個會議期間**，請勿於指定撤展時間前自行移除。',
+          '各學會將自行公告所屬投稿者之 **Poster 發表暨海報評選時段**。報告者須於該時段留在海報前進行發表、交流並接受評審。',
+          '所有海報請於 **2026 年 11 月 15 日（日）16:40–17:30 間**儘速自行移除。',
+        ] },
+      { title: '優秀海報獎', items: [
+          '各學會將依其獎項規劃進行海報評選，**獲獎名額及評選方式由各學會另行規定及公告**。',
+          '各學會之海報評選將於其指定之 **Poster 發表時段**進行，請報告者務必於該時段留在海報前接受評審。',
+          'Poster Award 頒獎將於會議第二天於第三講堂舉行，詳細時間依大會後續公告為準。',
+        ] },
+    ]
+  : [
+      { title: 'Poster Presentation Guidelines', items: [
+          'Posters must be **A0 portrait (84.1 cm W × 118.9 cm H)** and written in **English**.',
+          'On the day of the conference, please check in at **your society\'s registration desk** and confirm your **poster number** and **poster presentation session**.',
+          'All posters must be **mounted by 12:00 on Saturday, November 14, 2026**, on the board matching your abstract number.',
+          'Posters remain on display **throughout the conference**; please do not remove them before the designated removal time.',
+          'Each society will announce the **poster presentation and judging session** for its own presenters. Presenters must stay at their posters during that session to present, discuss, and be evaluated.',
+          'Please remove all posters **between 16:40 and 17:30 on Sunday, November 15, 2026**.',
+        ] },
+      { title: 'Best Poster Awards', items: [
+          'Each society will judge posters according to its own award plan; **the number of awards and judging criteria will be set and announced by each society**.',
+          'Judging takes place during each society\'s designated **poster presentation session**; presenters must stay at their posters during that session.',
+          'The Poster Award ceremony will be held on Day 2 in Lecture Hall 3; the exact time will be announced by the conference.',
+        ] },
+    ];
+
+// 把 **粗體** 切成片段，避免用 set:html 注入
+const segs = (s: string) => s.split('**').map((text, i) => ({ text, bold: i % 2 === 1 }));
+---
+<section id="poster" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
+  <SectionHeading title={t(lang, 'section.poster')} subtitle={t(lang, 'section.posterSub')} />
+  <div class="grid gap-6 md:grid-cols-2">
+    {blocks.map((b) => (
+      <div class="rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
+        <h3 class="mb-4 text-base font-bold text-ink">{b.title}</h3>
+        <ul class="flex list-none flex-col gap-3 p-0">
+          {b.items.map((it) => (
+            <li class="flex gap-2 text-[13.5px] leading-relaxed text-muted">
+              <span class="text-accent">•</span>
+              <span>{segs(it).map((s) => s.bold ? <strong class="font-semibold text-ink">{s.text}</strong> : s.text)}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
