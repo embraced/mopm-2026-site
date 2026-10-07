@@ -27,10 +27,8 @@ nonmember_register_url: "https://www.proteomics.org.tw/%E7%B9%B3%E8%B2%BB%E5%B0%
 abstract_form_url: "https://forms.gle/FFGo2LcTw1f3SMxk8"
 abstract_deadline_zh: "2026 年 9 月 25 日（五）23:59"
 abstract_deadline_en: "September 25, 2026 (Fri.), 23:59"
-# 2026-09-14 主辦再延長一週（原 9/18；更早還有一次 9/11 → 9/18）。
-# 舊截止日留在這裡不是歷史紀錄，是**顯示用資料**：DeadlineNotice 與 KeyDates
-# 靠「這兩行還在不在」決定要不要顯示公告條與「延長」標記。
-# 公告下架 = 刪掉下面兩行，元件與 index.astro 都不用動。
-abstract_deadline_prev_zh: "2026 年 9 月 18 日"
-abstract_deadline_prev_en: "September 18, 2026"
+# 延長公告（原 9/18）已於 2026-10-07 下架：刪掉 abstract_deadline_prev_zh/en 兩行，
+# DeadlineNotice 與 KeyDates 的「延長」標記就不渲染。要再掛延長公告，把兩行加回來即可。
 abstract_template: "/mopm-2026-abstract-template.docx"
+# 海報投稿通過名單（主辦 2026-10-07 提供的 PDF 原檔）。這行在，首頁公告條與海報區的名單連結就在。
+poster_list_url: "/mopm-2026-accepted-posters.pdf"

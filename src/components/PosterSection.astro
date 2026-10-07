@@ -1,7 +1,14 @@
 ---
+import yaml from 'js-yaml';
+import fs from 'node:fs';
 import { t, type Lang } from '../lib/i18n';
 import SectionHeading from './SectionHeading.astro';
 const { lang } = Astro.props as { lang: Lang };
+const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
+const listUrl: string | undefined = c.poster_list_url;
+const listTxt = lang === 'zh'
+  ? { title: '海報投稿通過名單', desc: '依學會分組，列出海報編號、發表者與摘要題目', cta: '查看名單 (PDF)' }
+  : { title: 'Accepted Poster List', desc: 'Grouped by society, with poster numbers, presenters and abstract titles', cta: 'View List (PDF)' };
 
 // 中文照抄主辦提供的文字（2026-09-30）；**…** 標記原稿的粗體重點。
 const blocks = lang === 'zh'
@@ -41,6 +48,20 @@ const segs = (s: string) => s.split('**').map((text, i) => ({ text, bold: i % 2 
 ---
 <section id="poster" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
   <SectionHeading title={t(lang, 'section.poster')} subtitle={t(lang, 'section.posterSub')} />
+  {listUrl && (
+    <a
+      href={listUrl}
+      target="_blank"
+      rel="noopener"
+      class="mb-6 flex flex-wrap items-center justify-between gap-x-5 gap-y-3 rounded-2xl border-2 border-accent bg-surface p-6 shadow-[0_2px_14px_rgba(30,41,59,.06)] transition-transform hover:-translate-y-0.5"
+    >
+      <div>
+        <h3 class="text-base font-bold text-ink">{listTxt.title}</h3>
+        <p class="mt-1 text-[13.5px] leading-relaxed text-muted">{listTxt.desc}</p>
+      </div>
+      <span class="shrink-0 rounded-lg bg-accent px-5 py-2.5 text-sm font-bold text-accent-contrast">{listTxt.cta} →</span>
+    </a>
+  )}
   <div class="grid gap-6 md:grid-cols-2">
     {blocks.map((b) => (
       <div class="rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)]">

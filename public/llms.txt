@@ -26,6 +26,7 @@
 - 投稿表單：https://forms.gle/FFGo2LcTw1f3SMxk8
 
 ## 海報展示 Poster Presentation
+- 海報投稿通過名單（2026-10-07 公布，依學會分組，含海報編號、發表者、摘要題目）：https://2026.mopm.tw/mopm-2026-accepted-posters.pdf
 - 海報尺寸：A0 直式（寬 84.1 cm × 高 118.9 cm），內容以英文撰寫 (A0 portrait, in English)
 - 報到：大會當日至所屬學會之報到櫃台報到，確認海報編號及 Poster 發表時段
 - 張貼：2026 年 11 月 14 日（六）12:00 前完成張貼，貼於對應論文編號之海報板
