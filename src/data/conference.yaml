@@ -30,5 +30,5 @@ abstract_deadline_en: "September 25, 2026 (Fri.), 23:59"
 # 延長公告（原 9/18）已於 2026-10-07 下架：刪掉 abstract_deadline_prev_zh/en 兩行，
 # DeadlineNotice 與 KeyDates 的「延長」標記就不渲染。要再掛延長公告，把兩行加回來即可。
 abstract_template: "/mopm-2026-abstract-template.docx"
-# 海報投稿通過名單（主辦 2026-10-07 提供的 PDF 原檔）。這行在，首頁公告條與海報區的名單連結就在。
+# 海報投稿通過名單（主辦提供的 PDF 原檔，現為 2026-10-08 版）。這行在，首頁公告條與海報區的名單連結就在。
 poster_list_url: "/mopm-2026-accepted-posters.pdf"

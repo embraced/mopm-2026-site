@@ -24,7 +24,7 @@ days:
           - venue: 第三講堂
             session: 'Session 1: AI 與精準醫療研究'
             organizer: TPS
-            title_zh: Talk 1-1 · TBA
+            title_zh: 'Talk 1-1: From Multi-Omics to Multimodal Deep Learning: Advancing AI-Driven Precision Medicine'
             speaker: 陳璿宇 研究員 中研院統計所
           - venue: 第一講堂
             session: 'Session 2: AI for Bioinformatics'
@@ -50,7 +50,7 @@ days:
             session: 'Session 2: AI for Bioinformatics'
             organizer: TBSB
             moderator: 張資昊教授 台北醫學大學
-            title_zh: Talk 2-2 · TBA
+            title_zh: 'Talk 2-2: 超越平衡基準：具類別不平衡感知的血腦屏障穿透胜肽預測'
             speaker: 陳鯨太 (臺北市立大學資訊科學系)
           - venue: 第二講堂
             session: 'Session 3: 精準醫學檢測與多體學判讀'
@@ -69,7 +69,7 @@ days:
             session: 'Session 2: AI for Bioinformatics'
             organizer: TBSB
             moderator: 張資昊教授 台北醫學大學
-            title_zh: Talk 2-3 · TBA
+            title_zh: 'Talk 2-3: Long-Read Sequencing for Precision Medicine: From Tumor Variant Phasing to Infectious Disease Diagnosis'
             speaker: 黃耀廷教授 中正大學
           - venue: 第二講堂
             session: 'Session 3: 精準醫學檢測與多體學判讀'
@@ -89,7 +89,7 @@ days:
       - time: 12:25-13:40
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 @ 3F-301~304 · 3F-302 亞洲準譯)
+        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 @ 3F-301~304 · 3F-302 亞洲準譯股份有限公司 · 3F-303 國家實驗研究院國家高速網路與計算中心)
       - time: 13:40-14:25
         type: plenary
         category: keynote
@@ -98,7 +98,7 @@ days:
       - time: 14:25-14:35
         type: plenary
         category: showcase
-        title_zh: Technology Showcase (6 min) · 圖爾思
+        title_zh: Technology Showcase (6 min) · 圖爾思生物科技股份有限公司
       - time: 14:35-14:50
         type: break
         category: break
@@ -122,7 +122,7 @@ days:
             session: 'Session 6: Exosomes in human diseases'
             organizer: TSEV
             moderator: 沈湯龍 (國立台灣大學植病系微生物所)
-            title_zh: Talk 6-1 · TBA
+            title_zh: 'Talk 6-1: Macrophage-Tumor Crosstalk Remodels Extracellular Vesicles to Drive Pancreatic Cancer Progression'
             speaker: 王竹安 (成功大學基醫所)
       - time: 15:25-16:00
         type: parallel
@@ -143,7 +143,7 @@ days:
             session: 'Session 6: Exosomes in human diseases'
             organizer: TSEV
             moderator: 沈湯龍 (國立台灣大學植病系微生物所)
-            title_zh: Talk 6-2 · TBA
+            title_zh: 'Talk 6-2: 工程化外泌體於腦部疾病應用之開發'
             speaker: 謝明佑 (中國醫藥大學)
       - time: 16:00-16:35
         type: parallel
@@ -152,7 +152,7 @@ days:
             session: 'Session 4: Evolutionary genomics'
             organizer: TSECB
             moderator: 許家郎 (台灣大學附設醫院醫學研究部)
-            title_zh: Talk 4-3 · TBA
+            title_zh: 'Talk 4-3: The origin and spread of adzuki bean across Asia'
             speaker: 李承叡 (台灣大學生態學與演化生物學研究所)
           - venue: 第一講堂
             session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
@@ -164,11 +164,17 @@ days:
             session: 'Session 6: Exosomes in human diseases'
             organizer: TSEV
             moderator: 沈湯龍 (國立台灣大學植病系微生物所)
-            title_zh: Talk 6-3 · TBA
+            title_zh: 'Talk 6-3: AI-Engineered Extracellular Vesicles: A New Frontier for Disease-Modifying Osteoarthritis Therapy Extracellular Vesicles'
             speaker: 廖秀蓉 研究員 亞東醫院醫研部
       - time: 16:35-17:30
-        type: plenary
-        title_zh: (Board of Directors meeting / General Assembly)
+        type: parallel
+        tracks:
+          - venue: 第三講堂
+            title_zh: TSECB Board of Directors meeting & General Assembly
+          - venue: 第一講堂
+            title_zh: (Board of Directors meeting / General Assembly)
+          - venue: 第二講堂
+            title_zh: (Board of Directors meeting / General Assembly)
       - time: 18:30-21:00
         type: break
         category: banquet
@@ -184,7 +190,7 @@ days:
       - time: 09:00-09:45
         type: plenary
         category: keynote
-        title_zh: Keynote Talk 3 · TBA
+        title_zh: 'Keynote Talk 3: Decoding cellular plasticity and spatial phenotypes in cancer'
         speaker: Aaron M. Newman (Stanford University)
         moderator: 劉宗霖老師 成功大學生物科技與產業科學系
       - time: 09:45-09:55
@@ -202,7 +208,7 @@ days:
             session: 'Session 7: Systems Biology'
             organizer: TSECB
             moderator: 吳謂勝 (國立成功大學電機工程)
-            title_zh: Talk 7-1 · TBA
+            title_zh: 'Talk 7-1: Nucleolar Proteins Coordinate Telomere Maintenance in Telomerase-Positive and ALT Cancer Cells'
             speaker: 林之儀 (國立中興大學生命科學系)
           - venue: 第一講堂
             session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
@@ -261,23 +267,29 @@ days:
       - time: 12:05-14:05
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 @ 3F-301~304 · 3F-301 博克科技 · 3F-302 世基生醫)
-      - time: 12:55-13:50
-        type: plenary
-        title_zh: (Board of Directors meeting / General Assembly)
+        title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 @ 3F-301~304 · 3F-301 博克科技股份有限公司 · 3F-302 世基生物醫學股份有限公司)
+      - time: 13:00-13:50
+        type: parallel
+        tracks:
+          - venue: 第三講堂
+            title_zh: TPS General Assembly
+          - venue: 第一講堂
+            title_zh: (Board of Directors meeting / General Assembly)
+          - venue: 第二講堂
+            title_zh: (Board of Directors meeting / General Assembly)
       - time: 14:05-14:40
         type: parallel
         tracks:
           - venue: 第三講堂
             session: 'Session 10: 質譜多體學大數據生醫分析'
             organizer: TPS
-            title_zh: Talk 10-1 · TBA
+            title_zh: 'Talk 10-1: ANALomics: An Integrated Computational Toolkit for Multi-Omics Analysis Across Genomics, Transcriptomics, and Multi-Layered Proteomics'
             speaker: 于松桓老師 中山大學精準所
           - venue: 第一講堂
             session: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
             moderator: 林峻宇教授 陽明交通大學
-            title_zh: Talk 11-1 · TBA
+            title_zh: 'Talk 11-1: Decoding Multi-layer Cis-regulatory Module Functional Mechanisms with Deep Learning'
             speaker: 楊子賢教授 國立成功大學
           - venue: 第二講堂
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
@@ -290,7 +302,7 @@ days:
           - venue: 第三講堂
             session: 'Session 10: 質譜多體學大數據生醫分析'
             organizer: TPS
-            title_zh: Talk 10-2 · TBA
+            title_zh: 'Talk 10-2: Machine Learning and Deep Learning of MALDI-TOF Mass Spectrometry Data for Predicting Vancomycin Resistance in Enterococci'
             speaker: 陳志杰老師 中山大學醫科所
           - venue: 第一講堂
             session: 'Session 11: Multi-Omics in Translational Medicine'
@@ -302,7 +314,7 @@ days:
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
             organizer: TPMS
             moderator: 陳相成 國防部軍醫局醫務管理處處長
-            title_zh: 'Talk 12-2: Cell-Based Liquid Biopsy: CTCs in the Era of Personalized'
+            title_zh: 'Talk 12-2: 循環腫瘤細胞於精準腫瘤學之應用：計數、表型分析、微量殘留病灶及臨床決策支持'
             speaker: 周輝政 醫師 臺安醫院婦產科
       - time: 15:15-15:50
         type: parallel
@@ -316,7 +328,7 @@ days:
             session: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
             moderator: 林峻宇教授 陽明交通大學
-            title_zh: Talk 11-3 · TBA
+            title_zh: 'Talk 11-3: AI-driven multi-omics integration for drug response prediction and clinical outcomes in precision oncology'
             speaker: 周緻雅博士 陽明交通大學
           - venue: 第二講堂
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
