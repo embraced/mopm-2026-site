@@ -89,7 +89,7 @@ days:
       - time: 12:25-13:40
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 @ 3F-301~304 · 3F-302 亞洲準譯股份有限公司 · 3F-303 國家實驗研究院國家高速網路與計算中心)
+        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 @ 3F-301~304 · 3F-302 亞洲準譯 · 3F-303 國網中心)
       - time: 13:40-14:25
         type: plenary
         category: keynote
@@ -98,7 +98,7 @@ days:
       - time: 14:25-14:35
         type: plenary
         category: showcase
-        title_zh: Technology Showcase (6 min) · 圖爾思生物科技股份有限公司
+        title_zh: Technology Showcase (6 min) · 圖爾思
       - time: 14:35-14:50
         type: break
         category: break
@@ -267,7 +267,7 @@ days:
       - time: 12:05-14:05
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 @ 3F-301~304 · 3F-301 博克科技股份有限公司 · 3F-302 世基生物醫學股份有限公司)
+        title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 @ 3F-301~304 · 3F-301 博克科技 · 3F-302 世基生醫)
       - time: 13:00-13:50
         type: parallel
         tracks:
