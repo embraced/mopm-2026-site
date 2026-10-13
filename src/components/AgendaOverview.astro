@@ -1,5 +1,5 @@
 ---
-import { loadAgenda, splitSpeaker, type Slot } from '../lib/agenda';
+import { loadAgenda, splitRooms, splitSpeaker, type Slot } from '../lib/agenda';
 import { t, pick, pathFor, type Lang } from '../lib/i18n';
 import SectionHeading from './SectionHeading.astro';
 const { lang } = Astro.props as { lang: Lang };
@@ -90,7 +90,18 @@ const fullHref = pathFor(lang, '/agenda');
                 </div>
               ) : (
                 <div class={`flex min-h-[48px] items-center gap-2.5 rounded-xl px-4 py-3 ${bandClass[kind]}`}>
-                  <span class={`text-sm font-bold ${bandLabel[kind]}`}>{pick(slot, 'title', lang) || slot.title_zh}</span>
+                  {(() => {
+                    // 午餐列：手機每間會議室一行，sm 以上維持原本的一行標題
+                    const title = pick(slot, 'title', lang) || slot.title_zh || '';
+                    const r = splitRooms(title);
+                    if (!r.rooms.length) return <span class={`text-sm font-bold ${bandLabel[kind]}`}>{title}</span>;
+                    return (
+                      <span class={`text-sm font-bold ${bandLabel[kind]}`}>
+                        <span class="hidden sm:inline">{title}</span>
+                        <span class="sm:hidden">{r.head}{r.time && <span class="whitespace-nowrap"> ({r.time})</span>}{r.rooms.map((room) => <span class="block">{room}</span>)}</span>
+                      </span>
+                    );
+                  })()}
                   {note && <span class="text-[13px] font-medium text-muted">{note}</span>}
                 </div>
               )}

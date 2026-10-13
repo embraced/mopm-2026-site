@@ -1,5 +1,5 @@
 ---
-import { splitSpeaker, type Agenda } from '../lib/agenda';
+import { splitRooms, splitSpeaker, type Agenda } from '../lib/agenda';
 import { pick, type Lang } from '../lib/i18n';
 const { agenda, lang } = Astro.props as { agenda: Agenda; lang: Lang };
 const chipAll = lang === 'zh' ? '全部' : 'All';
@@ -51,7 +51,15 @@ const venueIndex = (v: string) => Math.max(0, agenda.venues.indexOf(v));
         ) : (
           <div class="mb-3 rounded-md border-l-4 border-accent bg-surface p-3" data-venue="plenary">
             <div class="text-xs font-bold text-accent">{slot.time}{slot.venue ? '・' + slot.venue : ''}</div>
-            <div class="text-sm font-medium">{pick(slot, 'title', lang) || slot.title_zh}</div>
+            {(() => {
+              // 午餐列：每間會議室一行（splitRooms）
+              const r = splitRooms(pick(slot, 'title', lang) || slot.title_zh || '');
+              return (
+                <div class="text-sm font-medium">
+                  {r.head}{r.time && <span class="whitespace-nowrap"> ({r.time})</span>}{r.rooms.map((room) => <span class="block">{room}</span>)}
+                </div>
+              );
+            })()}
             {slot.speaker && (() => {
               const sp = splitSpeaker(slot.speaker);
               const aff = sp.affiliation || pick(slot, 'affiliation', lang);

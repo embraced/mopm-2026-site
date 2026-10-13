@@ -95,3 +95,17 @@ export function splitSpeaker(raw?: string): { person: string; affiliation: strin
   }
   return { person: s.slice(0, cursor).trim(), affiliation: cleanAffiliation(s.slice(cursor)) };
 }
+
+/**
+ * 午餐列的 title_zh 形如「Lunch Seminar (12:50-13:25 · 3F-302 廠商 · 3F-303 廠商)」，
+ * 網站沒有別的欄位放會議室（見 CLAUDE.md「場地」）。拆成 head + time + 一間一行，
+ * 讓窄螢幕在每個「3F-」前換行。time 單獨回傳，呈現時包成 nowrap 的「(time)」，
+ * 避免括號跨好幾行、時間被折成兩截。沒有會議室的標題原樣放在 head。
+ */
+export function splitRooms(title: string): { head: string; time: string; rooms: string[] } {
+  const m = title.match(/^(.*?)\s*\((.*)\)$/);
+  if (!m) return { head: title, time: '', rooms: [] };
+  const [time, ...rooms] = m[2].split(/\s*·\s*(?=3F-)/);
+  if (!rooms.length) return { head: title, time: '', rooms: [] };
+  return { head: m[1], time, rooms };
+}

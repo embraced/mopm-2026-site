@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { splitSpeaker } from '../src/lib/agenda';
+import { splitRooms, splitSpeaker } from '../src/lib/agenda';
 
 // 樣本全部取自主辦 2026-07-30 議程 docx 的實際寫法。
 describe('splitSpeaker', () => {
@@ -75,5 +75,24 @@ describe('splitSpeaker', () => {
 
   it('leaves a plain TBA untouched', () => {
     expect(splitSpeaker('TBA')).toEqual({ person: 'TBA', affiliation: '' });
+  });
+});
+
+// 午餐列把多間會議室塞在同一個 title_zh 裡；手機版要一間一行。
+describe('splitRooms', () => {
+  it('splits a lunch title into a head line and one line per room', () => {
+    expect(splitRooms('Lunch & Poster Session / Lunch Seminar (12:50-13:25 · 3F-302 亞洲準譯股份有限公司 · 3F-303 國家實驗研究院國家高速網路與計算中心)')).toEqual({
+      head: 'Lunch & Poster Session / Lunch Seminar',
+      time: '12:50-13:25',
+      rooms: ['3F-302 亞洲準譯股份有限公司', '3F-303 國家實驗研究院國家高速網路與計算中心'],
+    });
+  });
+
+  it('leaves titles without rooms untouched', () => {
+    expect(splitRooms('Technology Showcase (6 min) · 圖爾思生物科技股份有限公司')).toEqual({
+      head: 'Technology Showcase (6 min) · 圖爾思生物科技股份有限公司',
+      time: '',
+      rooms: [],
+    });
   });
 });
