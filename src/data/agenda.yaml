@@ -24,6 +24,7 @@ days:
           - venue: 第三講堂
             session: 'Session 1: AI 與精準醫療研究'
             organizer: TPS
+            moderator: 廖寶琦 特聘教授 國立成功大學工業衛生學科暨環境醫學研究所
             title_zh: 'Talk 1-1: From Multi-Omics to Multimodal Deep Learning: Advancing AI-Driven Precision Medicine'
             speaker: 陳璿宇 研究員 中研院統計所
           - venue: 第一講堂
@@ -44,6 +45,7 @@ days:
           - venue: 第三講堂
             session: 'Session 1: AI 與精準醫療研究'
             organizer: TPS
+            moderator: 廖寶琦 特聘教授 國立成功大學工業衛生學科暨環境醫學研究所
             title_zh: Talk 1-2 · TBA
             speaker: Hyun Joo An
           - venue: 第一講堂
@@ -63,6 +65,7 @@ days:
           - venue: 第三講堂
             session: 'Session 1: AI 與精準醫療研究'
             organizer: TPS
+            moderator: 廖寶琦 特聘教授 國立成功大學工業衛生學科暨環境醫學研究所
             title_zh: Talk 1-3 · TBA
             speaker: Je-Hyun Baek
           - venue: 第一講堂
