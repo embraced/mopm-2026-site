@@ -110,7 +110,7 @@ days:
             session: 'Session 4: Evolutionary genomics'
             organizer: TSECB
             moderator: 許家郎 (台灣大學附設醫院醫學研究部)
-            title_zh: Talk 4-1 · TBA
+            title_zh: 'Talk 4-1: When Spatial Meets Long Reads: Unveiling Novel Genes and Alternative Splicing in Maize Embryonic Leaves'
             speaker: 呂美曄 (中研院生物多樣性研究中心)
           - venue: 第一講堂
             session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
@@ -229,7 +229,7 @@ days:
             session: 'Session 7: Systems Biology'
             organizer: TSECB
             moderator: 吳謂勝 (國立成功大學電機工程)
-            title_zh: Talk 7-2 · TBA
+            title_zh: 'Talk 7-2: 利用E. coli 研究單一細胞中的ATP 與生長動態'
             speaker: 林暐翔 (中研院分子生物研究所)
           - venue: 第一講堂
             session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
