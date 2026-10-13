@@ -311,7 +311,7 @@ days:
             session: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
             moderator: 林峻宇教授 陽明交通大學
-            title_zh: Talk 11-2 · TBA
+            title_zh: 'Talk 11-2: 從單細胞空間微環境到癌前阻斷：空間多體學解析肺腺癌演化與 TIM-3 預防標靶'
             speaker: 李建融教授 長庚大學
           - venue: 第二講堂
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
@@ -325,7 +325,7 @@ days:
           - venue: 第三講堂
             session: 'Session 10: 質譜多體學大數據生醫分析'
             organizer: TPS
-            title_zh: Talk 10-3 · TBA
+            title_zh: 'Talk 10-3: An AI-powered Multimodal Platform for Pancancer Kinase Activity Profiling and Drug Response Prediction'
             speaker: 李宗夷理事長 陽明交大資工所
           - venue: 第一講堂
             session: 'Session 11: Multi-Omics in Translational Medicine'
