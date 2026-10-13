@@ -66,7 +66,7 @@ days:
             session: 'Session 1: AI 與精準醫療研究'
             organizer: TPS
             moderator: 廖寶琦 特聘教授 國立成功大學工業衛生學科暨環境醫學研究所
-            title_zh: Talk 1-3 · TBA
+            title_zh: 'Talk 1-3: Beyond Genomic Liquid Biopsy: Tumor-Proximal BALF Extracellular Vesicle Multi-Proteomics for Precision Lung Cancer Care'
             speaker: Je-Hyun Baek
           - venue: 第一講堂
             session: 'Session 2: AI for Bioinformatics'
@@ -134,13 +134,13 @@ days:
             session: 'Session 4: Evolutionary genomics'
             organizer: TSECB
             moderator: 許家郎 (台灣大學附設醫院醫學研究部)
-            title_zh: Talk 4-2 · TBA
+            title_zh: 'Talk 4-2: 羽毛形態轉變的多樣化及其分子調控機制'
             speaker: 陳志冠 (東華大學生化暨分子醫學科學系)
           - venue: 第一講堂
             session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
             organizer: TGMBS
             moderator: 莊智弘 教授 高雄醫學大學醫學檢驗生物技術學系
-            title_zh: Talk 5-2 · TBA
+            title_zh: 'Talk 5-2: From tumor dedifferentiation to systemic wasting: Roles of NSUN2-mediated m5C modification and macrophage-derived CHI3L1 in pancreatic cancer'
             speaker: 黃柏憲 副教授 國立成功大學生物化學暨分子生物學研究所
           - venue: 第二講堂
             session: 'Session 6: Exosomes in human diseases'
@@ -161,7 +161,7 @@ days:
             session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
             organizer: TGMBS
             moderator: 莊智弘 教授 高雄醫學大學醫學檢驗生物技術學系
-            title_zh: Talk 5-3 · TBA
+            title_zh: 'Talk 5-3: 從多體學角度解析 Tirzepatide 治療代謝功能障礙相關脂肪性肝病之分子機制'
             speaker: 李佳陽 教授 高雄醫學大學醫學研究所
           - venue: 第二講堂
             session: 'Session 6: Exosomes in human diseases'
