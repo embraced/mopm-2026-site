@@ -20,7 +20,7 @@ const dates = [
   {
     label: t(lang, 'keydates.register'),
     body: pick(c, 'register_deadline', lang),
-    was: '',  // 報名日沒延長過；留著欄位讓兩筆形狀一致，d.was 才不會是型別錯誤
+    was: pick(c, 'register_deadline_prev', lang),  // 同上：有 register_deadline_prev_* 才顯示「延長」
     color: '#22C55E',
     icon: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-3 3-1.5-1.5"/>',
   },
