@@ -15,6 +15,7 @@ days:
         type: plenary
         category: opening
         title_zh: Opening Remarks
+        moderator: 陳健生 理事長 國立成功大學食安所
       - time: 09:20-09:30
         type: plenary
         title_zh: Group Photo
@@ -58,7 +59,8 @@ days:
             session: 'Session 3: 精準醫學檢測與多體學判讀'
             organizer: TPMS
             moderator: 王智弘 總院長 臺北市立聯合醫院
-            title_zh: Talk 3-2 · TBA
+            title_zh: 'Talk 3-2: AI在臨床醫療數據分析的應用'
+            speaker: 張廷彰 醫師 林口長庚紀念醫院婦產部
       - time: 10:40-11:15
         type: parallel
         tracks:
@@ -196,11 +198,7 @@ days:
         title_zh: 'Keynote Talk 3: Decoding cellular plasticity and spatial phenotypes in cancer'
         speaker: Aaron M. Newman (Stanford University)
         moderator: 劉宗霖老師 成功大學生物科技與產業科學系
-      - time: 09:45-09:55
-        type: plenary
-        category: showcase
-        title_zh: Technology Showcase (6 min)
-      - time: 09:55-10:20
+      - time: 09:45-10:20
         type: break
         category: break
         title_zh: Refreshment Break
@@ -299,6 +297,7 @@ days:
             organizer: TPMS
             moderator: 陳相成 國防部軍醫局醫務管理處處長
             title_zh: Talk 12-1 · TBA
+            speaker: 楊謝樂 博士 磁量生技股份有限公司董事長
       - time: 14:40-15:15
         type: parallel
         tracks:
@@ -343,6 +342,7 @@ days:
         type: plenary
         category: ceremony
         title_zh: Award Ceremony
+        moderator: 陳健生 理事長 國立成功大學食安所
       - time: 16:30-16:40
         type: plenary
         category: closing
