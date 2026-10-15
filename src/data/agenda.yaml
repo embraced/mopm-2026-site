@@ -284,6 +284,7 @@ days:
           - venue: 第三講堂
             session: 'Session 10: 質譜多體學大數據生醫分析'
             organizer: TPS
+            moderator: 王家義 (國立成功大學副研發長)
             title_zh: 'Talk 10-1: ANALomics: An Integrated Computational Toolkit for Multi-Omics Analysis Across Genomics, Transcriptomics, and Multi-Layered Proteomics'
             speaker: 于松桓老師 中山大學精準所
           - venue: 第一講堂
@@ -304,6 +305,7 @@ days:
           - venue: 第三講堂
             session: 'Session 10: 質譜多體學大數據生醫分析'
             organizer: TPS
+            moderator: 王家義 (國立成功大學副研發長)
             title_zh: 'Talk 10-2: Machine Learning and Deep Learning of MALDI-TOF Mass Spectrometry Data for Predicting Vancomycin Resistance in Enterococci'
             speaker: 陳志杰老師 中山大學醫科所
           - venue: 第一講堂
@@ -324,6 +326,7 @@ days:
           - venue: 第三講堂
             session: 'Session 10: 質譜多體學大數據生醫分析'
             organizer: TPS
+            moderator: 王家義 (國立成功大學副研發長)
             title_zh: 'Talk 10-3: An AI-powered Multimodal Platform for Pancancer Kinase Activity Profiling and Drug Response Prediction'
             speaker: 李宗夷理事長 陽明交大資工所
           - venue: 第一講堂
