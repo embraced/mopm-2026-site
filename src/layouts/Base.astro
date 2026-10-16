@@ -40,6 +40,11 @@ const enPath = path.startsWith('/en') ? path : '/en' + (path === '/' ? '/' : pat
     <link rel="alternate" hreflang="en" href={new URL(enPath, site).href} />
     <link rel="alternate" hreflang="x-default" href={new URL(zhPath, site).href} />
     <meta name="theme-color" content="#1E293B" />
+    <!-- Favicon：圖形同 Nav 的分子 logo。Google 搜尋結果要求 48px 倍數，favicon.ico 內含 16/32/48 -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Fonts: Noto Sans TC (body) · Noto Serif TC (section/hero headings) · Spectral (italic EN subtitles) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
