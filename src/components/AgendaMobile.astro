@@ -22,8 +22,8 @@ const venueIndex = (v: string) => Math.max(0, agenda.venues.indexOf(v));
     ))}
   </div>
 
-  {agenda.days.map((day) => (
-    <section class="mb-8">
+  {agenda.days.map((day, di) => (
+    <section class="mb-8" data-agenda-day={di}>
       <h3 class="mb-2 text-base font-bold text-accent">{lang === 'zh' ? day.label_zh : day.label_en}</h3>
       {day.slots.map((slot) => (
         slot.type === 'parallel' ? (

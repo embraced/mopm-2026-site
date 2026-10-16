@@ -1,5 +1,5 @@
 ---
-import { t, pathFor, type Lang } from '../lib/i18n';
+import { t, type Lang } from '../lib/i18n';
 import ThemeToggle from './ThemeToggle.astro';
 import LangToggle from './LangToggle.astro';
 import Logo from './Logo.astro';
@@ -9,7 +9,7 @@ const neutralPath = Astro.url.pathname.replace(/^\/en/, '').replace(/\/$/, '') |
 const items = [
   { key: 'about', href: base + '#about' },
   { key: 'speakers', href: base + '#speakers' },
-  { key: 'agenda', href: pathFor(lang, '/agenda') },
+  { key: 'agenda', href: base + '#agenda' },
   { key: 'register', href: base + '#register' },
   { key: 'abstract', href: base + '#abstract' },
   { key: 'transport', href: base + '#transport' },

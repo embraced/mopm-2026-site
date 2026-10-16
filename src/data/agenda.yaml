@@ -11,14 +11,17 @@ days:
         type: break
         category: registration
         title_zh: Registration
+        venue: 成大醫學院穿堂
       - time: 09:00-09:20
         type: plenary
         category: opening
         title_zh: Opening Remarks
-        moderator: 陳健生 理事長 國立成功大學食安所
+        moderator: 陳健生 台灣蛋白體學會理事長、成大食安所所長
+        venue: 第三講堂
       - time: 09:20-09:30
         type: plenary
         title_zh: Group Photo
+        venue: 第三講堂
       - time: 09:30-10:05
         type: parallel
         tracks:
@@ -91,7 +94,8 @@ days:
         category: keynote
         title_zh: Keynote Talk 1 · TBA
         speaker: Heng Zhu (Johns Hopkins University)
-        moderator: 蔡少正 講座教授 成大生理所
+        moderator: 蔡少正 國立中正大學校長、成大生理所講座教授
+        venue: 第三講堂
       - time: 12:25-13:40
         type: break
         category: lunch
@@ -101,10 +105,12 @@ days:
         category: keynote
         title_zh: Keynote Talk 2 · TBA
         speaker: 吉田信介博士 日本京都大學
+        venue: 第三講堂
       - time: 14:25-14:35
         type: plenary
         category: showcase
-        title_zh: Technology Showcase (6 min) · 圖爾思生物科技股份有限公司
+        title_zh: Technology Showcase · 圖爾思生物科技股份有限公司
+        venue: 第三講堂
       - time: 14:35-14:50
         type: break
         category: break
@@ -178,13 +184,14 @@ days:
           - venue: 第三講堂
             title_zh: TSECB Board of Directors meeting & General Assembly
           - venue: 第一講堂
-            title_zh: (Board of Directors meeting / General Assembly)
+            title_zh: TGMBS Board of Directors meeting & General Assembly
           - venue: 第二講堂
-            title_zh: (Board of Directors meeting / General Assembly)
+            title_zh: TSEV Board of Directors meeting & General Assembly
       - time: 18:30-21:00
         type: break
         category: banquet
         title_zh: Invited Banquet
+        venue: 濃園滿漢餐廳
   - date: '2026-11-15'
     label_en: Day 2 · Nov 15 (Sun)
     label_zh: 第 2 天 · 11/15（日）
@@ -193,12 +200,14 @@ days:
         type: break
         category: registration
         title_zh: Registration
+        venue: 成大醫學院穿堂
       - time: 09:00-09:45
         type: plenary
         category: keynote
         title_zh: 'Keynote Talk 3: Decoding cellular plasticity and spatial phenotypes in cancer'
         speaker: Aaron M. Newman (Stanford University)
         moderator: 劉宗霖老師 成功大學生物科技與產業科學系
+        venue: 第三講堂
       - time: 09:45-10:20
         type: break
         category: break
@@ -270,15 +279,15 @@ days:
         type: break
         category: lunch
         title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 · 3F-301 博克科技股份有限公司 · 3F-302 世基生物醫學股份有限公司)
-      - time: 13:00-13:50
+      - time: 13:10-13:50
         type: parallel
         tracks:
           - venue: 第三講堂
             title_zh: TPS General Assembly
           - venue: 第一講堂
-            title_zh: (Board of Directors meeting / General Assembly)
+            title_zh: TBSB Board of Directors meeting & General Assembly
           - venue: 第二講堂
-            title_zh: (Board of Directors meeting / General Assembly)
+            title_zh: TPMS Board of Directors meeting & General Assembly
       - time: 14:05-14:40
         type: parallel
         tracks:
@@ -346,8 +355,10 @@ days:
         type: plenary
         category: ceremony
         title_zh: Award Ceremony
-        moderator: 陳健生 理事長 國立成功大學食安所
+        moderator: 陳健生 台灣蛋白體學會理事長、成大食安所所長
+        venue: 第三講堂
       - time: 16:30-16:40
         type: plenary
         category: closing
         title_zh: Closing Remarks & Handover Ceremony
+        venue: 第三講堂

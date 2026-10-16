@@ -1,0 +1,5 @@
+# 議程已合併到首頁（2026-10-16 主辦要求），舊的議程頁網址轉到首頁議程區塊
+/agenda /#agenda 301
+/agenda/ /#agenda 301
+/en/agenda /en/#agenda 301
+/en/agenda/ /en/#agenda 301

@@ -6,8 +6,8 @@ const trackColor = ['border-t101', 'border-t102', 'border-t103'];
 // 欄頭色點：與該欄 td 左框同色，呼應手機版的會場 chip 色點
 const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103'];
 ---
-{agenda.days.map((day) => (
-  <section class="mb-10">
+{agenda.days.map((day, di) => (
+  <section class="mb-10" data-agenda-day={di}>
     <h3 class="mb-3 text-lg font-bold text-accent">{lang === 'zh' ? day.label_zh : day.label_en}</h3>
     <div class="overflow-hidden rounded-lg border border-line">
       <table class="w-full table-fixed border-collapse text-sm">
@@ -54,6 +54,7 @@ const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103']
               <tr class="bg-bg/50">
                 <td class="border-b border-line p-2 align-top font-semibold text-accent">{slot.time}</td>
                 <td colspan={agenda.venues.length} class="border-b border-line p-2">
+                  {slot.venue && <span class="mr-2 inline-block rounded border border-accent/50 px-1.5 text-xs font-bold text-accent">{slot.venue}</span>}
                   <span class="font-medium">{pick(slot, 'title', lang) || slot.title_zh}</span>
                   {slot.speaker && (() => {
                     const sp = splitSpeaker(slot.speaker);

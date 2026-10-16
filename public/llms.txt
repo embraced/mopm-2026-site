@@ -12,7 +12,7 @@
 ## 關於會議 About the Conference
 - 定位：整合多體學（基因體、轉錄體、蛋白質體、代謝體等多維度數據解析疾病網絡）與精準醫學（將生物特徵轉化為個人化醫療策略）的跨領域會議，涵蓋基礎探索、體學創新、資料分析到轉譯應用的完整脈絡
 - 沿革：2019 年由台灣生物資訊暨系統生物學會 (TBSB)、台灣蛋白體學會 (TPS)、台灣基因醫學暨生物標記學會 (TGMBS) 共同發起；2020 年再結合台灣演化與計算生物學會 (TSECB)、台灣精準醫學學會 (TPMS)、台灣胞外體學會 (TSEV)，成為六大學會聯合主辦
-- 2026 年為第八屆，內容包含國內外專家專題演講、學術壁報競賽與產業儀器展示
+- 2026 年為第八屆，由台灣蛋白體學會（TPS）主辦，內容包含國內外專家專題演講、學術壁報競賽與產業儀器展示
 
 ## 大會主題演講 Keynote Speakers
 - Heng Zhu（教授，美國約翰霍普金斯大學醫學院藥理與分子科學系）— 高通量蛋白質體學與系統生物學；HuProt、VirD 等功能性蛋白質微陣列平台開發者
@@ -50,5 +50,5 @@
 ## 重要頁面
 - [首頁 Home (中文)](https://2026.mopm.tw/)
 - [Home (English)](https://2026.mopm.tw/en/)
-- [議程 Agenda](https://2026.mopm.tw/agenda/)
-- [Agenda (English)](https://2026.mopm.tw/en/agenda/)
+- [議程 Agenda](https://2026.mopm.tw/#agenda)
+- [Agenda (English)](https://2026.mopm.tw/en/#agenda)
