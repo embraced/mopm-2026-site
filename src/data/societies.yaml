@@ -1,15 +1,19 @@
 # 順序即全站顯示順序（banner strip / 報名列表 / 主辦單位 / footer）。
 # TPS 為本屆主辦（host），列第一；其餘五個協辦依序。
+# homepage_url：主辦單位區塊的卡片連到這裡（2026-10-16 使用者指示）。網域取自 register_url，
+# apex／www 依 mopm-2026 repo CHECKLIST.md 第 4 節的對照表（TPMS 不可加 www、TGMBS 只有 http、TSEV 沒有官網只有 FB 社團）。
 - code: TPS
   name_zh: "台灣蛋白體學會"
   name_en: "Taiwan Proteomics Society"
   logo: "/societies/tps.png"
+  homepage_url: "https://www.proteomics.org.tw/"
   register_url: "https://www.proteomics.org.tw/%E7%B9%B3%E8%B2%BB%E5%B0%88%E5%8D%80/%E6%9C%83%E8%AD%B0%E8%A8%BB%E5%86%8A%E8%B2%BB/"
 - code: TBSB
   name_zh: "台灣生物資訊暨系統生物學會"
   # 2026-08-05：改用主辦 About 來源檔的寫法，與學會官網 tbsb.org.tw 一致
   name_en: "Taiwan Bioinformatics and Systems Biology Society"
   logo: "/societies/tbsb.png"
+  homepage_url: "https://www.tbsb.org.tw/"
   # 過渡：暫連學會首頁，主辦取得 2026 報名連結後更換（2026-08-05 驗證 200）
   register_url: "https://www.tbsb.org.tw/"
 - code: TGMBS
@@ -17,6 +21,7 @@
   # 2026-08-05：改用主辦 About 來源檔的寫法（tgmbs.com 無英文，待主辦回覆確認）
   name_en: "Taiwan Genomic Medicine and Biomarker Society"
   logo: "/societies/tgmbs.png"
+  homepage_url: "http://www.tgmbs.com/"
   # 過渡：暫連學會首頁，主辦取得 2026 報名連結後更換。
   # 只有 http 可用——https://www.tgmbs.com 連不上（2026-08-05 驗證）
   register_url: "http://www.tgmbs.com/"
@@ -24,11 +29,13 @@
   name_zh: "台灣演化與計算生物學會"
   name_en: "Taiwan Society of Evolution and Computational Biology"
   logo: "/societies/tsecb.png"
+  homepage_url: "https://www.tsecb.org.tw/"
   register_url: "https://www.tsecb.org.tw/posts/2026mopm-registration"
 - code: TPMS
   name_zh: "台灣精準醫學學會"
   name_en: "Taiwan Precision Medicine Society"
   logo: "/societies/tpms.png"
+  homepage_url: "https://tpms.org.tw/"
   # 過渡：暫連學會首頁，主辦取得 2026 報名連結後更換。
   # ⚠️ 一定要用 apex，不要加 www：憑證不含 www.tpms.org.tw，
   #    https://www.tpms.org.tw 會 TLS 握手失敗（2026-08-05 驗證）
@@ -37,6 +44,7 @@
   name_zh: "台灣胞外體學會"
   name_en: "Taiwan Society for Extracellular Vesicles"
   logo: "/societies/tsev.png"
+  homepage_url: "https://www.facebook.com/groups/tsevtw/"
   # TSEV 沒有官方網站（原本的站已隨當初代管的公司停止服務而消失），
   # 使用者指定改連 Facebook 社團——這是目前唯一還在運作的公開管道。
   register_url: "https://www.facebook.com/groups/tsevtw/"
