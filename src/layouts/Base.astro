@@ -49,7 +49,10 @@ const enPath = path.startsWith('/en') ? path : '/en' + (path === '/' ? '/' : pat
     <!-- Fonts: Noto Sans TC (body) · Noto Serif TC (section/hero headings) · Spectral (italic EN subtitles) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=Noto+Serif+TC:wght@700;900&family=Spectral:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" />
+    <!-- 非阻斷載入：CJK 字型的 CSS 有 771 個 @font-face（gzip 後 237 KB），同步載入時下載完前畫面全白。
+         media="print" 讓瀏覽器以低優先度下載且不擋繪製，載完才切成 all；先用系統字型顯示，字型到了再換（display=swap）。 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=Noto+Serif+TC:wght@700;900&family=Spectral:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=Noto+Serif+TC:wght@700;900&family=Spectral:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet" /></noscript>
 
     <!-- Open Graph / social -->
     <meta property="og:type" content="website" />
