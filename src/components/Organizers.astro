@@ -8,12 +8,12 @@ const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')
 ---
 <section id="organizers" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
   <SectionHeading title={t(lang, 'section.organizers')} subtitle={t(lang, 'section.organizersSub')} />
-  {/* 成大標誌：官方 CIS「基本組合-01」原樣使用，四周留 0.4X 空白（規範 A-02），不可改色或變形。
-      深色模式仍放在白底上，因為規範規定深色底要用反白版，而我們沒有反白版。 */}
-  <div class="mb-5 flex justify-center rounded-2xl bg-white p-5 shadow-[0_2px_14px_rgba(30,41,59,.06)] ring-1 ring-black/[.04]">
-    <img src="/ncku-logo.webp" width="573" height="200" alt={lang === 'zh' ? '國立成功大學' : 'National Cheng Kung University'} class="h-16 w-auto sm:h-20" loading="lazy" />
-  </div>
   <div class="grid gap-5 rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)] sm:grid-cols-2 lg:grid-cols-3">
+    {/* 成大標誌（2026-10-16 主辦要求放在六學會區塊內、六學會上方）：官方 CIS「基本組合-01」原樣使用，
+        四周留 0.4X 空白（規範 A-02），不可改色或變形。深色模式仍放在白底上，因為規範規定深色底要用反白版，而我們沒有反白版。 */}
+    <div class="flex justify-center rounded-xl bg-white p-4 ring-1 ring-black/[.04] sm:col-span-2 lg:col-span-3">
+      <img src="/ncku-logo.webp" width="573" height="200" alt={lang === 'zh' ? '國立成功大學' : 'National Cheng Kung University'} class="h-14 w-auto sm:h-16" loading="lazy" />
+    </div>
     {socs.map((s) => (
       <div class="flex items-center gap-4 rounded-xl bg-bg p-4">
         <div class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white/95 p-1.5 shadow-[0_1px_5px_rgba(15,23,33,.12)] ring-1 ring-black/[.04]">
