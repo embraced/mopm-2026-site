@@ -15,7 +15,10 @@ const { lang = 'zh', title = 'MOPM 2026', description } = Astro.props as {
 
 const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
 const p = (o: any, b: string) => o?.[`${b}_${lang}`] ?? o?.[`${b}_zh`] ?? '';
-const desc = description ?? `${p(c, 'title')}｜${p(c, 'theme')}・${p(c, 'date')}・${p(c, 'venue')}`;
+// 主題未定時不放進 description：Google 會把「主題待定」原樣顯示在搜尋結果
+const theme = p(c, 'theme');
+const themePart = /待定|to be announced/i.test(theme) ? '' : `｜${theme}`;
+const desc = description ?? `${p(c, 'title')}${themePart}・${p(c, 'date')}・${p(c, 'venue')}`;
 
 const site = Astro.site ?? new URL('https://2026.mopm.tw');
 const canonical = new URL(Astro.url.pathname, site).href;
