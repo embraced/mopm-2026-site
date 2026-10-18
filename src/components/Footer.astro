@@ -8,7 +8,7 @@ const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
 const socs: any[] = yaml.load(fs.readFileSync('src/data/societies.yaml', 'utf8')) as any[];
 const base = lang === 'en' ? '/en/' : '/';
 
-const nameFull = lang === 'zh' ? '多體學與精準醫學聯合會議' : 'Multi-Omics & Precision Medicine Conference';
+const nameFull = lang === 'zh' ? c.title_zh : c.title_en;
 const editionLine = lang === 'zh' ? `第 ${c.edition} 屆` : `${c.edition}th Edition`;
 const venue = lang === 'zh' ? c.venue_zh : c.venue_en;
 const address = lang === 'zh' ? '701401 台南市東區大學路 1 號' : 'No. 1, University Rd, East Dist., Tainan 701401';
@@ -46,6 +46,7 @@ const quickTitle = lang === 'zh' ? '快速連結' : 'Quick Links';
       {quick.map((q) => (
         <a href={q.href} class="text-sm text-[#CBD5E1] transition-colors hover:text-accent">{t(lang, 'nav.' + q.key)}</a>
       ))}
+      <a href="https://mopm.tw/" class="text-sm text-[#CBD5E1] transition-colors hover:text-accent">{lang === 'zh' ? '歷屆會議' : 'Past Conferences'}</a>
     </div>
   </div>
 

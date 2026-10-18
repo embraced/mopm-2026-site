@@ -38,6 +38,12 @@ const schema = {
       addressCountry: 'TW',
     },
   },
+  superEvent: {
+    '@type': 'EventSeries',
+    '@id': 'https://mopm.tw/#series',
+    name: 'Multiomics and Precision Medicine Joint Conference (MOPM)',
+    url: 'https://mopm.tw/',
+  },
   organizer: societies.map((s) => ({ '@type': 'Organization', name: p(s, 'name') })),
   performer: speakers.map((s) => ({
     '@type': 'Person',
