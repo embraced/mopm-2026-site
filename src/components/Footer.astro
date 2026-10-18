@@ -46,7 +46,8 @@ const quickTitle = lang === 'zh' ? '快速連結' : 'Quick Links';
       {quick.map((q) => (
         <a href={q.href} class="text-sm text-[#CBD5E1] transition-colors hover:text-accent">{t(lang, 'nav.' + q.key)}</a>
       ))}
-      <a href="https://mopm.tw/" class="text-sm text-[#CBD5E1] transition-colors hover:text-accent">{lang === 'zh' ? '歷屆會議' : 'Past Conferences'}</a>
+      {/* ?from=2026：10-16 起 mopm.tw 曾 301 到本站，舊訪客的瀏覽器會快取那個 301。查詢字串讓快取鍵不同。 */}
+      <a href="https://mopm.tw/?from=2026" class="text-sm text-[#CBD5E1] transition-colors hover:text-accent">{lang === 'zh' ? '歷屆會議' : 'Past Conferences'}</a>
     </div>
   </div>
 
