@@ -1,5 +1,5 @@
 ---
-import { splitSpeaker, type Agenda } from '../lib/agenda';
+import { loc, splitSpeaker, type Agenda } from '../lib/agenda';
 import { pick, type Lang } from '../lib/i18n';
 const { agenda, lang } = Astro.props as { agenda: Agenda; lang: Lang };
 const trackColor = ['border-t101', 'border-t102', 'border-t103'];
@@ -16,7 +16,7 @@ const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103']
             <th class="sticky left-0 w-28 border-b border-line p-2 text-left">{lang === 'zh' ? '時間' : 'Time'}</th>
             {agenda.venues.map((v, i) => (
               <th class="border-b border-line p-2 text-left">
-                <span class="th-dot" style={`--chip: var(${trackVar[i] ?? '--color-accent'})`}></span>{v}
+                <span class="th-dot" style={`--chip: var(${trackVar[i] ?? '--color-accent'})`}></span>{lang === 'en' ? agenda.venues_en?.[i] ?? v : v}
               </th>
             ))}
           </tr>
@@ -28,23 +28,23 @@ const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103']
                 <td class="border-b border-line p-2 align-top font-semibold text-accent">{slot.time}</td>
                 {slot.tracks!.map((tk, i) => (
                   <td class={`border-b border-l border-line p-2 align-top break-words ${trackColor[i]} border-l-4`}>
-                    {(tk.session || tk.organizer) && (
+                    {(loc(tk, 'session', lang) || tk.organizer) && (
                       <div class="mb-0.5 flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
-                        {tk.session && <span class="text-xs font-bold text-muted">{tk.session}</span>}
+                        {loc(tk, 'session', lang) && <span class="text-xs font-bold text-muted">{loc(tk, 'session', lang)}</span>}
                         {tk.organizer && <span class="rounded border border-line px-1.5 text-[10px] font-bold tracking-wide text-muted">{tk.organizer}</span>}
                       </div>
                     )}
                     <div class="font-medium">{pick(tk, 'title', lang) || tk.title_zh}</div>
-                    {tk.speaker && (() => {
-                      const sp = splitSpeaker(tk.speaker);
+                    {loc(tk, 'speaker', lang) && (() => {
+                      const sp = splitSpeaker(loc(tk, 'speaker', lang));
                       return (
                         <div class="text-xs text-muted">
                           {sp.person}{sp.affiliation && <span class="block opacity-80">{sp.affiliation}</span>}
                         </div>
                       );
                     })()}
-                    {tk.moderator && (() => {
-                      const m = splitSpeaker(tk.moderator);
+                    {loc(tk, 'moderator', lang) && (() => {
+                      const m = splitSpeaker(loc(tk, 'moderator', lang));
                       return <div class="mt-1 text-xs text-muted">Moderator: {m.person}{m.affiliation ? ' ' + m.affiliation : ''}</div>;
                     })()}
                   </td>
@@ -54,17 +54,18 @@ const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103']
               <tr class="bg-bg/50">
                 <td class="border-b border-line p-2 align-top font-semibold text-accent">{slot.time}</td>
                 <td colspan={agenda.venues.length} class="border-b border-line p-2">
-                  {slot.venue && <span class="mr-2 inline-block rounded border border-accent/50 px-1.5 text-xs font-bold text-accent">{slot.venue}</span>}
+                  {slot.venue && <span class="mr-2 inline-block rounded border border-accent/50 px-1.5 text-xs font-bold text-accent">{loc(slot, 'venue', lang)}</span>}
                   <span class="font-medium">{pick(slot, 'title', lang) || slot.title_zh}</span>
-                  {slot.speaker && (() => {
-                    const sp = splitSpeaker(slot.speaker);
+                  {loc(slot, 'speaker', lang) && (() => {
+                    const sp = splitSpeaker(loc(slot, 'speaker', lang));
                     const aff = sp.affiliation || pick(slot, 'affiliation', lang);
                     // 間距用 class，不要用全形空白字面值——JSX 會把它吃掉，標題與講者會黏在一起
                     return <span class="ml-3 text-xs text-muted">{sp.person}{aff ? ' · ' + aff : ''}</span>;
                   })()}
-                  {slot.moderator && (() => {
-                    const m = splitSpeaker(slot.moderator);
-                    return <span class="ml-2 text-xs text-muted">（Moderator: {m.person}{m.affiliation ? ' ' + m.affiliation : ''}）</span>;
+                  {loc(slot, 'moderator', lang) && (() => {
+                    const m = splitSpeaker(loc(slot, 'moderator', lang));
+                    const [l, r] = lang === 'zh' ? ['（', '）'] : [' (', ')'];
+                    return <span class="ml-2 text-xs text-muted">{l}Moderator: {m.person}{m.affiliation ? ' ' + m.affiliation : ''}{r}</span>;
                   })()}
                 </td>
               </tr>

@@ -2,6 +2,10 @@ venues:
   - 第三講堂
   - 第一講堂
   - 第二講堂
+venues_en:
+  - Lecture Hall 3
+  - Lecture Hall 1
+  - Lecture Hall 2
 days:
   - date: '2026-11-14'
     label_en: Day 1 · Nov 14 (Sat)
@@ -10,81 +14,122 @@ days:
       - time: 08:00-09:00
         type: break
         category: registration
-        title_zh: Registration
+        title_zh: 註冊報到
+        title_en: Registration
         venue: 成大醫學院穿堂
+        venue_en: College of Medicine Lobby
       - time: 09:00-09:20
         type: plenary
         category: opening
         title_zh: Opening Remarks
-        moderator: 陳健生 台灣蛋白體學會理事長、成大食安所所長
+        moderator: 陳健生 台灣蛋白體學會理事長、國立成功大學食品安全衛生暨風險管理研究所所長
+        moderator_en: Chien-Sheng Chen / President of Taiwan Proteomics Society; Director of Department of Food Safety/Hygiene and Risk Management, NCKU
         venue: 第三講堂
+        venue_en: Lecture Hall 3
       - time: 09:20-09:30
         type: plenary
         title_zh: Group Photo
         venue: 第三講堂
+        venue_en: Lecture Hall 3
       - time: 09:30-10:05
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 1: AI 與精準醫療研究'
+            venue_en: Lecture Hall 3
+            session: 'Session 1: AI與精準醫療研究'
+            session_en: 'Session 1: AI and Precision Medicine Research'
             organizer: TPS
-            moderator: 廖寶琦 特聘教授 國立成功大學工業衛生學科暨環境醫學研究所
+            moderator: 廖寶琦 特聘教授 國立成功大學 工業衛生學科暨環境醫學研究所
+            moderator_en: Distinguished Prof. Pao-Chi Liao / Department of Environmental and Occupational Health, National Cheng Kung University
             title_zh: 'Talk 1-1: From Multi-Omics to Multimodal Deep Learning: Advancing AI-Driven Precision Medicine'
-            speaker: 陳璿宇 研究員 中研院統計所
+            speaker: 陳璿宇 教授 研究員 中央研究院 統計科學研究所
+            speaker_en: Dr. Hsuan-Yu Chen / Research Fellow, Institute of Statistical Science, Academia Sinica
           - venue: 第一講堂
-            session: 'Session 2: AI for Bioinformatics'
+            venue_en: Lecture Hall 1
+            session: 'Session 2: AI於生物資訊學之應用'
+            session_en: 'Session 2: AI for Bioinformatics'
             organizer: TBSB
-            moderator: 張資昊教授 台北醫學大學
-            title_zh: Talk 2-1 · TBA
-            speaker: 何信瑩教授 陽明交通大學
+            moderator: 張資昊 教授 台北醫學大學 醫學資訊研究所
+            moderator_en: Prof. Tzu-Hao Chang / Graduate Institute of Biomedical Informatics, Taipei Medical University
+            title_zh: 'Talk 2-1: Evolutionary Learning in Bioinformatics: From Signature Discovery to Intelligent Systems'
+            speaker: 何信瑩 副院長 國立陽明交通大學 工程生物科學學院
+            speaker_en: Prof. Shinn-Ying Ho / Vice Dean, College of Engineering Bioscience, National Yang Ming Chiao Tung University
           - venue: 第二講堂
+            venue_en: Lecture Hall 2
             session: 'Session 3: 精準醫學檢測與多體學判讀'
+            session_en: 'Session 3: Precision Medicine Testing and Multi-Omics Interpretation'
             organizer: TPMS
             moderator: 王智弘 總院長 臺北市立聯合醫院
-            title_zh: 'Talk 3-1: NGS、LDTs 與分子腫瘤委員會：多體學報告如何轉成臨床決策'
-            speaker: 陳燕麟 主任 三軍總醫院精準醫學暨基因體中心
+            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital
+            title_zh: 'Talk 3-1: NGS、LDTs與分子腫瘤委員會：多體學報告如何轉成臨床決策'
+            speaker: 陳燕麟 主任 三軍總醫院 精準醫學暨基因體中心
+            speaker_en: Dr. Yen-Lin Chen / Director, Center for Precision Medicine and Genomics, Tri-Service General Hospital
       - time: 10:05-10:40
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 1: AI 與精準醫療研究'
+            venue_en: Lecture Hall 3
+            session: 'Session 1: AI與精準醫療研究'
+            session_en: 'Session 1: AI and Precision Medicine Research'
             organizer: TPS
-            moderator: 廖寶琦 特聘教授 國立成功大學工業衛生學科暨環境醫學研究所
-            title_zh: Talk 1-2 · TBA
-            speaker: Hyun Joo An
+            moderator: 廖寶琦 特聘教授 國立成功大學 工業衛生學科暨環境醫學研究所
+            moderator_en: Distinguished Prof. Pao-Chi Liao / Department of Environmental and Occupational Health, National Cheng Kung University
+            title_zh: 'Talk 1-2: What Gene Editing Cannot Predict: Glycan Remodeling in Xenogeneic Tissues and Blood'
+            speaker: Prof. Hyun Joo An / Graduate School of Analytical Science and Technology, Chungnam National University; Director, Asia-Pacific Glycomics Reference Site, Chungnam National University
           - venue: 第一講堂
-            session: 'Session 2: AI for Bioinformatics'
+            venue_en: Lecture Hall 1
+            session: 'Session 2: AI於生物資訊學之應用'
+            session_en: 'Session 2: AI for Bioinformatics'
             organizer: TBSB
-            moderator: 張資昊教授 台北醫學大學
+            moderator: 張資昊 教授 台北醫學大學 醫學資訊研究所
+            moderator_en: Prof. Tzu-Hao Chang / Graduate Institute of Biomedical Informatics, Taipei Medical University
             title_zh: 'Talk 2-2: 超越平衡基準：具類別不平衡感知的血腦屏障穿透胜肽預測'
-            speaker: 陳鯨太 (臺北市立大學資訊科學系)
+            title_en: 'Talk 2-2: Beyond Balanced Benchmarks: Imbalance-Aware Prediction of Blood-Brain Barrier Penetrating Peptides'
+            speaker: 陳鯨太 助理教授 臺北市立大學 資訊科學系
+            speaker_en: Assistant Prof. Ching-Tai Chen / Department of Computer Science, University of Taipei
           - venue: 第二講堂
+            venue_en: Lecture Hall 2
             session: 'Session 3: 精準醫學檢測與多體學判讀'
+            session_en: 'Session 3: Precision Medicine Testing and Multi-Omics Interpretation'
             organizer: TPMS
             moderator: 王智弘 總院長 臺北市立聯合醫院
+            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital
             title_zh: 'Talk 3-2: AI在臨床醫療數據分析的應用'
-            speaker: 張廷彰 醫師 林口長庚紀念醫院婦產部
+            speaker: 張廷彰 教授級顧問醫師 林口長庚紀念醫院 婦產部
+            speaker_en: Dr. Ting-Chang Chang / Professor-Level Consulting Physician, Department of Obstetrics and Gynecology, Chang Gung Memorial Hospital, Linkou Branch
       - time: 10:40-11:15
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 1: AI 與精準醫療研究'
+            venue_en: Lecture Hall 3
+            session: 'Session 1: AI與精準醫療研究'
+            session_en: 'Session 1: AI and Precision Medicine Research'
             organizer: TPS
-            moderator: 廖寶琦 特聘教授 國立成功大學工業衛生學科暨環境醫學研究所
+            moderator: 廖寶琦 特聘教授 國立成功大學 工業衛生學科暨環境醫學研究所
+            moderator_en: Distinguished Prof. Pao-Chi Liao / Department of Environmental and Occupational Health, National Cheng Kung University
             title_zh: 'Talk 1-3: Beyond Genomic Liquid Biopsy: Tumor-Proximal BALF Extracellular Vesicle Multi-Proteomics for Precision Lung Cancer Care'
-            speaker: Je-Hyun Baek
+            speaker: Dr. Je-Hyun Baek / Research Director, R&D Center for Clinical Mass Spectrometry, Seegene Medical Foundation
           - venue: 第一講堂
-            session: 'Session 2: AI for Bioinformatics'
+            venue_en: Lecture Hall 1
+            session: 'Session 2: AI於生物資訊學之應用'
+            session_en: 'Session 2: AI for Bioinformatics'
             organizer: TBSB
-            moderator: 張資昊教授 台北醫學大學
-            title_zh: 'Talk 2-3: Long-Read Sequencing for Precision Medicine: From Tumor Variant Phasing to Infectious Disease Diagnosis'
-            speaker: 黃耀廷教授 中正大學
+            moderator: 張資昊 教授 台北醫學大學 醫學資訊研究所
+            moderator_en: Prof. Tzu-Hao Chang / Graduate Institute of Biomedical Informatics, Taipei Medical University
+            title_zh: 'Talk 2-3: 長讀長定序於精準醫學之應用：從腫瘤變異分相到感染症診斷'
+            title_en: 'Talk 2-3: Long-Read Sequencing for Precision Medicine: From Tumor Variant Phasing to Infectious Disease Diagnosis'
+            speaker: 黃耀廷 系主任 教授 國立中正大學 資訊工程學系
+            speaker_en: Prof. Yao-Ting Huang / Department Chair, Institute of Computer Science and Information Engineering, National Chung Cheng University
           - venue: 第二講堂
+            venue_en: Lecture Hall 2
             session: 'Session 3: 精準醫學檢測與多體學判讀'
+            session_en: 'Session 3: Precision Medicine Testing and Multi-Omics Interpretation'
             organizer: TPMS
             moderator: 王智弘 總院長 臺北市立聯合醫院
+            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital
             title_zh: 'Talk 3-3: Precision Medicine in Hematology Practice'
-            speaker: 陳昱光 博士醫師 三軍總醫院血液腫瘤部
+            speaker: 陳昱光 主任 三軍總醫院 再生醫療中心
+            speaker_en: Dr. Yu-Guang Chen / Director, Center for Cell Therapy and Regenerative Medicine, Tri-Service General Hospital
       - time: 11:15-11:40
         type: break
         category: break
@@ -93,24 +138,31 @@ days:
         type: plenary
         category: keynote
         title_zh: Keynote Talk 1 · TBA
-        speaker: Heng Zhu (Johns Hopkins University)
-        moderator: 蔡少正 國立中正大學校長、成大生理所講座教授
+        speaker: Prof. Heng Zhu / Department of Physiology, Pharmacology & Therapeutics, Johns Hopkins University School of Medicine
+        moderator: 蔡少正 校長 國立中正大學、講座教授 國立成功大學 生理學科暨研究所
+        moderator_en: Chair Prof. Shaw-Jenq Sean Tsai / Department of Physiology, National Cheng Kung University; President, National Chung Cheng University
         venue: 第三講堂
+        venue_en: Lecture Hall 3
       - time: 12:25-13:40
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 · 3F-302 亞洲準譯股份有限公司 · 3F-303 國家實驗研究院國家高速網路與計算中心)
+        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 · 3F-303 國家實驗研究院國家高速網路與計算中心 · 3F-304 亞洲準譯股份有限公司)
+        title_en: Lunch & Poster Session / Lunch Seminar (12:50-13:25 · 3F-303 National Center for High-performance Computing, NARLabs · 3F-304 Asia Pathogenomics Co., Ltd.)
       - time: 13:40-14:25
         type: plenary
         category: keynote
         title_zh: Keynote Talk 2 · TBA
-        speaker: 吉田信介博士 日本京都大學
+        speaker: 吉田信介 博士 日本京都大學
+        speaker_en: Dr. Shinsuke Yoshida / Kyoto University, Japan
         venue: 第三講堂
+        venue_en: Lecture Hall 3
       - time: 14:25-14:35
         type: plenary
         category: showcase
         title_zh: Technology Showcase · 圖爾思生物科技股份有限公司
+        title_en: Technology Showcase · BIOTOOLS Co., Ltd
         venue: 第三講堂
+        venue_en: Lecture Hall 3
       - time: 14:35-14:50
         type: break
         category: break
@@ -119,74 +171,118 @@ days:
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 4: Evolutionary genomics'
+            venue_en: Lecture Hall 3
+            session: 'Session 4: 演化基因體學'
+            session_en: 'Session 4: Evolutionary Genomics'
             organizer: TSECB
-            moderator: 許家郎 (台灣大學附設醫院醫學研究部)
+            moderator: 許家郎 研究員 國立臺灣大學 附設醫院醫學研究部
+            moderator_en: Dr. Chia-Lang Hsu / Research Fellow, Department of Medical Research, National Taiwan University Hospital
             title_zh: 'Talk 4-1: When Spatial Meets Long Reads: Unveiling Novel Genes and Alternative Splicing in Maize Embryonic Leaves'
-            speaker: 呂美曄 (中研院生物多樣性研究中心)
+            speaker: 呂美曄 研究技師 中央研究院 生物多樣性研究中心
+            speaker_en: Dr. Mei-Yeh Jade Lu / Senior Research Specialist, Biodiversity Research Center, Academia Sinica
           - venue: 第一講堂
+            venue_en: Lecture Hall 1
             session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
+            session_en: 'Session 5: Multi-Omics Dissection of the Tumor Microenvironment: From Cell Signaling to Precision Therapy'
             organizer: TGMBS
-            moderator: 莊智弘 教授 高雄醫學大學醫學檢驗生物技術學系
+            moderator: 莊智弘 教授 高雄醫學大學 醫學檢驗生物技術學系
+            moderator_en: Prof. Chih-Hung Chuang / Department of Medical Laboratory Science and Biotechnology, Kaohsiung Medical University
             title_zh: 'Talk 5-1: 標靶 KIF2C 以克服紫杉醇抗藥性：微管解聚酶如何解讀微管蛋白密碼'
-            speaker: 王慧菁 教授 國立清華大學生命科學暨醫學院分子與細胞生物研究所
+            title_en: 'Talk 5-1: Targeting KIF2C to Overcome Paclitaxel Resistance: How a Microtubule Depolymerase Reads the Tubulin Code'
+            speaker: 王慧菁 所長 國立清華大學 分子與細胞生物研究所
+            speaker_en: Prof. Lily Hui-Ching Wang / Director, Institute of Molecular and Cellular Biology, National Tsing Hua University
           - venue: 第二講堂
-            session: 'Session 6: Exosomes in human diseases'
+            venue_en: Lecture Hall 2
+            session: 'Session 6: 外泌體與人類疾病'
+            session_en: 'Session 6: Exosomes in Human Diseases'
             organizer: TSEV
-            moderator: 沈湯龍 (國立台灣大學植病系微生物所)
+            moderator: 沈湯龍 教授 國立臺灣大學 植物病理與微生物學系
+            moderator_en: Prof. Tang-Long Shen / Department of Plant Pathology and Microbiology, National Taiwan University
             title_zh: 'Talk 6-1: Macrophage-Tumor Crosstalk Remodels Extracellular Vesicles to Drive Pancreatic Cancer Progression'
-            speaker: 王竹安 (成功大學基醫所)
+            speaker: 王竹安 助理教授 國立成功大學 基礎醫學研究所
+            speaker_en: Assistant Prof. Chu-An Wang / Institute of Basic Medical Sciences, National Cheng Kung University
       - time: 15:25-16:00
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 4: Evolutionary genomics'
+            venue_en: Lecture Hall 3
+            session: 'Session 4: 演化基因體學'
+            session_en: 'Session 4: Evolutionary Genomics'
             organizer: TSECB
-            moderator: 許家郎 (台灣大學附設醫院醫學研究部)
+            moderator: 許家郎 研究員 國立臺灣大學 附設醫院醫學研究部
+            moderator_en: Dr. Chia-Lang Hsu / Research Fellow, Department of Medical Research, National Taiwan University Hospital
             title_zh: 'Talk 4-2: 羽毛形態轉變的多樣化及其分子調控機制'
-            speaker: 陳志冠 (東華大學生化暨分子醫學科學系)
+            title_en: 'Talk 4-2: Diversification of Feather Transitions and Their Underlying Molecular Control'
+            speaker: 陳志冠 助理教授 國立東華大學 生化暨分子醫學科學系
+            speaker_en: Assistant Prof. Chih-Kuan Chen / Department of Biochemistry and Molecular Medicine, National Dong Hwa University
           - venue: 第一講堂
+            venue_en: Lecture Hall 1
             session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
+            session_en: 'Session 5: Multi-Omics Dissection of the Tumor Microenvironment: From Cell Signaling to Precision Therapy'
             organizer: TGMBS
-            moderator: 莊智弘 教授 高雄醫學大學醫學檢驗生物技術學系
+            moderator: 莊智弘 教授 高雄醫學大學 醫學檢驗生物技術學系
+            moderator_en: Prof. Chih-Hung Chuang / Department of Medical Laboratory Science and Biotechnology, Kaohsiung Medical University
             title_zh: 'Talk 5-2: From tumor dedifferentiation to systemic wasting: Roles of NSUN2-mediated m5C modification and macrophage-derived CHI3L1 in pancreatic cancer'
-            speaker: 黃柏憲 副教授 國立成功大學生物化學暨分子生物學研究所
+            speaker: 黃柏憲 副教授 國立成功大學 生物化學暨分子生物學研究所
+            speaker_en: Dr. Po-Hsien Huang / Associate Prof., Department of Biochemistry and Molecular Biology, National Cheng Kung University
           - venue: 第二講堂
-            session: 'Session 6: Exosomes in human diseases'
+            venue_en: Lecture Hall 2
+            session: 'Session 6: 外泌體與人類疾病'
+            session_en: 'Session 6: Exosomes in Human Diseases'
             organizer: TSEV
-            moderator: 沈湯龍 (國立台灣大學植病系微生物所)
+            moderator: 沈湯龍 教授 國立臺灣大學 植物病理與微生物學系
+            moderator_en: Prof. Tang-Long Shen / Department of Plant Pathology and Microbiology, National Taiwan University
             title_zh: 'Talk 6-2: 工程化外泌體於腦部疾病應用之開發'
-            speaker: 謝明佑 (中國醫藥大學)
+            title_en: 'Talk 6-2: Therapeutic Applications of Engineered Extracellular Vesicles in Brain Disorders'
+            speaker: 謝明佑 教授 中國醫藥大學 生物醫學工程學系
+            speaker_en: Prof. Ming-You Shie / Department of Biomedical Engineering, China Medical University
       - time: 16:00-16:35
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 4: Evolutionary genomics'
+            venue_en: Lecture Hall 3
+            session: 'Session 4: 演化基因體學'
+            session_en: 'Session 4: Evolutionary Genomics'
             organizer: TSECB
-            moderator: 許家郎 (台灣大學附設醫院醫學研究部)
+            moderator: 許家郎 研究員 國立臺灣大學 附設醫院醫學研究部
+            moderator_en: Dr. Chia-Lang Hsu / Research Fellow, Department of Medical Research, National Taiwan University Hospital
             title_zh: 'Talk 4-3: The origin and spread of adzuki bean across Asia'
-            speaker: 李承叡 (台灣大學生態學與演化生物學研究所)
+            speaker: 李承叡 教授 國立臺灣大學 生態學與演化生物學研究所
+            speaker_en: Prof. Cheng-Ruei Lee / Institute of Ecology and Evolutionary Biology, National Taiwan University
           - venue: 第一講堂
+            venue_en: Lecture Hall 1
             session: 'Session 5: 癌症微環境之多體學剖析：從細胞訊號到精準治療'
+            session_en: 'Session 5: Multi-Omics Dissection of the Tumor Microenvironment: From Cell Signaling to Precision Therapy'
             organizer: TGMBS
-            moderator: 莊智弘 教授 高雄醫學大學醫學檢驗生物技術學系
+            moderator: 莊智弘 教授 高雄醫學大學 醫學檢驗生物技術學系
+            moderator_en: Prof. Chih-Hung Chuang / Department of Medical Laboratory Science and Biotechnology, Kaohsiung Medical University
             title_zh: 'Talk 5-3: 從多體學角度解析 Tirzepatide 治療代謝功能障礙相關脂肪性肝病之分子機制'
-            speaker: 李佳陽 教授 高雄醫學大學醫學研究所
+            title_en: 'Talk 5-3: Unraveling the Molecular Mechanisms of Tirzepatide in MASLD: A Multi-Omics Perspective'
+            speaker: 李佳陽 教授 高雄醫學大學 醫學研究所、副研發長 高雄醫學大學 研究發展處
+            speaker_en: Prof. Chia-Yang Li / Graduate Institute of Medicine, Kaohsiung Medical University; Associate Vice President, Office of Research and Development, Kaohsiung Medical University
           - venue: 第二講堂
-            session: 'Session 6: Exosomes in human diseases'
+            venue_en: Lecture Hall 2
+            session: 'Session 6: 外泌體與人類疾病'
+            session_en: 'Session 6: Exosomes in Human Diseases'
             organizer: TSEV
-            moderator: 沈湯龍 (國立台灣大學植病系微生物所)
-            title_zh: 'Talk 6-3: AI-Engineered Extracellular Vesicles: A New Frontier for Disease-Modifying Osteoarthritis Therapy Extracellular Vesicles'
-            speaker: 廖秀蓉 研究員 亞東醫院醫研部
+            moderator: 沈湯龍 教授 國立臺灣大學 植物病理與微生物學系
+            moderator_en: Prof. Tang-Long Shen / Department of Plant Pathology and Microbiology, National Taiwan University
+            title_zh: 'Talk 6-3: AI工程化細胞外囊泡：退化性關節炎疾病修飾治療的新前沿'
+            title_en: 'Talk 6-3: AI-Engineered Extracellular Vesicles: A New Frontier for Disease-Modifying Osteoarthritis Therapy Extracellular Vesicles'
+            speaker: 廖秀蓉 研究員 亞東醫院 醫學研究部、助理教授 國立陽明交通大學 生物藥學研究所
+            speaker_en: Dr. Hsiu-Jung Liao / Research Fellow, Department of Medical Research, Far Eastern Memorial Hospital; Assistant Prof., Institute of Biopharmaceutical Sciences, National Yang Ming Chiao Tung University
       - time: 16:35-17:30
         type: parallel
         tracks:
           - venue: 第三講堂
-            title_zh: TSECB Board of Directors meeting & General Assembly
+            venue_en: Lecture Hall 3
+            title_zh: TSECB Board of Directors Meeting & General Assembly
           - venue: 第一講堂
-            title_zh: TGMBS Board of Directors meeting & General Assembly
+            venue_en: Lecture Hall 1
+            title_zh: TGMBS Board of Directors Meeting & General Assembly
           - venue: 第二講堂
-            title_zh: TSEV Board of Directors meeting & General Assembly
+            venue_en: Lecture Hall 2
+            title_zh: TSEV Board of Directors Meeting & General Assembly
       - time: 18:30-21:00
         type: break
         category: banquet
@@ -199,15 +295,19 @@ days:
       - time: 08:00-09:00
         type: break
         category: registration
-        title_zh: Registration
+        title_zh: 註冊報到
+        title_en: Registration
         venue: 成大醫學院穿堂
+        venue_en: College of Medicine Lobby
       - time: 09:00-09:45
         type: plenary
         category: keynote
         title_zh: 'Keynote Talk 3: Decoding cellular plasticity and spatial phenotypes in cancer'
-        speaker: Aaron M. Newman (Stanford University)
-        moderator: 劉宗霖老師 成功大學生物科技與產業科學系
+        speaker: Associate Prof. Aaron M. Newman / Department of Biomedical Data Science, Stanford University
+        moderator: 劉宗霖 副院長 國立成功大學 生物科學與科技學院、系主任 國立成功大學 生物科技與產業科學系
+        moderator_en: Prof. Tsung-Lin Liu / Vice Dean, College of Bioscience and Biotechnology, National Cheng Kung University; Chairman, Department of Biotechnology and Bioindustry Sciences, National Cheng Kung University
         venue: 第三講堂
+        venue_en: Lecture Hall 3
       - time: 09:45-10:20
         type: break
         category: break
@@ -216,149 +316,231 @@ days:
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 7: Systems Biology'
+            venue_en: Lecture Hall 3
+            session: 'Session 7: 系統生物學'
+            session_en: 'Session 7: Systems Biology'
             organizer: TSECB
-            moderator: 吳謂勝 (國立成功大學電機工程)
+            moderator: 吳謂勝 教授 國立成功大學電機工程學系
+            moderator_en: Prof. Wei-Sheng Wu / Department of Electrical Engineering, National Cheng Kung University
             title_zh: 'Talk 7-1: Nucleolar Proteins Coordinate Telomere Maintenance in Telomerase-Positive and ALT Cancer Cells'
-            speaker: 林之儀 (國立中興大學生命科學系)
+            speaker: 林之儀 助理教授 國立中興大學 生命科學系
+            speaker_en: Dr. Chih-Yi Gabriela Lin / Assistant Prof., Department of Life Sciences, National Chung Hsing University
           - venue: 第一講堂
+            venue_en: Lecture Hall 1
             session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
+            session_en: 'Session 8: A New Era of Metabolomics: From High-Precision Mass Spectrometry Analysis to Precision Medicine Practice'
             organizer: TGMBS
-            moderator: 黃友利 教授 高雄醫學大學醫學檢驗生物技術學系
+            moderator: 黃友利 副校長 高雄醫學大學
+            moderator_en: Prof. Yeou-Lih Huang / Senior Vice President, Kaohsiung Medical University
             title_zh: Talk 8-1 · TBA
             speaker: 徐丞志 副教授 國立臺灣大學化學系暨研究所
+            speaker_en: Assoc. Prof. Cheng-Chih Hsu / Department of Chemistry, National Taiwan University
           - venue: 第二講堂
-            session: 'Session 9: Plant and microbial EVs'
+            venue_en: Lecture Hall 2
+            session: 'Session 9: 植物與微生物胞外囊泡'
+            session_en: 'Session 9: Plant and Microbial EVs'
             organizer: TSEV
-            moderator: 周涵怡 (國立台灣大學口生所)
+            moderator: 周涵怡 副教授 國立臺灣大學 口腔生物科學研究所
+            moderator_en: Associate Prof. Han-Yi E. Chou / Graduate Institute of Oral Biology, National Taiwan University
             title_zh: Talk 9-1 · TBA
             speaker: 徐瑋萱 (國立成功大學食安所)
+            speaker_en: Wei-Hsuan Hsu / Department of Food Safety / Hygiene and Risk Management, National Cheng Kung University
       - time: 10:55-11:30
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 7: Systems Biology'
+            venue_en: Lecture Hall 3
+            session: 'Session 7: 系統生物學'
+            session_en: 'Session 7: Systems Biology'
             organizer: TSECB
-            moderator: 吳謂勝 (國立成功大學電機工程)
-            title_zh: 'Talk 7-2: 利用E. coli 研究單一細胞中的ATP 與生長動態'
-            speaker: 林暐翔 (中研院分子生物研究所)
+            moderator: 吳謂勝 教授 國立成功大學電機工程學系
+            moderator_en: Prof. Wei-Sheng Wu / Department of Electrical Engineering, National Cheng Kung University
+            title_zh: 'Talk 7-2: 利用E. coli研究單一細胞中的ATP 與生長動態'
+            title_en: 'Talk 7-2: Studying ATP and growth dynamics at the single-cell level in E. coli'
+            speaker: 林暐翔 助研究員 中央研究院 分子生物研究所
+            speaker_en: Dr. Wei-Hsiang Lin / Assistant Research Fellow, Institute of Molecular Biology, Academia Sinica
           - venue: 第一講堂
+            venue_en: Lecture Hall 1
             session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
+            session_en: 'Session 8: A New Era of Metabolomics: From High-Precision Mass Spectrometry Analysis to Precision Medicine Practice'
             organizer: TGMBS
-            moderator: 黃友利 教授 高雄醫學大學醫學檢驗生物技術學系
+            moderator: 黃友利 副校長 高雄醫學大學
+            moderator_en: Prof. Yeou-Lih Huang / Senior Vice President, Kaohsiung Medical University
             title_zh: 'Talk 8-2: Beyond LDL Cholesterol: Lysophosphatidylcholine as Cargo and Driver of Pathogenic Electronegative Lipoproteins'
-            speaker: 詹華蓁 助理教授 義守大學醫學檢驗技術學系
+            speaker: 詹華蓁 助理教授 義守大學 醫學檢驗技術學系
+            speaker_en: Assistant Prof. Hua-Chen Chan / Department of Medical Laboratory Science, I-Shou University
           - venue: 第二講堂
-            session: 'Session 9: Plant and microbial EVs'
+            venue_en: Lecture Hall 2
+            session: 'Session 9: 植物與微生物胞外囊泡'
+            session_en: 'Session 9: Plant and Microbial EVs'
             organizer: TSEV
-            moderator: 周涵怡 (國立台灣大學口生所)
-            title_zh: Talk 9-2 · TBA
-            speaker: 潘敏雄 (國立台灣大學食科所)
+            moderator: 周涵怡 副教授 國立臺灣大學 口腔生物科學研究所
+            moderator_en: Associate Prof. Han-Yi E. Chou / Graduate Institute of Oral Biology, National Taiwan University
+            title_zh: 'Talk 9-2: 植物來源奈米囊泡於腸道發炎與氧化壓力之調控作用及潛在應用'
+            title_en: 'Talk 9-2: Regulatory Effects and Potential Applications of Plant-Derived Nanovesicles in Intestinal Inflammation and Oxidative Stress'
+            speaker: 潘敏雄 副院長 國立臺灣大學 生物資源暨農學院
+            speaker_en: Prof. Min-Hsiung Pan / College of Bioresources and Agriculture, National Taiwan University
       - time: 11:30-12:05
         type: parallel
         tracks:
           - venue: 第三講堂
-            session: 'Session 7: Systems Biology'
+            venue_en: Lecture Hall 3
+            session: 'Session 7: 系統生物學'
+            session_en: 'Session 7: Systems Biology'
             organizer: TSECB
-            moderator: 吳謂勝 (國立成功大學電機工程)
+            moderator: 吳謂勝 教授 國立成功大學電機工程學系
+            moderator_en: Prof. Wei-Sheng Wu / Department of Electrical Engineering, National Cheng Kung University
             title_zh: 'Talk 7-3: Beyond Transcription: Novel Mechanisms of HIF-1α in Small RNA Regulation, the Exoswitch'
-            speaker: 李婕寧 助理教授 國立成功大學細胞生物與解剖學研究所
+            speaker: 李婕寧 助理教授 國立成功大學 細胞生物與解剖學研究所
+            speaker_en: Dr. Jie-Ning Li / Assistant Prof., Department of Cell Biology and Anatomy, National Cheng Kung University
           - venue: 第一講堂
+            venue_en: Lecture Hall 1
             session: 'Session 8: 代謝體學新紀元：從精密質譜分析到精準醫學實踐'
+            session_en: 'Session 8: A New Era of Metabolomics: From High-Precision Mass Spectrometry Analysis to Precision Medicine Practice'
             organizer: TGMBS
-            moderator: 黃友利 教授 高雄醫學大學醫學檢驗生物技術學系
-            title_zh: Talk 8-3 · TBA
-            speaker: 朱俐潔 助理教授 長庚大學生物醫學研究所
+            moderator: 黃友利 副校長 高雄醫學大學
+            moderator_en: Prof. Yeou-Lih Huang / Senior Vice President, Kaohsiung Medical University
+            title_zh: 'Talk 8-3: 以多體學整合分析探討口腔癌前病變惡化進程相關之分子路徑'
+            title_en: 'Talk 8-3: Integrated Multi-Omics Analysis of Molecular Pathways Driving Malignant Transformation in Oral Potentially Malignant Disorders'
+            speaker: 朱俐潔 副教授 長庚大學 生物醫學研究所
+            speaker_en: Associate Prof. Lichieh Julie Chu / Graduate Institute of Biomedical Sciences, Chang Gung University
           - venue: 第二講堂
-            session: 'Session 9: Plant and microbial EVs'
+            venue_en: Lecture Hall 2
+            session: 'Session 9: 植物與微生物胞外囊泡'
+            session_en: 'Session 9: Plant and Microbial EVs'
             organizer: TSEV
-            moderator: 周涵怡 (國立台灣大學口生所)
+            moderator: 周涵怡 副教授 國立臺灣大學 口腔生物科學研究所
+            moderator_en: Associate Prof. Han-Yi E. Chou / Graduate Institute of Oral Biology, National Taiwan University
             title_zh: 'Talk 9-3: Beyond the Cell: Extracellular Vesicles in Viroid-Associated Systemic Pathogenesis'
-            speaker: 沈湯龍 (國立台灣大學植病系微生物所)
+            speaker: 沈湯龍 教授 國立臺灣大學 植物病理與微生物學系
+            speaker_en: Prof. Tang-Long Shen / Department of Plant Pathology and Microbiology, National Taiwan University
       - time: 12:05-14:05
         type: break
         category: lunch
         title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 · 3F-301 博克科技股份有限公司 · 3F-302 世基生物醫學股份有限公司)
+        title_en: Lunch & Poster Session / Lunch Seminar (12:20-12:55 · 3F-301 J&H Technology Co., Ltd. · 3F-302 Pharmigene Inc.)
       - time: 13:10-13:50
         type: parallel
         tracks:
           - venue: 第三講堂
+            venue_en: Lecture Hall 3
             title_zh: TPS General Assembly
           - venue: 第一講堂
-            title_zh: TBSB Board of Directors meeting & General Assembly
+            venue_en: Lecture Hall 1
+            title_zh: TBSB Board of Directors Meeting & General Assembly
           - venue: 第二講堂
-            title_zh: TPMS Board of Directors meeting & General Assembly
+            venue_en: Lecture Hall 2
+            title_zh: TPMS Board of Directors Meeting & General Assembly
       - time: 14:05-14:40
         type: parallel
         tracks:
           - venue: 第三講堂
+            venue_en: Lecture Hall 3
             session: 'Session 10: 質譜多體學大數據生醫分析'
+            session_en: 'Session 10: Mass Spectrometry-Based Multi-Omics Big Data Analysis in Biomedicine'
             organizer: TPS
-            moderator: 王家義 (國立成功大學副研發長)
+            moderator: 王家義 副研發長 國立成功大學 研究發展處
+            moderator_en: Prof. Chia-Yih Wang / Associate Vice President, Office of Research and Development, National Cheng Kung University
             title_zh: 'Talk 10-1: ANALomics: An Integrated Computational Toolkit for Multi-Omics Analysis Across Genomics, Transcriptomics, and Multi-Layered Proteomics'
-            speaker: 于松桓老師 中山大學精準所
+            speaker: 于松桓 助理教授 國立中山大學 精準醫學研究所
+            speaker_en: Assistant Prof. Sung-Huan Yu / Institute of Precision Medicine, National Sun Yat-sen University
           - venue: 第一講堂
-            session: 'Session 11: Multi-Omics in Translational Medicine'
+            venue_en: Lecture Hall 1
+            session: 'Session 11: 多體學於轉譯醫學之應用'
+            session_en: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
-            moderator: 林峻宇教授 陽明交通大學
+            moderator: 林峻宇 副教授 國立陽明交通大學 生物資訊及系統生物研究所
+            moderator_en: Associate Prof. Chun-Yu Lin / Institute of Bioinformatics and Systems Biology, National Yang Ming Chiao Tung University
             title_zh: 'Talk 11-1: Decoding Multi-layer Cis-regulatory Module Functional Mechanisms with Deep Learning'
-            speaker: 楊子賢教授 國立成功大學
+            speaker: 楊子賢 副教授 國立成功大學 生物醫學工程學系
+            speaker_en: Associate Prof. Tzu-Hsien Yang / Department of Biomedical Engineering, National Cheng Kung University
           - venue: 第二講堂
+            venue_en: Lecture Hall 2
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
+            session_en: 'Session 12: Clinical Applications of Precision Medicine and Future Therapeutic Strategies'
             organizer: TPMS
-            moderator: 陳相成 國防部軍醫局醫務管理處處長
+            moderator: 陳相成 處長 國防部 軍醫局醫務管理處
+            moderator_en: Prof. Hsiang-Cheng Chen / Director, Department of Medical Management, Medical Affairs Bureau, Ministry of National Defense
             title_zh: Talk 12-1 · TBA
-            speaker: 楊謝樂 博士 磁量生技股份有限公司董事長
+            speaker: 楊謝樂 董事長 磁量生技股份有限公司
+            speaker_en: Dr. Shieh-Yueh Yang / General Manager, MAGQU Co., Ltd.
       - time: 14:40-15:15
         type: parallel
         tracks:
           - venue: 第三講堂
+            venue_en: Lecture Hall 3
             session: 'Session 10: 質譜多體學大數據生醫分析'
+            session_en: 'Session 10: Mass Spectrometry-Based Multi-Omics Big Data Analysis in Biomedicine'
             organizer: TPS
-            moderator: 王家義 (國立成功大學副研發長)
+            moderator: 王家義 副研發長 國立成功大學 研究發展處
+            moderator_en: Prof. Chia-Yih Wang / Associate Vice President, Office of Research and Development, National Cheng Kung University
             title_zh: 'Talk 10-2: Machine Learning and Deep Learning of MALDI-TOF Mass Spectrometry Data for Predicting Vancomycin Resistance in Enterococci'
-            speaker: 陳志杰老師 中山大學醫科所
+            speaker: 陳志杰 副教授 國立中山大學 醫學科技研究所
+            speaker_en: Dr. Chih-Chieh Chen / Associate Prof., Institute of Medical Science and Technology, National Sun Yat-sen University
           - venue: 第一講堂
-            session: 'Session 11: Multi-Omics in Translational Medicine'
+            venue_en: Lecture Hall 1
+            session: 'Session 11: 多體學於轉譯醫學之應用'
+            session_en: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
-            moderator: 林峻宇教授 陽明交通大學
+            moderator: 林峻宇 副教授 國立陽明交通大學 生物資訊及系統生物研究所
+            moderator_en: Associate Prof. Chun-Yu Lin / Institute of Bioinformatics and Systems Biology, National Yang Ming Chiao Tung University
             title_zh: 'Talk 11-2: 從單細胞空間微環境到癌前阻斷：空間多體學解析肺腺癌演化與 TIM-3 預防標靶'
-            speaker: 李建融教授 長庚大學
+            title_en: 'Talk 11-2: Deciphering Single-Cell Spatial Architecture in Lung Adenocarcinoma: Cell-Cell Interactions and TIM-3 Precancer Interception via Spatial Multiomics'
+            speaker: 李建融 助理教授 長庚大學 生物醫學研究所
+            speaker_en: Dr. Jian-Rong Li / Assistant Prof., Graduate Institute of Biomedical Sciences, Chang Gung University
           - venue: 第二講堂
+            venue_en: Lecture Hall 2
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
+            session_en: 'Session 12: Clinical Applications of Precision Medicine and Future Therapeutic Strategies'
             organizer: TPMS
-            moderator: 陳相成 國防部軍醫局醫務管理處處長
+            moderator: 陳相成 處長 國防部 軍醫局醫務管理處
+            moderator_en: Prof. Hsiang-Cheng Chen / Director, Department of Medical Management, Medical Affairs Bureau, Ministry of National Defense
             title_zh: 'Talk 12-2: 循環腫瘤細胞於精準腫瘤學之應用：計數、表型分析、微量殘留病灶及臨床決策支持'
-            speaker: 周輝政 醫師 臺安醫院婦產科
+            title_en: 'Talk 12-2: Circulating Tumor Cells in Precision Oncology: Enumeration, Phenotyping, Minimal Residual Disease, and Clinical Decision Support'
+            speaker: 周輝政 醫師 臺安醫院 婦產科
+            speaker_en: Dr. Hei-Jen Jou / Visiting Staff, Department of Obstetrics and Gynecology, Taiwan Adventist Hospital
       - time: 15:15-15:50
         type: parallel
         tracks:
           - venue: 第三講堂
+            venue_en: Lecture Hall 3
             session: 'Session 10: 質譜多體學大數據生醫分析'
+            session_en: 'Session 10: Mass Spectrometry-Based Multi-Omics Big Data Analysis in Biomedicine'
             organizer: TPS
-            moderator: 王家義 (國立成功大學副研發長)
+            moderator: 王家義 副研發長 國立成功大學 研究發展處
+            moderator_en: Prof. Chia-Yih Wang / Associate Vice President, Office of Research and Development, National Cheng Kung University
             title_zh: 'Talk 10-3: An AI-powered Multimodal Platform for Pancancer Kinase Activity Profiling and Drug Response Prediction'
-            speaker: 李宗夷理事長 陽明交大資工所
+            speaker: 李宗夷 理事長 台灣生物資訊暨系統生物學會、所長 國立陽明交通大學 生物資訊及系統生物研究所
+            speaker_en: Prof. Tzong-Yi Lee / President, Taiwan Bioinformatics and Systems Biology Society; Director, Institute of Bioinformatics and Systems Biology, National Yang Ming Chiao Tung University
           - venue: 第一講堂
-            session: 'Session 11: Multi-Omics in Translational Medicine'
+            venue_en: Lecture Hall 1
+            session: 'Session 11: 多體學於轉譯醫學之應用'
+            session_en: 'Session 11: Multi-Omics in Translational Medicine'
             organizer: TBSB
-            moderator: 林峻宇教授 陽明交通大學
+            moderator: 林峻宇 副教授 國立陽明交通大學 生物資訊及系統生物研究所
+            moderator_en: Associate Prof. Chun-Yu Lin / Institute of Bioinformatics and Systems Biology, National Yang Ming Chiao Tung University
             title_zh: 'Talk 11-3: AI-driven multi-omics integration for drug response prediction and clinical outcomes in precision oncology'
-            speaker: 周緻雅博士 陽明交通大學
+            speaker: 周緻雅 博士 助理研究員 國立陽明交通大學 生物資訊中心
+            speaker_en: Dr. Chi-Nga Chow / Research Assistant, Center for Bioinformatics, National Yang Ming Chiao Tung University
           - venue: 第二講堂
+            venue_en: Lecture Hall 2
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
+            session_en: 'Session 12: Clinical Applications of Precision Medicine and Future Therapeutic Strategies'
             organizer: TPMS
-            moderator: 陳相成 國防部軍醫局醫務管理處處長
-            title_zh: 'Talk 12-3: Precision Cell Therapy 精準細胞治療'
-            speaker: 宋柏儀 (國防醫學大學)
+            moderator: 陳相成 處長 國防部 軍醫局醫務管理處
+            moderator_en: Prof. Hsiang-Cheng Chen / Director, Department of Medical Management, Medical Affairs Bureau, Ministry of National Defense
+            title_zh: Talk 12-3 · TBA
       - time: 15:50-16:30
         type: plenary
         category: ceremony
         title_zh: Award Ceremony
-        moderator: 陳健生 台灣蛋白體學會理事長、成大食安所所長
+        moderator: 陳健生 台灣蛋白體學會理事長、國立成功大學食品安全衛生暨風險管理研究所所長
+        moderator_en: Chien-Sheng Chen / President of Taiwan Proteomics Society; Director of Department of Food Safety/Hygiene and Risk Management, NCKU
         venue: 第三講堂
+        venue_en: Lecture Hall 3
       - time: 16:30-16:40
         type: plenary
         category: closing
         title_zh: Closing Remarks & Handover Ceremony
         venue: 第三講堂
+        venue_en: Lecture Hall 3

@@ -4,12 +4,16 @@ import yaml from 'js-yaml';
 
 export interface Track {
   venue: string;
+  venue_en?: string;
   session?: string;
+  session_en?: string;
   organizer?: string;
   moderator?: string;
+  moderator_en?: string;
   title_zh: string;
   title_en?: string;
   speaker?: string;
+  speaker_en?: string;
   affiliation?: string;
 }
 export interface Slot {
@@ -17,16 +21,26 @@ export interface Slot {
   type: 'plenary' | 'parallel' | 'break';
   category?: string;
   venue?: string;
+  venue_en?: string;
   title_zh?: string;
   title_en?: string;
   speaker?: string;
+  speaker_en?: string;
   affiliation_zh?: string;
   affiliation_en?: string;
   moderator?: string;
+  moderator_en?: string;
   tracks?: Track[];
 }
 export interface Day { date: string; label_zh: string; label_en: string; slots: Slot[]; }
-export interface Agenda { venues: string[]; days: Day[]; }
+export interface Agenda { venues: string[]; venues_en?: string[]; days: Day[]; }
+
+// 議程的英文值放在 *_en 欄位（speaker_en、session_en…），原欄位沒有 _zh 後綴，所以不能用 i18n 的 pick。
+// 英文頁有英文就用英文，沒有就退回原值（講題本來就是英文的不會另寫 title_en）。
+export function loc<T extends object>(item: T, key: string, lang: 'zh' | 'en'): string | undefined {
+  const r = item as Record<string, string | undefined>;
+  return (lang === 'en' ? r[`${key}_en`] : undefined) ?? r[key];
+}
 
 export function loadAgenda(): Agenda {
   const file = path.join(process.cwd(), 'src/data/agenda.yaml');
@@ -43,6 +57,7 @@ const TITLES = [
   '特聘教授', '助理教授', '副教授', '教授',
   '主治醫師', '主治醫生', '主任醫師', '醫師', '醫生',
   '總院長', '院長', '所長', '部長', '處長', '理事長', '主任', '顧問', '總監', '執行長', '資訊長',
+  '校長', '研發長', '董事長',
   '博士', '創辦人', '老師',
 ];
 // 職稱之間的連接詞/空白（複合職稱用）

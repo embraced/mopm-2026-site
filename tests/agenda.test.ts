@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { splitRooms, splitSpeaker } from '../src/lib/agenda';
+import { loc, splitRooms, splitSpeaker } from '../src/lib/agenda';
 
 // 樣本全部取自主辦 2026-07-30 議程 docx 的實際寫法。
 describe('splitSpeaker', () => {
@@ -94,5 +94,44 @@ describe('splitRooms', () => {
       time: '',
       rooms: [],
     });
+  });
+});
+
+// 2026-10-22 起議程有英文欄位（speaker_en 等）。英文頁有英文就用英文，沒有就退回原值；中文頁一律用原值。
+describe('loc', () => {
+  const tk = { speaker: '陳璿宇 研究員 中央研究院', speaker_en: 'Dr. Hsuan-Yu Chen / Academia Sinica', moderator: '張資昊 教授' };
+  it('uses the _en value on the English page', () => {
+    expect(loc(tk, 'speaker', 'en')).toBe('Dr. Hsuan-Yu Chen / Academia Sinica');
+  });
+  it('falls back to the base value when no _en value exists', () => {
+    expect(loc(tk, 'moderator', 'en')).toBe('張資昊 教授');
+  });
+  it('always uses the base value on the Chinese page', () => {
+    expect(loc(tk, 'speaker', 'zh')).toBe('陳璿宇 研究員 中央研究院');
+  });
+  it('returns undefined when neither value exists', () => {
+    expect(loc(tk, 'session', 'en')).toBeUndefined();
+  });
+});
+
+// 英文講者寫成「姓名 / 職稱, 單位」，靠 / 拆成兩行（英文沒有 TITLES 可掃）
+describe('splitSpeaker (English)', () => {
+  it('splits on the first slash and keeps later slashes in the affiliation', () => {
+    expect(splitSpeaker('Wei-Hsuan Hsu / Department of Food Safety / Hygiene and Risk Management, National Cheng Kung University')).toEqual({
+      person: 'Wei-Hsuan Hsu',
+      affiliation: 'Department of Food Safety / Hygiene and Risk Management, National Cheng Kung University',
+    });
+  });
+});
+
+// 2026-10-22 版議程新出現的職稱
+describe('splitSpeaker (10-22 titles)', () => {
+  it.each([
+    ['黃友利 副校長 高雄醫學大學', '黃友利 副校長', '高雄醫學大學'],
+    ['王家義 副研發長 國立成功大學 研究發展處', '王家義 副研發長', '國立成功大學 研究發展處'],
+    ['楊謝樂 董事長 磁量生技股份有限公司', '楊謝樂 董事長', '磁量生技股份有限公司'],
+    ['蔡少正 校長 國立中正大學、講座教授 國立成功大學 生理學科暨研究所', '蔡少正 校長', '國立中正大學、講座教授 國立成功大學 生理學科暨研究所'],
+  ])('%s', (raw, person, affiliation) => {
+    expect(splitSpeaker(raw)).toEqual({ person, affiliation });
   });
 });
