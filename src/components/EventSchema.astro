@@ -44,7 +44,11 @@ const schema = {
     name: 'Multiomics and Precision Medicine Joint Conference (MOPM)',
     url: 'https://mopm.tw/',
   },
-  organizer: societies.map((s) => ({ '@type': 'Organization', name: p(s, 'name') })),
+  organizer: societies.map((s) => ({
+    '@type': 'Organization',
+    name: p(s, 'name'),
+    ...(s.homepage_url ? { url: s.homepage_url } : {}),
+  })),
   performer: speakers.map((s) => ({
     '@type': 'Person',
     name: (lang === 'en' && s.name_en) || s.name,
