@@ -1,25 +1,21 @@
 # 2026 屆 keynote（主辦提供）。順序＝議程的 Keynote 1/2/3。
 # 職稱／單位／簡介與連結皆取自主辦提供的 imports/Keynote_Speakers_Bio(2).docx（2026-08-04）。
+# 例外：陳玉如（2026-10-27 主辦換人，取代 Heng Zhu）。主辦只給院士頁連結；照片、職稱、研究領域取自該頁，簡介為自行改寫。
 # 照片就位後填 photo（檔案丟 public/，填 /檔名.webp）；留空顯示灰底佔位。
 # name 是單一欄位（拉丁名不需翻譯）；只有漢字姓名需要 name_en 補羅馬拼音。
-- name: "Heng Zhu"
-  title_zh: "教授"
-  title_en: "Professor"
-  affiliation_zh: "美國約翰霍普金斯大學醫學院藥理與分子科學系"
-  affiliation_en: "Dept. of Pharmacology and Molecular Sciences, Johns Hopkins University School of Medicine"
-  photo: "/speaker-heng-zhu.webp"
-  bio_zh: "專精於高通量蛋白質體學與系統生物學，開發了包含 HuProt 與 VirD 等功能性蛋白質微陣列平台，使研究人員得以進行大規模的多體學研究。"
-  bio_en: "Specializing in high-throughput proteomics and systems biology; Dr. Zhu developed functional protein microarrays—such as the HuProt and VirD platforms—that enable researchers to conduct large-scale multi-omics research."
+- name: "陳玉如"
+  name_en: "Yu-Ju Chen"
+  title_zh: "副院長"
+  title_en: "Vice President"
+  affiliation_zh: "中央研究院"
+  affiliation_en: "Academia Sinica"
+  photo: "/speaker-yu-ju-chen.webp"
+  bio_zh: "中央研究院院士（第 35 屆，2026 年當選）；研究領域為生物質譜技術與蛋白質體學。"
+  bio_en: "Academician of Academia Sinica (elected 2026); research focuses on biological mass spectrometry and proteomics."
   links:
-    - label_zh: "Google Scholar"
-      label_en: "Google Scholar"
-      url: "https://scholar.google.com/citations?user=PLQVWdcAAAAJ"
-    - label_zh: "個人網頁"
-      label_en: "Profile"
-      url: "https://bcmb.bs.jhmi.edu/people/heng-zhu/"
-    - label_zh: "實驗室網頁"
-      label_en: "Lab Website"
-      url: "https://www.hopkinsmedicine.org/research/labs/h/heng-zhu-lab"
+    - label_zh: "院士資料"
+      label_en: "Academician Profile"
+      url: "https://academicians.sinica.edu.tw/index.php?r=academician-n%2Fshow&id=831"
 - name: "吉田信介"
   name_en: "Shinsuke Yoshida"
   title_zh: "前副所長"

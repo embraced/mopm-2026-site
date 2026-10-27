@@ -130,15 +130,16 @@ days:
             title_zh: 'Talk 3-3: Precision Medicine in Hematology Practice'
             speaker: 陳昱光 主任 三軍總醫院 再生醫療中心
             speaker_en: Dr. Yu-Guang Chen / Director, Center for Cell Therapy and Regenerative Medicine, Tri-Service General Hospital
-      - time: 11:15-11:40
+      - time: 11:15-11:45
         type: break
         category: break
         title_zh: Refreshment Break
-      - time: 11:40-12:25
+      - time: 11:45-12:25
         type: plenary
         category: keynote
         title_zh: Keynote Talk 1 · TBA
-        speaker: Prof. Heng Zhu / Department of Physiology, Pharmacology & Therapeutics, Johns Hopkins University School of Medicine
+        speaker: 陳玉如 副院長 中央研究院
+        speaker_en: Dr. Yu-Ju Chen / Vice President, Academia Sinica
         moderator: 蔡少正 校長 國立中正大學、講座教授 國立成功大學 生理學科暨研究所
         moderator_en: Chair Prof. Shaw-Jenq Sean Tsai / Department of Physiology, National Cheng Kung University; President, National Chung Cheng University
         venue: 第三講堂
@@ -430,7 +431,7 @@ days:
             title_zh: TBSB Board of Directors Meeting & General Assembly
           - venue: 第二講堂
             venue_en: Lecture Hall 2
-            title_zh: TPMS Board of Directors Meeting & General Assembly
+            title_zh: TPMS Board of Directors Meeting
       - time: 14:05-14:40
         type: parallel
         tracks:
