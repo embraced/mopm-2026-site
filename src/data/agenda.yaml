@@ -59,9 +59,10 @@ days:
             session: 'Session 3: 精準醫學檢測與多體學判讀'
             session_en: 'Session 3: Precision Medicine Testing and Multi-Omics Interpretation'
             organizer: TPMS
-            moderator: 王智弘 總院長 臺北市立聯合醫院
-            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital
-            title_zh: 'Talk 3-1: NGS、LDTs與分子腫瘤委員會：多體學報告如何轉成臨床決策'
+            moderator: 王智弘 總院長 臺北市立聯合醫院、理事長 臺灣精準醫學學會
+            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital; President, Taiwan Precision Medicine Society
+            title_zh: 'Talk 3-1: 隱藏的診斷線索：全外顯子定序的臨床經驗與啟發'
+            title_en: 'Talk 3-1: Hidden in Plain Sight: Uncovering Diagnostic Clues in Whole-Exome Sequencing'
             speaker: 陳燕麟 主任 三軍總醫院 精準醫學暨基因體中心
             speaker_en: Dr. Yen-Lin Chen / Director, Center for Precision Medicine and Genomics, Tri-Service General Hospital
       - time: 10:05-10:40
@@ -92,8 +93,8 @@ days:
             session: 'Session 3: 精準醫學檢測與多體學判讀'
             session_en: 'Session 3: Precision Medicine Testing and Multi-Omics Interpretation'
             organizer: TPMS
-            moderator: 王智弘 總院長 臺北市立聯合醫院
-            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital
+            moderator: 王智弘 總院長 臺北市立聯合醫院、理事長 臺灣精準醫學學會
+            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital; President, Taiwan Precision Medicine Society
             title_zh: 'Talk 3-2: AI在臨床醫療數據分析的應用'
             speaker: 張廷彰 教授級顧問醫師 林口長庚紀念醫院 婦產部
             speaker_en: Dr. Ting-Chang Chang / Professor-Level Consulting Physician, Department of Obstetrics and Gynecology, Chang Gung Memorial Hospital, Linkou Branch
@@ -125,8 +126,8 @@ days:
             session: 'Session 3: 精準醫學檢測與多體學判讀'
             session_en: 'Session 3: Precision Medicine Testing and Multi-Omics Interpretation'
             organizer: TPMS
-            moderator: 王智弘 總院長 臺北市立聯合醫院
-            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital
+            moderator: 王智弘 總院長 臺北市立聯合醫院、理事長 臺灣精準醫學學會
+            moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital; President, Taiwan Precision Medicine Society
             title_zh: 'Talk 3-3: Precision Medicine in Hematology Practice'
             speaker: 陳昱光 主任 三軍總醫院 再生醫療中心
             speaker_en: Dr. Yu-Guang Chen / Director, Center for Cell Therapy and Regenerative Medicine, Tri-Service General Hospital
@@ -139,7 +140,7 @@ days:
         category: keynote
         title_zh: Keynote Talk 1 · TBA
         speaker: 陳玉如 副院長 中央研究院
-        speaker_en: Dr. Yu-Ju Chen / Vice President, Academia Sinica
+        speaker_en: Prof. Yu-Ju Chen / Vice President, Institute of Chemistry, Academia Sinica
         moderator: 蔡少正 校長 國立中正大學、講座教授 國立成功大學 生理學科暨研究所
         moderator_en: Chair Prof. Shaw-Jenq Sean Tsai / Department of Physiology, National Cheng Kung University; President, National Chung Cheng University
         venue: 第三講堂
@@ -153,8 +154,10 @@ days:
         type: plenary
         category: keynote
         title_zh: Keynote Talk 2 · TBA
-        speaker: 吉田信介 博士 日本京都大學
+        speaker: 吉田信介 博士 日本京都大學 CiRA Foundation 前副所長
         speaker_en: Dr. Shinsuke Yoshida / Kyoto University, Japan
+        moderator: 王智弘 總院長 臺北市立聯合醫院、理事長 臺灣精準醫學學會
+        moderator_en: Dr. Chih-Hung Wang / Superintendent, Taipei City Hospital; President, Taiwan Precision Medicine Society
         venue: 第三講堂
         venue_en: Lecture Hall 3
       - time: 14:25-14:35
@@ -280,7 +283,7 @@ days:
             title_zh: TSECB General Assembly
           - venue: 第一講堂
             venue_en: Lecture Hall 1
-            title_zh: TGMBS Board of Directors Meeting & General Assembly
+            title_zh: TGMBS General Assembly
           - venue: 第二講堂
             venue_en: Lecture Hall 2
             title_zh: TSEV Board of Directors Meeting & General Assembly
@@ -334,8 +337,8 @@ days:
             moderator: 黃友利 副校長 高雄醫學大學
             moderator_en: Prof. Yeou-Lih Huang / Senior Vice President, Kaohsiung Medical University
             title_zh: 'Talk 8-1: Generalizability of machine-learning–identified metabolites for breast cancer diagnosis across MS platforms and medical centers'
-            speaker: 徐丞志 副教授 國立臺灣大學化學系暨研究所
-            speaker_en: Assoc. Prof. Cheng-Chih Hsu / Department of Chemistry, National Taiwan University
+            speaker: 徐丞志 執行長 創辦人 雷文虎克生物技術、副教授 國立臺灣大學 化學系暨研究所
+            speaker_en: Dr. Cheng-Chih (Richard) Hsu / Associate Prof., Department of Chemistry, National Taiwan University; Founder, Leeuwenhoek Biotechnology
           - venue: 第二講堂
             venue_en: Lecture Hall 2
             session: 'Session 9: 植物與微生物胞外囊泡'
@@ -343,9 +346,9 @@ days:
             organizer: TSEV
             moderator: 周涵怡 副教授 國立臺灣大學 口腔生物科學研究所
             moderator_en: Associate Prof. Han-Yi E. Chou / Graduate Institute of Oral Biology, National Taiwan University
-            title_zh: Talk 9-1 · TBA
-            speaker: 徐瑋萱 (國立成功大學食安所)
-            speaker_en: Wei-Hsuan Hsu / Department of Food Safety / Hygiene and Risk Management, National Cheng Kung University
+            title_zh: 'Talk 9-1: Extracellular Vesicle-Mediated Host-Microbe Crosstalk'
+            speaker: 徐瑋萱 副教授 國立成功大學食品安全衛生暨風險管理研究所
+            speaker_en: Associate Prof. Wei-Hsuan Hsu / Department of Food Safety/Hygiene and Risk Management, National Cheng Kung University
       - time: 10:55-11:30
         type: parallel
         tracks:
@@ -460,9 +463,9 @@ days:
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
             session_en: 'Session 12: Clinical Applications of Precision Medicine and Future Therapeutic Strategies'
             organizer: TPMS
-            moderator: 陳相成 處長 國防部 軍醫局醫務管理處
+            moderator: 陳相成 處長 國防部軍醫局醫務管理處、副理事長 台灣精準醫學學會
             moderator_en: Prof. Hsiang-Cheng Chen / Director, Department of Medical Management, Medical Affairs Bureau, Ministry of National Defense
-            title_zh: Talk 12-1 · TBA
+            title_zh: 'Talk 12-1: 量子感測精準檢驗神經退化性疾病血液生物標誌物：臨床案例分享'
             speaker: 楊謝樂 董事長 磁量生技股份有限公司
             speaker_en: Dr. Shieh-Yueh Yang / General Manager, MAGQU Co., Ltd.
       - time: 14:40-15:15
@@ -494,7 +497,7 @@ days:
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
             session_en: 'Session 12: Clinical Applications of Precision Medicine and Future Therapeutic Strategies'
             organizer: TPMS
-            moderator: 陳相成 處長 國防部 軍醫局醫務管理處
+            moderator: 陳相成 處長 國防部軍醫局醫務管理處、副理事長 台灣精準醫學學會
             moderator_en: Prof. Hsiang-Cheng Chen / Director, Department of Medical Management, Medical Affairs Bureau, Ministry of National Defense
             title_zh: 'Talk 12-2: 循環腫瘤細胞於精準腫瘤學之應用：計數、表型分析、微量殘留病灶及臨床決策支持'
             title_en: 'Talk 12-2: Circulating Tumor Cells in Precision Oncology: Enumeration, Phenotyping, Minimal Residual Disease, and Clinical Decision Support'
@@ -528,7 +531,7 @@ days:
             session: 'Session 12: 精準醫學臨床應用與未來治療策略'
             session_en: 'Session 12: Clinical Applications of Precision Medicine and Future Therapeutic Strategies'
             organizer: TPMS
-            moderator: 陳相成 處長 國防部 軍醫局醫務管理處
+            moderator: 陳相成 處長 國防部軍醫局醫務管理處、副理事長 台灣精準醫學學會
             moderator_en: Prof. Hsiang-Cheng Chen / Director, Department of Medical Management, Medical Affairs Bureau, Ministry of National Defense
             title_zh: Talk 12-3 · TBA
       - time: 15:50-16:30
