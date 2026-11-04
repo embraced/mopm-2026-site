@@ -17,7 +17,7 @@
 
 ## 大會主題演講 Keynote Speakers
 - 陳玉如 Yu-Ju Chen（副院長，中央研究院；中央研究院院士）— 生物質譜技術與蛋白質體學
-- 吉田信介 Shinsuke Yoshida（前副所長，日本京都大學 CiRA 基金會）— 再生醫學轉譯；臨床級 HLA 純合子 iPSC 細胞庫品管、細胞自動化製程
+- 吉田信介 Shinsuke Yoshida（前研發中心副主任，日本 CiRA Foundation）— 再生醫學轉譯；臨床級 HLA 純合子 iPSC 細胞庫品管、細胞自動化製程
 - Aaron M. Newman（副教授，美國史丹佛大學生物醫學數據科學系）— 計算生物學；CIBERSORT／CIBERSORTx 開發者，從混合組織轉錄體解卷積出細胞類型組成
 
 ## 摘要投稿 Abstract Submission

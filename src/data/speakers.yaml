@@ -1,6 +1,7 @@
 # 2026 屆 keynote（主辦提供）。順序＝議程的 Keynote 1/2/3。
 # 職稱／單位／簡介與連結皆取自主辦提供的 imports/Keynote_Speakers_Bio(2).docx（2026-08-04）。
 # 例外：陳玉如（2026-10-27 主辦換人，取代 Heng Zhu）。主辦只給院士頁連結；照片、職稱、研究領域取自該頁，簡介為自行改寫。
+# 例外：吉田信介的職稱／單位（2026-11-04 主辦提供新版，取代 bio 檔的「京都大學 CiRA 基金會前副所長」）。
 # 照片就位後填 photo（檔案丟 public/，填 /檔名.webp）；留空顯示灰底佔位。
 # name 是單一欄位（拉丁名不需翻譯）；只有漢字姓名需要 name_en 補羅馬拼音。
 - name: "陳玉如"
@@ -18,10 +19,10 @@
       url: "https://academicians.sinica.edu.tw/index.php?r=academician-n%2Fshow&id=831"
 - name: "吉田信介"
   name_en: "Shinsuke Yoshida"
-  title_zh: "前副所長"
-  title_en: "Former Deputy Director"
-  affiliation_zh: "日本京都大學 CiRA 基金會"
-  affiliation_en: "CiRA Foundation, Kyoto University, Japan"
+  title_zh: "前研發中心副主任"
+  title_en: "Former Assistant Head, R&D Center"
+  affiliation_zh: "日本 CiRA Foundation"
+  affiliation_en: "CiRA Foundation, Japan"
   photo: "/speaker-shinsuke-yoshida.webp"
   bio_zh: "再生醫學轉譯專家，曾主導建立臨床級 HLA 純合子 iPSC 細胞庫品管（QA），現致力於細胞自動化製程開發及跨國精準醫療整合。"
   bio_en: "Translational researcher in regenerative medicine who led quality assurance (QA) for clinical-grade iPSC Haplobanks, now dedicated to automated cell manufacturing and integrating transnational precision medicine frameworks."
