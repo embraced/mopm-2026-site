@@ -4,4 +4,4 @@ const { lang, path = '/' } = Astro.props as { lang: 'zh' | 'en'; path?: string }
 const target = lang === 'zh' ? `/en${path === '/' ? '/' : path}` : (path === '/' ? '/' : path);
 const label = lang === 'zh' ? 'EN' : '中';
 ---
-<a href={target} class="rounded-full border border-line px-2 py-1 text-sm">{label}</a>
+<a href={target} class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-sm">{label}</a>
