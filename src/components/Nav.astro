@@ -32,7 +32,42 @@ const items = [
       <div class="flex items-center gap-3 text-[#E9EEF3]">
         <LangToggle lang={lang} path={neutralPath} />
         <ThemeToggle />
+        <!-- md 以下桌機連結整排隱藏，改由這顆按鈕展開下拉選單 -->
+        <button id="nav-menu-btn" type="button" aria-expanded="false" aria-controls="nav-menu"
+          aria-label={lang === 'en' ? 'Menu' : '選單'}
+          class="rounded-full border border-line px-2 py-1 md:hidden">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path class="nav-icon-open" d="M4 7h16M4 12h16M4 17h16" />
+            <path class="nav-icon-close hidden" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
       </div>
     </div>
   </nav>
+  <div id="nav-menu" hidden class="border-t border-white/10 md:hidden">
+    <ul class="mx-auto max-w-6xl px-5 py-2 sm:px-8">
+      {items.map((i) => (
+        <li><a href={i.href} class="block py-3 text-base font-medium text-[#E9EEF3] hover:text-accent">{t(lang, 'nav.' + i.key)}</a></li>
+      ))}
+    </ul>
+  </div>
 </header>
+<script>
+  const btn = document.getElementById('nav-menu-btn');
+  const menu = document.getElementById('nav-menu');
+  const setOpen = (open: boolean) => {
+    if (!btn || !menu) return;
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelector('.nav-icon-open')?.classList.toggle('hidden', open);
+    btn.querySelector('.nav-icon-close')?.classList.toggle('hidden', !open);
+  };
+  btn?.addEventListener('click', () => setOpen(menu?.hidden ?? false));
+  // 同頁錨點不會換頁，點完要手動收起
+  menu?.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('a')) setOpen(false);
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+  // 轉成桌機寬度時收起，避免回到手機寬度時選單還開著
+  matchMedia('(min-width: 768px)').addEventListener('change', (e) => { if (e.matches) setOpen(false); });
+</script>

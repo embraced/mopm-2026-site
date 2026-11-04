@@ -3,5 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth; }
+/* scroll-padding-top：錨點跳轉時讓出 sticky header 的高度（手機 54px、桌機約 60px），否則區塊標題會被蓋住 */
+html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
 body { background: rgb(var(--color-bg)); color: rgb(var(--color-text)); font-family: "Noto Sans TC", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
