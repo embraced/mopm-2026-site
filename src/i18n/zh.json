@@ -1,5 +1,5 @@
 {
-  "nav": { "about": "關於會議", "speakers": "講者陣容", "agenda": "議程", "register": "報名資訊", "abstract": "摘要投稿", "transport": "交通資訊", "accommodation": "住宿", "sponsors": "贊助" },
+  "nav": { "about": "關於會議", "speakers": "講者陣容", "agenda": "議程", "register": "報名資訊", "abstract": "摘要投稿", "venue": "會議地點", "transport": "交通資訊", "accommodation": "住宿", "sponsors": "贊助" },
   "hero": { "register": "立即報名", "submit": "立即投稿", "learn": "了解更多" },
   "stats": {
     "days": "天會議", "daysSub": "11.14 – 11.15",

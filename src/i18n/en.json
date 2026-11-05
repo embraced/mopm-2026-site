@@ -1,5 +1,5 @@
 {
-  "nav": { "about": "About", "speakers": "Speakers", "agenda": "Agenda", "register": "Registration", "abstract": "Abstract", "transport": "Travel", "accommodation": "Stay", "sponsors": "Sponsors" },
+  "nav": { "about": "About", "speakers": "Speakers", "agenda": "Agenda", "register": "Registration", "abstract": "Abstract", "venue": "Venue", "transport": "Travel", "accommodation": "Stay", "sponsors": "Sponsors" },
   "hero": { "register": "Register Now", "submit": "Submit Abstract", "learn": "Learn More" },
   "stats": {
     "days": "Days", "daysSub": "Nov 14 – 15",
