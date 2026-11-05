@@ -2,7 +2,32 @@
 import { t, type Lang } from '../lib/i18n';
 import SectionHeading from './SectionHeading.astro';
 const { lang } = Astro.props as { lang: Lang };
-const mapSrc = 'https://www.google.com/maps?q=國立成功大學醫學院 成杏校區&output=embed';
+const mapSrc = 'https://www.google.com/maps?q=國立成功大學成杏校區警衛室&z=17&output=embed';
+// 2026-11-05 主辦 `地圖資訊.pptx` + 對話貼上的文字（中英各自照抄）
+const NAV_URL = 'https://maps.app.goo.gl/BXMY5ricTMHXFfgz8';
+const guide = lang === 'zh'
+  ? {
+      title: '會議地點與導航指引',
+      venueLabel: '會議地點', venue: '國立成功大學醫學院（成杏校區）',
+      navLabel: '建議導航地點', nav: '成杏校區警衛室（小東路入口）',
+      button: '用 Google Maps 導航',
+      entryLabel: '入口及報到說明',
+      entry: '請由小東路的成杏校區正門進入，並前往醫學院一樓穿堂辦理報到。',
+      warn: '請留意，會議地點並非成大醫院門診大樓。',
+      gateCap: '小東路成杏校區正門（圖：Google 街景）',
+      floorCap: '醫學院 1F 平面圖：第三講堂、第一講堂、第二講堂（圖：成大校園地圖）',
+    }
+  : {
+      title: 'Conference Venue & Navigation',
+      venueLabel: 'Conference Venue', venue: 'College of Medicine, National Cheng Kung University (NCKU)',
+      navLabel: 'Recommended Navigation Destination', nav: 'Cheng-Hsing Campus Security Office (Xiaodong Road Entrance)',
+      button: 'Navigate with Google Maps',
+      entryLabel: 'Entrance & Registration',
+      entry: 'Please use the Google Maps link above to navigate to the Campus entrance on Xiaodong Road. After entering the campus, proceed to the College of Medicine building. The conference registration desk is located in the first-floor lobby.',
+      warn: 'Please note that the conference is NOT held at NCKU Hospital.',
+      gateCap: 'Cheng-Hsing Campus entrance, Xiaodong Rd (image: Google Street View)',
+      floorCap: 'College of Medicine 1F: Lecture Halls 3, 1 and 2 (image: NCKU Campus Map)',
+    };
 
 // teal line icons (car / train / hsr)
 const ICON = {
@@ -38,6 +63,43 @@ const modes = lang === 'zh'
 ---
 <section id="transport" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
   <SectionHeading title={t(lang, 'section.transport')} subtitle={t(lang, 'section.transportSub')} />
+  <div id="venue" class="mb-6 rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
+    <h3 class="mb-4 flex items-center gap-2 text-lg font-bold text-ink">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--color-accent))" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      {guide.title}
+    </h3>
+    <dl class="grid gap-4 sm:grid-cols-2">
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-wide text-muted">{guide.venueLabel}</dt>
+        <dd class="mt-1 text-[15px] font-semibold text-ink">{guide.venue}</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-wide text-muted">{guide.navLabel}</dt>
+        <dd class="mt-1 text-[15px] font-semibold text-ink">{guide.nav}</dd>
+        <dd class="mt-3">
+          <a href={NAV_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-contrast hover:opacity-90">
+            {guide.button} ↗
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <div class="mt-5 border-t border-line pt-5">
+      <h4 class="mb-1.5 text-sm font-bold text-ink">{guide.entryLabel}</h4>
+      <p class="text-[13.5px] leading-relaxed text-muted">{guide.entry} <strong class="font-semibold text-ink">{guide.warn}</strong></p>
+    </div>
+    <div class="mt-5 grid gap-5 md:grid-cols-2">
+      <figure>
+        <img src="/venue-gate.webp" width="1200" height="718" alt={guide.gateCap} loading="lazy" class="w-full rounded-xl border border-line" />
+        <figcaption class="mt-2 text-xs text-muted">{guide.gateCap}</figcaption>
+      </figure>
+      <figure>
+        <a href="/venue-floor-1f.webp" target="_blank" rel="noopener">
+          <img src="/venue-floor-1f.webp" width="1260" height="1140" alt={guide.floorCap} loading="lazy" class="w-full rounded-xl border border-line bg-white" />
+        </a>
+        <figcaption class="mt-2 text-xs text-muted">{guide.floorCap}</figcaption>
+      </figure>
+    </div>
+  </div>
   <div class="grid gap-6 md:grid-cols-2 md:items-stretch">
     <iframe src={mapSrc} class="h-72 w-full rounded-2xl border border-line md:h-full" loading="lazy" title="Google Map"></iframe>
     <div class="flex flex-col gap-5 rounded-2xl bg-surface p-7 shadow-[0_2px_14px_rgba(30,41,59,.06)]">
