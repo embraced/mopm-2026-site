@@ -38,6 +38,13 @@ describe('splitSpeaker', () => {
     });
   });
 
+  it('recognises 科學家 as a title (Showcase 講者)', () => {
+    expect(splitSpeaker('周士軒 FAS 領域應用科學家 國立中興大學 生科院 兼任副教授')).toEqual({
+      person: '周士軒 FAS 領域應用科學家',
+      affiliation: '國立中興大學 生科院 兼任副教授',
+    });
+  });
+
   it('falls back to the slash when no title is present', () => {
     expect(splitSpeaker('宋柏儀／國防醫學大學')).toEqual({
       person: '宋柏儀',

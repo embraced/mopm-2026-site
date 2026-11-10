@@ -1,5 +1,5 @@
 ---
-import { loc, splitSpeaker, type Agenda } from '../lib/agenda';
+import { loc, splitSpeaker, splitRooms, type Agenda } from '../lib/agenda';
 import { pick, type Lang } from '../lib/i18n';
 const { agenda, lang } = Astro.props as { agenda: Agenda; lang: Lang };
 const trackColor = ['border-t101', 'border-t102', 'border-t103'];
@@ -55,7 +55,15 @@ const trackVar = ['--color-track-101', '--color-track-102', '--color-track-103']
                 <td class="border-b border-line p-2 align-top font-semibold text-accent">{slot.time}</td>
                 <td colspan={agenda.venues.length} class="border-b border-line p-2">
                   {slot.venue && <span class="mr-2 inline-block rounded border border-accent/50 px-1.5 text-xs font-bold text-accent">{loc(slot, 'venue', lang)}</span>}
-                  <span class="font-medium">{pick(slot, 'title', lang) || slot.title_zh}</span>
+                  {(() => {
+                    // 午餐列：Lunch Seminar 有講題後太長，與手機版一樣每間會議室一行
+                    const r = splitRooms(pick(slot, 'title', lang) || slot.title_zh || '');
+                    return (
+                      <span class="font-medium">
+                        {r.head}{r.time && <span class="whitespace-nowrap"> ({r.time})</span>}{r.rooms.map((room) => <span class="block">{room}</span>)}
+                      </span>
+                    );
+                  })()}
                   {loc(slot, 'speaker', lang) && (() => {
                     const sp = splitSpeaker(loc(slot, 'speaker', lang));
                     const aff = sp.affiliation || pick(slot, 'affiliation', lang);

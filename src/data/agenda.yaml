@@ -138,9 +138,10 @@ days:
       - time: 11:45-12:25
         type: plenary
         category: keynote
-        title_zh: Keynote Talk 1 · TBA
+        title_zh: 'Keynote Talk 1: 癌症蛋白質基因體學：從分子發現到精準腫瘤醫學'
+        title_en: 'Keynote Talk 1: Cancer Proteogenomics: From Molecular Discovery to Precision Oncology'
         speaker: 陳玉如 副院長 中央研究院
-        speaker_en: Prof. Yu-Ju Chen / Vice President, Institute of Chemistry, Academia Sinica
+        speaker_en: Prof. Yu-Ju Chen / Vice President, Academia Sinica
         moderator: 蔡少正 校長 國立中正大學、講座教授 國立成功大學 生理學科暨研究所
         moderator_en: Chair Prof. Shaw-Jenq Sean Tsai / Department of Physiology, National Cheng Kung University; President, National Chung Cheng University
         venue: 第三講堂
@@ -148,8 +149,8 @@ days:
       - time: 12:25-13:40
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:50-13:25 · 3F-303 國家實驗研究院國家高速網路與計算中心 · 3F-304 亞洲準譯股份有限公司)
-        title_en: Lunch & Poster Session / Lunch Seminar (12:50-13:25 · 3F-303 National Center for High-performance Computing, NARLabs · 3F-304 Asia Pathogenomics Co., Ltd.)
+        title_zh: 'Lunch & Poster Session / Lunch Seminar (12:50-13:25 · 3F-303 國家實驗研究院國家高速網路與計算中心「HPC x Agentic AI for Science：打造新世代智慧生醫科研平台」 · 3F-304 亞洲準譯股份有限公司「From Variant to Gene Expression, Cell by Cell: Single-Cell RNA + DNA Co-Sequencing」)'
+        title_en: 'Lunch & Poster Session / Lunch Seminar (12:50-13:25 · 3F-303 National Center for High-performance Computing, NARLabs: “HPC x Agentic AI for Science：打造新世代智慧生醫科研平台” · 3F-304 Asia Pathogenomics Co., Ltd.: “From Variant to Gene Expression, Cell by Cell: Single-Cell RNA + DNA Co-Sequencing”)'
       - time: 13:40-14:25
         type: plenary
         category: keynote
@@ -163,8 +164,9 @@ days:
       - time: 14:25-14:35
         type: plenary
         category: showcase
-        title_zh: Technology Showcase · 圖爾思生物科技股份有限公司
-        title_en: Technology Showcase · BIOTOOLS Co., Ltd
+        title_zh: Technology Showcase · 圖爾思生物科技股份有限公司：Multi-Omics Tools Decipher Human Microbiome Biomarkers and Therapeutic Potentials
+        title_en: 'Technology Showcase · BIOTOOLS Co., Ltd: Multi-Omics Tools Decipher Human Microbiome Biomarkers and Therapeutic Potentials'
+        speaker: 周士軒 FAS 領域應用科學家 國立中興大學 生科院 兼任副教授
         venue: 第三講堂
         venue_en: Lecture Hall 3
       - time: 14:35-14:50
@@ -421,8 +423,8 @@ days:
       - time: 12:05-14:05
         type: break
         category: lunch
-        title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 · 3F-301 博克科技股份有限公司 · 3F-302 世基生物醫學股份有限公司)
-        title_en: Lunch & Poster Session / Lunch Seminar (12:20-12:55 · 3F-301 J&H Technology Co., Ltd. · 3F-302 Pharmigene Inc.)
+        title_zh: Lunch & Poster Session / Lunch Seminar (12:20-12:55 · 3F-301 博克科技股份有限公司「從多體學到空間生物學：解碼單細胞層級的組織微環境」 · 3F-302 世基生物醫學股份有限公司「從轉錄體走向調控機制：以單細胞多體學解碼細胞調控」)
+        title_en: 'Lunch & Poster Session / Lunch Seminar (12:20-12:55 · 3F-301 J&H Technology Co., Ltd.: “From Multi-omics to Spatial Biology: Decoding the Tissue Microenvironment at Single-Cell Resolution” · 3F-302 Pharmigene Inc.: “Beyond the Transcriptome: Decoding Gene Regulation with Single-Cell Multiomics”)'
       - time: 13:10-13:50
         type: parallel
         tracks:
@@ -533,7 +535,9 @@ days:
             organizer: TPMS
             moderator: 陳相成 處長 國防部軍醫局醫務管理處、副理事長 台灣精準醫學學會
             moderator_en: Prof. Hsiang-Cheng Chen / Director, Department of Medical Management, Medical Affairs Bureau, Ministry of National Defense
-            title_zh: Talk 12-3 · TBA
+            title_zh: 'Talk 12-3: Toward Personalized Medicine in Pulmonary Arterial Hypertension: Deciphering the TLR7/MyD88 Axis to Guide Phenotype-Specific Immunomodulation'
+            speaker: 葉富強 醫師 主治醫師 三軍總醫院 風濕免疫過敏科
+            speaker_en: Dr. Fu-Chiang Yeh / Visiting Staff, Division of Rheumatology, Immunology and Allergy, Tri-Service General Hospital
       - time: 15:50-16:30
         type: plenary
         category: ceremony
