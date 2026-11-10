@@ -1,6 +1,8 @@
 # 2026 屆 keynote（主辦提供）。順序＝議程的 Keynote 1/2/3。
 # 職稱／單位／簡介與連結皆取自主辦提供的 imports/Keynote_Speakers_Bio(2).docx（2026-08-04）。
-# 例外：陳玉如（2026-10-27 主辦換人，取代 Heng Zhu）。主辦只給院士頁連結；照片、職稱、研究領域取自該頁，簡介為自行改寫。
+# 例外：陳玉如（2026-10-27 主辦換人，取代 Heng Zhu）。主辦只給院士頁連結；照片、職稱、研究領域取自該頁，bio_zh 為自行改寫。
+#   bio_en 是 2026-11-10 會議手冊 Research Interests 的第一句，一字照抄（使用者裁決；手冊沒有中文版）。
+#   只取一句是為了和另外兩位的卡片高度接近（兩句 15 行、其他人 6 行）。
 # 例外：吉田信介的職稱／單位（2026-11-04 主辦提供新版，取代 bio 檔的「京都大學 CiRA 基金會前副所長」）。
 # 照片就位後填 photo（檔案丟 public/，填 /檔名.webp）；留空顯示灰底佔位。
 # name 是單一欄位（拉丁名不需翻譯）；只有漢字姓名需要 name_en 補羅馬拼音。
@@ -12,7 +14,7 @@
   affiliation_en: "Academia Sinica"
   photo: "/speaker-yu-ju-chen.webp"
   bio_zh: "中央研究院院士（第 35 屆，2026 年當選）；研究領域為生物質譜技術與蛋白質體學。"
-  bio_en: "Academician of Academia Sinica (elected 2026); research focuses on biological mass spectrometry and proteomics."
+  bio_en: "Chen group is interested in developing advanced mass spectrometry-based proteomics strategies towards comprehensive profiling of human proteome, especially the druggable membrane sub-proteome and its post-translational modification to decipher complex disease mechanisms."
   links:
     - label_zh: "院士資料"
       label_en: "Academician Profile"
