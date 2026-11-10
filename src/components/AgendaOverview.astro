@@ -7,11 +7,23 @@ import { t, type Lang } from '../lib/i18n';
 import SectionHeading from './SectionHeading.astro';
 import AgendaDesktop from './AgendaDesktop.astro';
 import AgendaMobile from './AgendaMobile.astro';
+import yaml from 'js-yaml';
+import fs from 'node:fs';
 const { lang } = Astro.props as { lang: Lang };
 const agenda = loadAgenda();
+// 會議手冊下載連結：conference.yaml 的 handbook_url 在才顯示（與 HandbookNotice 同一個開關）
+const handbookUrl: string | undefined = (yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8')) as any).handbook_url;
 ---
 <section id="agenda" class="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
-  <SectionHeading title={t(lang, 'section.agenda')} subtitle={t(lang, 'agenda.note')} />
+  {handbookUrl ? (
+    <SectionHeading title={t(lang, 'section.agenda')} subtitle={t(lang, 'agenda.note')}>
+      <a href={handbookUrl} target="_blank" rel="noopener" class="text-sm font-semibold text-accent hover:underline">
+        {lang === 'zh' ? '下載會議手冊 (PDF) →' : 'Download Program Book (PDF) →'}
+      </a>
+    </SectionHeading>
+  ) : (
+    <SectionHeading title={t(lang, 'section.agenda')} subtitle={t(lang, 'agenda.note')} />
+  )}
 
   <div class="agenda-full rounded-2xl bg-surface p-4 shadow-[0_2px_14px_rgba(30,41,59,.06)] sm:p-8">
     {agenda.days.length > 1 && (

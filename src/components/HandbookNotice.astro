@@ -6,18 +6,18 @@ const { lang } = Astro.props as { lang: Lang };
 const c: any = yaml.load(fs.readFileSync('src/data/conference.yaml', 'utf8'));
 
 /*
-  海報投稿通過名單公告 — 與 DeadlineNotice 同一個位置、同一套 gold 樣式，
-  接手 9/25 截止後空出來的「banner 下第一眼」。
+  會議手冊公告 — banner 下第一眼的 gold 公告條（2026-11-10 起取代海報名單公告）。
+  海報名單仍在 PosterSection 的卡片裡（poster_list_url）。
 
-  渲染條件是 conference.yaml 的 poster_list_url 還在；下架 = 刪掉那一行
-  （PosterSection 的名單連結也會一起消失）。名單是主辦的 PDF 原檔，
-  不在站上轉成 HTML 表格：主辦會改版，原檔覆蓋同名檔即更新。
+  渲染條件是 conference.yaml 的 handbook_url 還在；下架 = 刪掉那一行
+  （議程區的下載連結也會一起消失）。手冊是主辦 PDF 壓縮到 150 dpi 的版本，
+  因為原檔 45 MB 超過 Cloudflare 單檔 25 MiB 上限。
 */
-const url: string | undefined = c.poster_list_url;
+const url: string | undefined = c.handbook_url;
 
 const txt = lang === 'zh'
-  ? { tag: '最新公告', lead: '海報投稿通過名單已公布', sub: '請至名單確認您的海報', cta: '查看名單 (PDF)' }
-  : { tag: 'Announcement', lead: 'Accepted poster list is now available', sub: 'Please check your poster in the list', cta: 'View List (PDF)' };
+  ? { tag: '最新公告', lead: '會議手冊已公布', sub: '議程、講者簡介與會場資訊', cta: '下載手冊 (PDF)' }
+  : { tag: 'Announcement', lead: 'The Program Book is now available', sub: 'Agenda, speakers & venue', cta: 'Download (PDF)' };
 ---
 {url && (
   <aside class="bg-gold text-gold-contrast" aria-label={txt.tag}>
